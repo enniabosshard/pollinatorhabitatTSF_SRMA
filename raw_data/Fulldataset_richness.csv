@@ -1,0 +1,806 @@
+﻿study,report,authors,crop,p_dependency,farm_size,habitat,agr_intensity,distance_m,distance_measure,proportion,radius,richness_all,richness_wild,sites,location,pollinator,sampling_effort,sampling_method,sampling_time_min,total_sampling_time_min,source
+Banks,Banks,Banks et al. 2013,coffee,Modest (10-40%),Medium (2-15 ha),forest,high,13,estimated,NA,NA,1,NA,12,m18 adjacent,Hymenoptera,1,passive,1440,NA,corresponding author(s)
+Banks,Banks,Banks et al. 2013,coffee,Modest (10-40%),Medium (2-15 ha),forest,high,48,estimated,NA,NA,0,NA,12,g15 adjacent,Hymenoptera,1,passive,1440,NA,corresponding author(s)
+Banks,Banks,Banks et al. 2013,coffee,Modest (10-40%),Medium (2-15 ha),forest,high,73,estimated,NA,NA,0,NA,12,g11 adjacent,Hymenoptera,1,passive,1440,NA,corresponding author(s)
+Banks,Banks,Banks et al. 2013,coffee,Modest (10-40%),Medium (2-15 ha),forest,high,55,estimated,NA,NA,1,NA,12,m17 adjacent,Hymenoptera,1,passive,1440,NA,corresponding author(s)
+Banks,Banks,Banks et al. 2013,coffee,Modest (10-40%),Medium (2-15 ha),forest,high,0,estimated,NA,NA,1,NA,12,g9 adjacent,Hymenoptera,1,passive,1440,NA,corresponding author(s)
+Banks,Banks,Banks et al. 2013,coffee,Modest (10-40%),Medium (2-15 ha),forest,high,55,estimated,NA,NA,0,NA,12,g3 adjacent,Hymenoptera,1,passive,1440,NA,corresponding author(s)
+Banks,Banks,Banks et al. 2013,coffee,Modest (10-40%),Medium (2-15 ha),forest,high,230,estimated,NA,NA,1,NA,12,g4 isolated,Hymenoptera,1,passive,1440,NA,corresponding author(s)
+Banks,Banks,Banks et al. 2013,coffee,Modest (10-40%),Medium (2-15 ha),forest,high,305,estimated,NA,NA,1,NA,12,g23 isolated,Hymenoptera,1,passive,1440,NA,corresponding author(s)
+Banks,Banks,Banks et al. 2013,coffee,Modest (10-40%),Medium (2-15 ha),forest,high,174,estimated,NA,NA,1,NA,12,g29 isolated,Hymenoptera,1,passive,1440,NA,corresponding author(s)
+Banks,Banks,Banks et al. 2013,coffee,Modest (10-40%),Medium (2-15 ha),forest,high,207,estimated,NA,NA,1,NA,12,g13 isolated,Hymenoptera,1,passive,1440,NA,corresponding author(s)
+Banks,Banks,Banks et al. 2013,coffee,Modest (10-40%),Medium (2-15 ha),forest,high,115,estimated,NA,NA,1,NA,12,g8 isolated,Hymenoptera,1,passive,1440,NA,corresponding author(s)
+Banks,Banks,Banks et al. 2013,coffee,Modest (10-40%),Medium (2-15 ha),forest,high,230,estimated,NA,NA,1,NA,12,g39 isolated,Hymenoptera,1,passive,1440,NA,corresponding author(s)
+Basu,Basu,Basu et al. 2016,vegetable crops,NA,6.419933041,forest,both,34.93,reported,NA,NA,10,9,12,Amitadebbarma,Bees,189,passive,1440,272160,corresponding author(s)
+Basu,Basu,Basu et al. 2016,vegetable crops,NA,6.954927461,forest,both,7.75,reported,NA,NA,19,18,12,Brahmachara,Bees,189,passive,1440,272160,corresponding author(s)
+Basu,Basu,Basu et al. 2016,vegetable crops,NA,NA,forest,both,8.26,reported,NA,NA,15,14,12,Champaknagar,Bees,189,passive,1440,272160,corresponding author(s)
+Basu,Basu,Basu et al. 2016,vegetable crops,NA,3.47746373,forest,both,331.43,reported,NA,NA,18,17,12,Emanuel Para,Bees,189,passive,1440,272160,corresponding author(s)
+Basu,Basu,Basu et al. 2016,vegetable crops,NA,2.40747489,forest,both,69.41,reported,NA,NA,20,19,12,Ghaniamara,Bees,189,passive,1440,272160,corresponding author(s)
+Basu,Basu,Basu et al. 2016,vegetable crops,NA,13.3748605,forest,both,27.74,reported,NA,NA,19,18,12,Ghilatali,Bees,189,passive,1440,272160,corresponding author(s)
+Basu,Basu,Basu et al. 2016,vegetable crops,NA,5.082446991,forest,both,14.54,reported,NA,NA,18,18,12,Kamalnagar,Bees,189,passive,1440,272160,corresponding author(s)
+Basu,Basu,Basu et al. 2016,vegetable crops,NA,7.222424671,forest,both,4.31,reported,NA,NA,19,18,12,Krishnapur,Bees,189,passive,1440,272160,corresponding author(s)
+Basu,Basu,Basu et al. 2016,vegetable crops,NA,6.152435831,forest,both,18.6,reported,NA,NA,16,16,12,ONGC,Bees,189,passive,1440,272160,corresponding author(s)
+Basu,Basu,Basu et al. 2016,vegetable crops,NA,5.884938621,forest,both,27.67,reported,NA,NA,19,19,12,Palpara,Bees,189,passive,1440,272160,corresponding author(s)
+Basu,Basu,Basu et al. 2016,vegetable crops,NA,9.362402351,forest,both,23.08,reported,NA,NA,21,20,12,Totabari,Bees,189,passive,1440,272160,corresponding author(s)
+Basu,Basu,Basu et al. 2016,vegetable crops,NA,6.954927461,forest,both,129.92,reported,NA,NA,21,20,12,Trinu Baidya Jhum,Bees,189,passive,1440,272160,corresponding author(s)
+Deepthi,Deepthi,Deepthi et al 2019,coffea canephora,Great (40-90%),12,riparian forest ,high,10,reported,NA,NA,2,2,10,C01,Bees,5,active,15,300,corresponding author(s)
+Deepthi,Deepthi,Deepthi et al 2019,coffea canephora,Great (40-90%),12,riparian forest ,high,60,reported,NA,NA,3,3,10,C01,Bees,5,active,15,300,corresponding author(s)
+Deepthi,Deepthi,Deepthi et al 2019,coffea canephora,Great (40-90%),12,riparian forest ,high,10,reported,NA,NA,4,4,10,C02,Bees,5,active,15,300,corresponding author(s)
+Deepthi,Deepthi,Deepthi et al 2019,coffea canephora,Great (40-90%),12,riparian forest ,high,30,reported,NA,NA,4,4,10,C02,Bees,5,active,15,300,corresponding author(s)
+Deepthi,Deepthi,Deepthi et al 2019,coffea canephora,Great (40-90%),12,riparian forest ,high,60,reported,NA,NA,4,4,10,C02,Bees,5,active,15,300,corresponding author(s)
+Deepthi,Deepthi,Deepthi et al 2019,coffea canephora,Great (40-90%),4,riparian forest ,high,10,reported,NA,NA,4,4,10,C03,Bees,5,active,15,300,corresponding author(s)
+Deepthi,Deepthi,Deepthi et al 2019,coffea canephora,Great (40-90%),4,riparian forest ,high,30,reported,NA,NA,4,4,10,C03,Bees,5,active,15,300,corresponding author(s)
+Deepthi,Deepthi,Deepthi et al 2019,coffea canephora,Great (40-90%),4,riparian forest ,high,60,reported,NA,NA,4,4,10,C03,Bees,5,active,15,300,corresponding author(s)
+Deepthi,Deepthi,Deepthi et al 2019,coffea canephora,Great (40-90%),3,riparian forest ,high,30,reported,NA,NA,3,3,10,C04,Bees,5,active,15,300,corresponding author(s)
+Deepthi,Deepthi,Deepthi et al 2019,coffea canephora,Great (40-90%),10,riparian forest ,high,10,reported,NA,NA,3,3,10,C05,Bees,5,active,15,300,corresponding author(s)
+Deepthi,Deepthi,Deepthi et al 2019,coffea canephora,Great (40-90%),10,riparian forest ,high,30,reported,NA,NA,3,3,10,C05,Bees,5,active,15,300,corresponding author(s)
+Deepthi,Deepthi,Deepthi et al 2019,coffea canephora,Great (40-90%),10,riparian forest ,high,60,reported,NA,NA,2,2,10,C05,Bees,5,active,15,300,corresponding author(s)
+Deepthi,Deepthi,Deepthi et al 2019,coffea canephora,Great (40-90%),4,riparian forest ,high,10,reported,NA,NA,4,4,10,C06,Bees,5,active,15,300,corresponding author(s)
+Deepthi,Deepthi,Deepthi et al 2019,coffea canephora,Great (40-90%),4,riparian forest ,high,30,reported,NA,NA,4,4,10,C06,Bees,5,active,15,300,corresponding author(s)
+Deepthi,Deepthi,Deepthi et al 2019,coffea canephora,Great (40-90%),4,riparian forest ,high,60,reported,NA,NA,4,4,10,C06,Bees,5,active,15,300,corresponding author(s)
+Deepthi,Deepthi,Deepthi et al 2019,coffea canephora,Great (40-90%),4,riparian forest ,high,10,reported,NA,NA,3,3,10,C07,Bees,5,active,15,300,corresponding author(s)
+Deepthi,Deepthi,Deepthi et al 2019,coffea canephora,Great (40-90%),4,riparian forest ,high,30,reported,NA,NA,4,4,10,C07,Bees,5,active,15,300,corresponding author(s)
+Deepthi,Deepthi,Deepthi et al 2019,coffea canephora,Great (40-90%),4,riparian forest ,high,60,reported,NA,NA,4,4,10,C07,Bees,5,active,15,300,corresponding author(s)
+Deepthi,Deepthi,Deepthi et al 2019,coffea canephora,Great (40-90%),8,riparian forest ,high,30,reported,NA,NA,2,2,10,C08,Bees,5,active,15,300,corresponding author(s)
+Deepthi,Deepthi,Deepthi et al 2019,coffea canephora,Great (40-90%),8,riparian forest ,high,60,reported,NA,NA,2,2,10,C08,Bees,5,active,15,300,corresponding author(s)
+Deepthi,Deepthi,Deepthi et al 2019,coffea canephora,Great (40-90%),10,riparian forest ,high,10,reported,NA,NA,4,4,10,C09,Bees,5,active,15,300,corresponding author(s)
+Deepthi,Deepthi,Deepthi et al 2019,coffea canephora,Great (40-90%),10,riparian forest ,high,60,reported,NA,NA,4,4,10,C09,Bees,5,active,15,300,corresponding author(s)
+Deepthi,Deepthi,Deepthi et al 2019,coffea canephora,Great (40-90%),8,riparian forest ,high,10,reported,NA,NA,3,3,10,C11,Bees,5,active,15,300,corresponding author(s)
+Deepthi,Deepthi,Deepthi et al 2019,coffea canephora,Great (40-90%),8,riparian forest ,high,30,reported,NA,NA,4,4,10,C11,Bees,5,active,15,300,corresponding author(s)
+Deepthi,Deepthi,Deepthi et al 2019,coffea canephora,Great (40-90%),8,riparian forest ,high,60,reported,NA,NA,4,4,10,C11,Bees,5,active,15,300,corresponding author(s)
+Deepthi,Deepthi,Deepthi et al 2019,coffea canephora,Great (40-90%),12,riparian forest ,high,30,reported,NA,NA,2,2,10,C01,Bees,6,active,15,360,corresponding author(s)
+Deepthi,Deepthi,Deepthi et al 2019,coffea canephora,Great (40-90%),3,riparian forest ,high,10,reported,NA,NA,3,3,10,C04,Bees,6,active,15,360,corresponding author(s)
+Deepthi,Deepthi,Deepthi et al 2019,coffea canephora,Great (40-90%),3,riparian forest ,high,60,reported,NA,NA,3,3,10,C04,Bees,6,active,15,360,corresponding author(s)
+Deepthi,Deepthi,Deepthi et al 2019,coffea canephora,Great (40-90%),8,riparian forest ,high,10,reported,NA,NA,3,3,10,C08,Bees,6,active,15,360,corresponding author(s)
+Deepthi,Deepthi,Deepthi et al 2019,coffea canephora,Great (40-90%),10,riparian forest ,high,30,reported,NA,NA,3,3,10,C09,Bees,6,active,15,360,corresponding author(s)
+Enriquez,Enriquez,Enriquez et al. 2015,squash,Essential (90-100%),Small (<1ha),secondary vegetation,low,96.91,reported,NA,NA,6,5,10,PU1,Bees,2,active,3,NA,corresponding author(s)
+Enriquez,Enriquez,Enriquez et al. 2015,squash,Essential (90-100%),Small (<1ha),secondary vegetation,low,88.48,reported,NA,NA,6,5,10,PU2,Bees,2,active,3,NA,corresponding author(s)
+Enriquez,Enriquez,Enriquez et al. 2015,squash,Essential (90-100%),Small (<1ha),secondary vegetation,low,28.46,reported,NA,NA,6,5,10,RE1,Bees,2,active,3,NA,corresponding author(s)
+Enriquez,Enriquez,Enriquez et al. 2015,squash,Essential (90-100%),Small (<1ha),secondary vegetation,low,21.51,reported,NA,NA,9,8,10,PA2,Bees,2,active,3,NA,corresponding author(s)
+Enriquez,Enriquez,Enriquez et al. 2015,squash,Essential (90-100%),Small (<1ha),secondary vegetation,low,12.51,reported,NA,NA,9,8,10,CH1,Bees,2,active,3,NA,corresponding author(s)
+Enriquez,Enriquez,Enriquez et al. 2015,squash,Essential (90-100%),Small (<1ha),secondary vegetation,low,124.62,reported,NA,NA,14,13,10,CH2,Bees,2,active,3,NA,corresponding author(s)
+Enriquez,Enriquez,Enriquez et al. 2015,squash,Essential (90-100%),Small (<1ha),secondary vegetation,low,60.38,reported,NA,NA,9,8,10,RE2,Bees,2,active,3,NA,corresponding author(s)
+Enriquez,Enriquez,Enriquez et al. 2015,squash,Essential (90-100%),Small (<1ha),secondary vegetation,low,151.37,reported,NA,NA,8,7,10,RE3,Bees,2,active,3,NA,corresponding author(s)
+Enriquez,Enriquez,Enriquez et al. 2015,squash,Essential (90-100%),Small (<1ha),secondary vegetation,low,111.03,reported,NA,NA,5,4,10,UB1,Bees,2,active,3,NA,corresponding author(s)
+Enriquez,Enriquez,Enriquez et al. 2015,squash,Essential (90-100%),Small (<1ha),secondary vegetation,low,239.01,reported,NA,NA,7,6,10,UB2,Bees,2,active,3,NA,corresponding author(s)
+Geeraert,Geeraert,Geeraert et al. 2020,coffee,Modest (10-40%),0.73,other,low,120,estimated,20.74,300,5.333333333,4.666666667,15,Plot01,Bees,12,passive,27360,328320,corresponding author(s)
+Geeraert,Geeraert,Geeraert et al. 2020,coffee,Modest (10-40%),0.01,other,low,40,estimated,17.19,300,8,7.333333333,15,Plot02,Bees,12,passive,27360,328320,corresponding author(s)
+Geeraert,Geeraert,Geeraert et al. 2020,coffee,Modest (10-40%),0.19,other,low,80,estimated,20.51,300,6.666666667,6,15,Plot03,Bees,12,passive,27360,328320,corresponding author(s)
+Geeraert,Geeraert,Geeraert et al. 2020,coffee,Modest (10-40%),0.31,other,low,80,estimated,17.68,300,9.333333333,8.666666667,15,Plot04,Bees,12,passive,27360,328320,corresponding author(s)
+Geeraert,Geeraert,Geeraert et al. 2020,coffee,Modest (10-40%),1.36,other,low,85,estimated,17.22,300,4.666666667,4,15,Plot05,Bees,12,passive,27360,328320,corresponding author(s)
+Geeraert,Geeraert,Geeraert et al. 2020,coffee,Modest (10-40%),0.79,other,low,90,estimated,18.96,300,5.333333333,4.666666667,15,Plot06,Bees,12,passive,27360,328320,corresponding author(s)
+Geeraert,Geeraert,Geeraert et al. 2020,coffee,Modest (10-40%),1.12,other,low,65,estimated,18.48,300,6.666666667,6,15,Plot07,Bees,12,passive,27360,328320,corresponding author(s)
+Geeraert,Geeraert,Geeraert et al. 2020,coffee,Modest (10-40%),4.03,other,low,250,estimated,15.16,300,6.666666667,6,15,Plot08.1,Bees,12,passive,27360,328320,corresponding author(s)
+Geeraert,Geeraert,Geeraert et al. 2020,coffee,Modest (10-40%),4.03,other,low,220,estimated,20.53,300,4.285714284,3.428571428,15,Plot08.2,Bees,12,passive,27360,328320,corresponding author(s)
+Geeraert,Geeraert,Geeraert et al. 2020,coffee,Modest (10-40%),2.35,other,low,210,estimated,19.66,300,4,3,15,Plot09,Bees,12,passive,27360,328320,corresponding author(s)
+Geeraert,Geeraert,Geeraert et al. 2020,coffee,Modest (10-40%),0.74,other,low,110,estimated,13.36,300,6,5.333333333,15,Plot10,Bees,12,passive,27360,328320,corresponding author(s)
+Geeraert,Geeraert,Geeraert et al. 2020,coffee,Modest (10-40%),0.83,other,low,100,estimated,18.75,300,4.666666667,4,15,Plot11,Bees,12,passive,27360,328320,corresponding author(s)
+Geeraert,Geeraert,Geeraert et al. 2020,coffee,Modest (10-40%),1.47,other,low,110,estimated,26.01,300,5.333333333,4.666666667,15,Plot12,Bees,12,passive,27360,328320,corresponding author(s)
+Geeraert,Geeraert,Geeraert et al. 2020,coffee,Modest (10-40%),1.06,other,low,135,estimated,19.09,300,4,3.333333333,15,Plot13,Bees,12,passive,27360,328320,corresponding author(s)
+Geeraert,Geeraert,Geeraert et al. 2020,coffee,Modest (10-40%),2.8,other,low,115,estimated,24.57,300,2.666666667,2,15,Plot14,Bees,12,passive,27360,328320,corresponding author(s)
+Geeraert,Geeraert,Geeraert et al. 2020,coffee,Modest (10-40%),12.6,other,low,390,estimated,48.12,300,7.333333333,6.666666667,15,Plot16.1,Bees,12,passive,27360,328320,corresponding author(s)
+Geeraert,Geeraert,Geeraert et al. 2020,coffee,Modest (10-40%),12.6,other,low,170,estimated,47.38,300,3.333333333,2.666666667,15,Plot16.2,Bees,12,passive,27360,328320,corresponding author(s)
+Geeraert,Geeraert,Geeraert et al. 2020,coffee,Modest (10-40%),12.6,other,low,160,estimated,45,300,2,1.333333333,15,Plot16.3,Bees,12,passive,27360,328320,corresponding author(s)
+Gemmill,Gemmill,Gemmill-Herren and Ochieng' 2008,eggplant,Great (40-90%),<2ha,forest,high,25,reported,NA,NA,7,7,NA,1NF,Bees,NA,active,10,NA,open access data (Ricketts et al. 2008)
+Gemmill,Gemmill,Gemmill-Herren and Ochieng' 2008,eggplant,Great (40-90%),<2ha,forest,high,25,reported,NA,NA,7,7,NA,2NF,Bees,NA,active,10,NA,open access data (Ricketts et al. 2008)
+Gemmill,Gemmill,Gemmill-Herren and Ochieng' 2008,eggplant,Great (40-90%),<2ha,forest,high,25,reported,NA,NA,7,7,NA,3NF,Bees,NA,active,10,NA,open access data (Ricketts et al. 2008)
+Gemmill,Gemmill,Gemmill-Herren and Ochieng' 2008,eggplant,Great (40-90%),<2ha,forest,high,25,reported,NA,NA,7,7,NA,4NF,Bees,NA,active,10,NA,open access data (Ricketts et al. 2008)
+Gemmill,Gemmill,Gemmill-Herren and Ochieng' 2008,eggplant,Great (40-90%),<2ha,forest,high,25,reported,NA,NA,7,7,NA,5NF,Bees,NA,active,10,NA,open access data (Ricketts et al. 2008)
+Gemmill,Gemmill,Gemmill-Herren and Ochieng' 2008,eggplant,Great (40-90%),<2ha,forest,high,75,reported,NA,NA,7,7,NA,1MF,Bees,NA,active,10,NA,open access data (Ricketts et al. 2008)
+Gemmill,Gemmill,Gemmill-Herren and Ochieng' 2008,eggplant,Great (40-90%),<2ha,forest,high,75,reported,NA,NA,7,7,NA,2MF,Bees,NA,active,10,NA,open access data (Ricketts et al. 2008)
+Gemmill,Gemmill,Gemmill-Herren and Ochieng' 2008,eggplant,Great (40-90%),<2ha,forest,high,75,reported,NA,NA,7,7,NA,3MF,Bees,NA,active,10,NA,open access data (Ricketts et al. 2008)
+Gemmill,Gemmill,Gemmill-Herren and Ochieng' 2008,eggplant,Great (40-90%),<2ha,forest,high,75,reported,NA,NA,7,7,NA,4MF,Bees,NA,active,10,NA,open access data (Ricketts et al. 2008)
+Gemmill,Gemmill,Gemmill-Herren and Ochieng' 2008,eggplant,Great (40-90%),<2ha,forest,high,75,reported,NA,NA,7,7,NA,5MF,Bees,NA,active,10,NA,open access data (Ricketts et al. 2008)
+Gemmill,Gemmill,Gemmill-Herren and Ochieng' 2008,eggplant,Great (40-90%),<2ha,forest,high,150,reported,NA,NA,7,7,NA,1FF,Bees,NA,active,10,NA,open access data (Ricketts et al. 2008)
+Gemmill,Gemmill,Gemmill-Herren and Ochieng' 2008,eggplant,Great (40-90%),<2ha,forest,high,150,reported,NA,NA,7,7,NA,2FF,Bees,NA,active,10,NA,open access data (Ricketts et al. 2008)
+Gemmill,Gemmill,Gemmill-Herren and Ochieng' 2008,eggplant,Great (40-90%),<2ha,forest,high,150,reported,NA,NA,7,7,NA,3FF,Bees,NA,active,10,NA,open access data (Ricketts et al. 2008)
+Gemmill,Gemmill,Gemmill-Herren and Ochieng' 2008,eggplant,Great (40-90%),<2ha,forest,high,150,reported,NA,NA,7,7,NA,4FF,Bees,NA,active,10,NA,open access data (Ricketts et al. 2008)
+Gemmill,Gemmill,Gemmill-Herren and Ochieng' 2008,eggplant,Great (40-90%),<2ha,forest,high,150,reported,NA,NA,7,7,NA,5FF,Bees,NA,active,10,NA,open access data (Ricketts et al. 2008)
+Hansen,Hansen,Hansen et al. 2020,guava,Little (0-10%),Medium (2 - 8 ha),forest,high,370.66,reported,15.625,1000,9,NA,6,farm 1,Insecta,1,active,5,50,open access data
+Hansen,Hansen,Hansen et al. 2020,guava,Little (0-10%),Medium (2 - 8 ha),forest,high,752,reported,0.000005,1000,4,NA,6,farm 2,Insecta,1,active,5,50,open access data
+Hansen,Hansen,Hansen et al. 2020,guava,Little (0-10%),Medium (2 - 8 ha),forest,high,5475,reported,0,1000,3,NA,6,farm 3,Insecta,1,active,5,50,open access data
+Hansen,Hansen,Hansen et al. 2020,guava,Little (0-10%),Medium (2 - 8 ha),forest,high,769.82,reported,2.33463035,1000,12,NA,6,farm 4,Insecta,1,active,5,50,open access data
+Hansen,Hansen,Hansen et al. 2020,guava,Little (0-10%),Medium (2 - 8 ha),forest,high,8676,reported,3.474903475,1000,6,NA,6,farm 5,Insecta,1,active,5,50,open access data
+Hansen,Hansen,Hansen et al. 2020,guava,Little (0-10%),Medium (2 - 8 ha),forest,high,7070,reported,0,1000,1,NA,6,farm 6,Insecta,1,active,5,50,open access data
+Hass,Hass,Hass et al. 2018,rice,None or unknown (0%) ,5,agroforests,high,255,reported,NA,NA,1,1,16,PH_1_R_2,Bees,4,active,15,60,corresponding author(s)
+Hass,Hass,Hass et al. 2018,rice,None or unknown (0%) ,6,agroforests,high,0,reported,NA,NA,4,4,16,PH_1_R_1,Bees,4,active,15,60,corresponding author(s)
+Hass,Hass,Hass et al. 2018,rice,None or unknown (0%) ,0.5,agroforests,high,125,reported,NA,NA,2,2,16,PH_1_R_4,Bees,4,active,15,60,corresponding author(s)
+Hass,Hass,Hass et al. 2018,rice,None or unknown (0%) ,NA,agroforests,high,0,reported,NA,NA,2,2,16,PH_1_R_3,Bees,4,active,15,60,corresponding author(s)
+Hass,Hass,Hass et al. 2018,rice,None or unknown (0%) ,NA,agroforests,high,230,reported,NA,NA,2,2,16,PH_1_R_6,Bees,4,active,15,60,corresponding author(s)
+Hass,Hass,Hass et al. 2018,rice,None or unknown (0%) ,2,agroforests,high,0,reported,NA,NA,6,6,16,PH_1_R_5,Bees,4,active,15,60,corresponding author(s)
+Hass,Hass,Hass et al. 2018,rice,None or unknown (0%) ,2,agroforests,high,60,reported,NA,NA,4,4,16,PH_1_R_8,Bees,4,active,15,60,corresponding author(s)
+Hass,Hass,Hass et al. 2018,rice,None or unknown (0%) ,0.3,agroforests,high,0,reported,NA,NA,3,3,16,PH_1_R_7,Bees,4,active,15,60,corresponding author(s)
+Hass,Hass,Hass et al. 2018,rice,None or unknown (0%) ,5,agroforests,high,165,reported,NA,NA,1,1,16,PH_1_R_10,Bees,4,active,15,60,corresponding author(s)
+Hass,Hass,Hass et al. 2018,rice,None or unknown (0%) ,NA,agroforests,high,0,reported,NA,NA,3,3,16,PH_1_R_9,Bees,4,active,15,60,corresponding author(s)
+Hass,Hass,Hass et al. 2018,rice,None or unknown (0%) ,NA,agroforests,high,130,reported,NA,NA,1,1,16,PH_1A_R_12,Bees,4,active,15,60,corresponding author(s)
+Hass,Hass,Hass et al. 2018,rice,None or unknown (0%) ,NA,agroforests,high,0,reported,NA,NA,1,1,16,PH_1A_R_11,Bees,4,active,15,60,corresponding author(s)
+Hass,Hass,Hass et al. 2018,rice,None or unknown (0%) ,NA,agroforests,high,150,reported,NA,NA,1,1,16,PH_1A_R_14,Bees,4,active,15,60,corresponding author(s)
+Hass,Hass,Hass et al. 2018,rice,None or unknown (0%) ,NA,agroforests,high,0,reported,NA,NA,1,1,16,PH_1A_R_13,Bees,4,active,15,60,corresponding author(s)
+Hass,Hass,Hass et al. 2018,rice,None or unknown (0%) ,NA,agroforests,high,125,reported,NA,NA,2,2,16,PH_1A_R_16,Bees,4,active,15,60,corresponding author(s)
+Hass,Hass,Hass et al. 2018,rice,None or unknown (0%) ,NA,agroforests,high,0,reported,NA,NA,7,7,16,PH_1A_R_15,Bees,4,active,15,60,corresponding author(s)
+Kasina,Kasina,Kasina et al. 2009,dry common bean,Modest (10-40%),Small (<2ha),forest,low,112,reported,NA,NA,4,3,28,1,Bees,8,active,25,200,corresponding author(s)
+Kasina,Kasina,Kasina et al. 2009,dry common bean,Modest (10-40%),Small (<2ha),forest,low,366,reported,NA,NA,5,4,28,2,Bees,8,active,25,200,corresponding author(s)
+Kasina,Kasina,Kasina et al. 2009,dry common bean,Modest (10-40%),Small (<2ha),forest,low,644,reported,NA,NA,7,6,28,3,Bees,8,active,25,200,corresponding author(s)
+Kasina,Kasina,Kasina et al. 2009,dry common bean,Modest (10-40%),Small (<2ha),forest,low,876,reported,NA,NA,7,6,28,4,Bees,8,active,25,200,corresponding author(s)
+Kasina,Kasina,Kasina et al. 2009,dry common bean,Modest (10-40%),Small (<2ha),forest,low,316,reported,NA,NA,7,6,28,5,Bees,8,active,25,200,corresponding author(s)
+Kasina,Kasina,Kasina et al. 2009,dry common bean,Modest (10-40%),Small (<2ha),forest,low,960,reported,NA,NA,7,6,28,6,Bees,8,active,25,200,corresponding author(s)
+Kasina,Kasina,Kasina et al. 2009,dry common bean,Modest (10-40%),Small (<2ha),forest,low,1610,reported,NA,NA,5,4,28,7,Bees,8,active,25,200,corresponding author(s)
+Kasina,Kasina,Kasina et al. 2009,dry common bean,Modest (10-40%),Small (<2ha),forest,low,2028,reported,NA,NA,5,4,28,8,Bees,8,active,25,200,corresponding author(s)
+Kasina,Kasina,Kasina et al. 2009,dry common bean,Modest (10-40%),Small (<2ha),forest,low,2800,reported,NA,NA,4,3,28,9,Bees,8,active,25,200,corresponding author(s)
+Kasina,Kasina,Kasina et al. 2009,dry common bean,Modest (10-40%),Small (<2ha),forest,low,3342,reported,NA,NA,5,4,28,10,Bees,8,active,25,200,corresponding author(s)
+Kasina,Kasina,Kasina et al. 2009,dry common bean,Modest (10-40%),Small (<2ha),forest,low,2299,reported,NA,NA,7,6,28,11,Bees,8,active,25,200,corresponding author(s)
+Kasina,Kasina,Kasina et al. 2009,dry common bean,Modest (10-40%),Small (<2ha),forest,low,4017,reported,NA,NA,5,4,28,12,Bees,8,active,25,200,corresponding author(s)
+Kasina,Kasina,Kasina et al. 2009,dry common bean,Modest (10-40%),Small (<2ha),forest,low,5183,reported,NA,NA,7,6,28,13,Bees,8,active,25,200,corresponding author(s)
+Kasina,Kasina,Kasina et al. 2009,dry common bean,Modest (10-40%),Small (<2ha),forest,low,6799,reported,NA,NA,5,4,28,14,Bees,8,active,25,200,corresponding author(s)
+Kasina,Kasina,Kasina et al. 2009,dry common bean,Modest (10-40%),Small (<2ha),forest,low,60,reported,NA,NA,7,6,28,15,Bees,8,active,25,200,corresponding author(s)
+Kasina,Kasina,Kasina et al. 2009,dry common bean,Modest (10-40%),Small (<2ha),forest,low,366,reported,NA,NA,8,7,28,16,Bees,8,active,25,200,corresponding author(s)
+Kasina,Kasina,Kasina et al. 2009,dry common bean,Modest (10-40%),Small (<2ha),forest,low,466,reported,NA,NA,7,6,28,17,Bees,8,active,25,200,corresponding author(s)
+Kasina,Kasina,Kasina et al. 2009,dry common bean,Modest (10-40%),Small (<2ha),forest,low,720,reported,NA,NA,6,5,28,18,Bees,8,active,25,200,corresponding author(s)
+Kasina,Kasina,Kasina et al. 2009,dry common bean,Modest (10-40%),Small (<2ha),forest,low,1475,reported,NA,NA,8,7,28,19,Bees,8,active,25,200,corresponding author(s)
+Kasina,Kasina,Kasina et al. 2009,dry common bean,Modest (10-40%),Small (<2ha),forest,low,1814,reported,NA,NA,7,6,28,20,Bees,8,active,25,200,corresponding author(s)
+Kasina,Kasina,Kasina et al. 2009,dry common bean,Modest (10-40%),Small (<2ha),forest,low,2456,reported,NA,NA,4,3,28,21,Bees,8,active,25,200,corresponding author(s)
+Kasina,Kasina,Kasina et al. 2009,dry common bean,Modest (10-40%),Small (<2ha),forest,low,3625,reported,NA,NA,7,6,28,22,Bees,8,active,25,200,corresponding author(s)
+Kasina,Kasina,Kasina et al. 2009,dry common bean,Modest (10-40%),Small (<2ha),forest,low,4403,reported,NA,NA,6,5,28,23,Bees,8,active,25,200,corresponding author(s)
+Kasina,Kasina,Kasina et al. 2009,dry common bean,Modest (10-40%),Small (<2ha),forest,low,5019,reported,NA,NA,6,5,28,24,Bees,8,active,25,200,corresponding author(s)
+Kasina,Kasina,Kasina et al. 2009,dry common bean,Modest (10-40%),Small (<2ha),forest,low,5824,reported,NA,NA,7,6,28,25,Bees,8,active,25,200,corresponding author(s)
+Kasina,Kasina,Kasina et al. 2009,dry common bean,Modest (10-40%),Small (<2ha),forest,low,6715,reported,NA,NA,5,4,28,26,Bees,8,active,25,200,corresponding author(s)
+Kasina,Kasina,Kasina et al. 2009,dry common bean,Modest (10-40%),Small (<2ha),forest,low,7700,reported,NA,NA,9,8,28,27,Bees,8,active,25,200,corresponding author(s)
+Kasina,Kasina,Kasina et al. 2009,dry common bean,Modest (10-40%),Small (<2ha),forest,low,8721,reported,NA,NA,7,6,28,28,Bees,8,active,25,200,corresponding author(s)
+Klein(a),Klein(a),Klein et al. 2003 a),coffee arabica,Modest (10-40%),NA,forest,low,100,reported,NA,NA,13,13,24,area 1,Bees,3,active,25,75,corresponding author(s)
+Klein(a),Klein(a),Klein et al. 2003 a),coffee arabica,Modest (10-40%),NA,forest,low,1500,reported,NA,NA,8,8,24,area 2,Bees,3,active,25,75,corresponding author(s)
+Klein(a),Klein(a),Klein et al. 2003 a),coffee arabica,Modest (10-40%),NA,forest,low,2500,reported,NA,NA,6,6,24,area 3,Bees,3,active,25,75,corresponding author(s)
+Klein(a),Klein(a),Klein et al. 2003 a),coffee arabica,Modest (10-40%),NA,forest,low,2000,reported,NA,NA,3,3,24,area 4,Bees,3,active,25,75,corresponding author(s)
+Klein(a),Klein(a),Klein et al. 2003 a),coffee arabica,Modest (10-40%),NA,forest,low,1000,reported,NA,NA,8,8,24,area 5,Bees,3,active,25,75,corresponding author(s)
+Klein(a),Klein(a),Klein et al. 2003 a),coffee arabica,Modest (10-40%),NA,forest,low,500,reported,NA,NA,8,8,24,area 6,Bees,3,active,25,75,corresponding author(s)
+Klein(a),Klein(a),Klein et al. 2003 a),coffee arabica,Modest (10-40%),NA,forest,low,100,reported,NA,NA,13,13,24,area 7,Bees,3,active,25,75,corresponding author(s)
+Klein(a),Klein(a),Klein et al. 2003 a),coffee arabica,Modest (10-40%),NA,forest,low,1000,reported,NA,NA,7,7,24,area 8,Bees,3,active,25,75,corresponding author(s)
+Klein(a),Klein(a),Klein et al. 2003 a),coffee arabica,Modest (10-40%),NA,forest,low,0,reported,NA,NA,14,14,24,area 9,Bees,3,active,25,75,corresponding author(s)
+Klein(a),Klein(a),Klein et al. 2003 a),coffee arabica,Modest (10-40%),NA,forest,low,0,reported,NA,NA,20,20,24,area 10,Bees,3,active,25,75,corresponding author(s)
+Klein(a),Klein(a),Klein et al. 2003 a),coffee arabica,Modest (10-40%),NA,forest,low,50,reported,NA,NA,13,13,24,area 11,Bees,3,active,25,75,corresponding author(s)
+Klein(a),Klein(a),Klein et al. 2003 a),coffee arabica,Modest (10-40%),NA,forest,low,800,reported,NA,NA,10,10,24,area 12,Bees,3,active,25,75,corresponding author(s)
+Klein(a),Klein(a),Klein et al. 2003 a),coffee arabica,Modest (10-40%),NA,forest,low,1500,reported,NA,NA,4,4,24,area 13,Bees,3,active,25,75,corresponding author(s)
+Klein(a),Klein(a),Klein et al. 2003 a),coffee arabica,Modest (10-40%),NA,forest,low,1500,reported,NA,NA,5,5,24,area 14,Bees,3,active,25,75,corresponding author(s)
+Klein(a),Klein(a),Klein et al. 2003 a),coffee arabica,Modest (10-40%),NA,forest,low,1000,reported,NA,NA,9,9,24,area 15,Bees,3,active,25,75,corresponding author(s)
+Klein(a),Klein(a),Klein et al. 2003 a),coffee arabica,Modest (10-40%),NA,forest,low,0,reported,NA,NA,9,9,24,area 16,Bees,3,active,25,75,corresponding author(s)
+Klein(a),Klein(a),Klein et al. 2003 a),coffee arabica,Modest (10-40%),NA,forest,low,600,reported,NA,NA,5,5,24,area 17,Bees,3,active,25,75,corresponding author(s)
+Klein(a),Klein(a),Klein et al. 2003 a),coffee arabica,Modest (10-40%),NA,forest,low,500,reported,NA,NA,8,8,24,area 18,Bees,3,active,25,75,corresponding author(s)
+Klein(a),Klein(a),Klein et al. 2003 a),coffee arabica,Modest (10-40%),NA,forest,low,0,reported,NA,NA,9,9,24,area 19,Bees,3,active,25,75,corresponding author(s)
+Klein(a),Klein(a),Klein et al. 2003 a),coffee arabica,Modest (10-40%),NA,forest,low,600,reported,NA,NA,7,7,24,area 20,Bees,3,active,25,75,corresponding author(s)
+Klein(a),Klein(a),Klein et al. 2003 a),coffee arabica,Modest (10-40%),NA,forest,low,10,reported,NA,NA,14,14,24,area 21,Bees,3,active,25,75,corresponding author(s)
+Klein(a),Klein(a),Klein et al. 2003 a),coffee arabica,Modest (10-40%),NA,forest,low,1500,reported,NA,NA,8,8,24,area 22,Bees,3,active,25,75,corresponding author(s)
+Klein(a),Klein(a),Klein et al. 2003 a),coffee arabica,Modest (10-40%),NA,forest,low,500,reported,NA,NA,9,9,24,area 23,Bees,3,active,25,75,corresponding author(s)
+Klein(a),Klein(a),Klein et al. 2003 a),coffee arabica,Modest (10-40%),NA,forest,low,1500,reported,NA,NA,4,4,24,area 24,Bees,3,active,25,75,corresponding author(s)
+Klein(b),Klein(b),Klein et al. 2003 b),coffee canephora,Great (40-90%),NA,rainforest,low,100,reported,NA,NA,12,12,15,area 1,Bees,3,active,25,75,corresponding author(s)
+Klein(b),Klein(b),Klein et al. 2003 b),coffee canephora,Great (40-90%),NA,rainforest,low,500,reported,NA,NA,11,11,15,area 6,Bees,3,active,25,75,corresponding author(s)
+Klein(b),Klein(b),Klein et al. 2003 b),coffee canephora,Great (40-90%),NA,rainforest,low,100,reported,NA,NA,14,14,15,area 7,Bees,3,active,25,75,corresponding author(s)
+Klein(b),Klein(b),Klein et al. 2003 b),coffee canephora,Great (40-90%),NA,rainforest,low,1000,reported,NA,NA,8,8,15,area 8,Bees,3,active,25,75,corresponding author(s)
+Klein(b),Klein(b),Klein et al. 2003 b),coffee canephora,Great (40-90%),NA,rainforest,low,0,reported,NA,NA,14,14,15,area 9,Bees,3,active,25,75,corresponding author(s)
+Klein(b),Klein(b),Klein et al. 2003 b),coffee canephora,Great (40-90%),NA,rainforest,low,0,reported,NA,NA,21,21,15,area 10,Bees,3,active,25,75,corresponding author(s)
+Klein(b),Klein(b),Klein et al. 2003 b),coffee canephora,Great (40-90%),NA,rainforest,low,800,reported,NA,NA,13,13,15,area 12,Bees,3,active,25,75,corresponding author(s)
+Klein(b),Klein(b),Klein et al. 2003 b),coffee canephora,Great (40-90%),NA,rainforest,low,1500,reported,NA,NA,7,7,15,area 14,Bees,3,active,25,75,corresponding author(s)
+Klein(b),Klein(b),Klein et al. 2003 b),coffee canephora,Great (40-90%),NA,rainforest,low,0,reported,NA,NA,7,7,15,area 16,Bees,3,active,25,75,corresponding author(s)
+Klein(b),Klein(b),Klein et al. 2003 b),coffee canephora,Great (40-90%),NA,rainforest,low,500,reported,NA,NA,8,8,15,area 18,Bees,3,active,25,75,corresponding author(s)
+Klein(b),Klein(b),Klein et al. 2003 b),coffee canephora,Great (40-90%),NA,rainforest,low,0,reported,NA,NA,11,11,15,area 19,Bees,3,active,25,75,corresponding author(s)
+Klein(b),Klein(b),Klein et al. 2003 b),coffee canephora,Great (40-90%),NA,rainforest,low,600,reported,NA,NA,15,15,15,area 20,Bees,3,active,25,75,corresponding author(s)
+Klein(b),Klein(b),Klein et al. 2003 b),coffee canephora,Great (40-90%),NA,rainforest,low,10,reported,NA,NA,15,15,15,area 21,Bees,3,active,25,75,corresponding author(s)
+Klein(b),Klein(b),Klein et al. 2003 b),coffee canephora,Great (40-90%),NA,rainforest,low,500,reported,NA,NA,9,9,15,area 23,Bees,3,active,25,75,corresponding author(s)
+Klein(b),Klein(b),Klein et al. 2003 b),coffee canephora,Great (40-90%),NA,rainforest,low,1500,reported,NA,NA,6,6,15,area 24,Bees,3,active,25,75,corresponding author(s)
+Klein(c),Klein(c),Klein 2009,NA,NA,NA,forest,low,52.5,reported,NA,NA,25,25,24,NA,Bees,5,active,30,150,corresponding author(s)
+Klein(c),Klein(c),Klein 2009,NA,NA,NA,forest,low,945,reported,NA,NA,16,16,24,NA,Bees,5,active,30,150,corresponding author(s)
+Klein(c),Klein(c),Klein 2009,NA,NA,NA,forest,low,1415,reported,NA,NA,11,11,24,NA,Bees,5,active,30,150,corresponding author(s)
+Klein(c),Klein(c),Klein 2009,NA,NA,NA,forest,low,1005,reported,NA,NA,4,4,24,NA,Bees,5,active,30,150,corresponding author(s)
+Klein(c),Klein(c),Klein 2009,NA,NA,NA,forest,low,575,reported,NA,NA,12,12,24,NA,Bees,5,active,30,150,corresponding author(s)
+Klein(c),Klein(c),Klein 2009,NA,NA,NA,forest,low,207.5,reported,NA,NA,11,11,24,NA,Bees,5,active,30,150,corresponding author(s)
+Klein(c),Klein(c),Klein 2009,NA,NA,NA,forest,low,180,reported,NA,NA,23,23,24,NA,Bees,5,active,30,150,corresponding author(s)
+Klein(c),Klein(c),Klein 2009,NA,NA,NA,forest,low,327.5,reported,NA,NA,15,15,24,NA,Bees,5,active,30,150,corresponding author(s)
+Klein(c),Klein(c),Klein 2009,NA,NA,NA,forest,low,85,reported,NA,NA,21,21,24,NA,Bees,5,active,30,150,corresponding author(s)
+Klein(c),Klein(c),Klein 2009,NA,NA,NA,forest,low,0,reported,NA,NA,37,37,24,NA,Bees,5,active,30,150,corresponding author(s)
+Klein(c),Klein(c),Klein 2009,NA,NA,NA,forest,low,45,reported,NA,NA,17,17,24,NA,Bees,5,active,30,150,corresponding author(s)
+Klein(c),Klein(c),Klein 2009,NA,NA,NA,forest,low,147.5,reported,NA,NA,12,12,24,NA,Bees,5,active,30,150,corresponding author(s)
+Klein(c),Klein(c),Klein 2009,NA,NA,NA,forest,low,357.5,reported,NA,NA,8,8,24,NA,Bees,5,active,30,150,corresponding author(s)
+Klein(c),Klein(c),Klein 2009,NA,NA,NA,forest,low,880,reported,NA,NA,12,12,24,NA,Bees,5,active,30,150,corresponding author(s)
+Klein(c),Klein(c),Klein 2009,NA,NA,NA,forest,low,402.5,reported,NA,NA,12,12,24,NA,Bees,5,active,30,150,corresponding author(s)
+Klein(c),Klein(c),Klein 2009,NA,NA,NA,forest,low,0,reported,NA,NA,15,15,24,NA,Bees,5,active,30,150,corresponding author(s)
+Klein(c),Klein(c),Klein 2009,NA,NA,NA,forest,low,180,reported,NA,NA,9,9,24,NA,Bees,5,active,30,150,corresponding author(s)
+Klein(c),Klein(c),Klein 2009,NA,NA,NA,forest,low,107.5,reported,NA,NA,17,17,24,NA,Bees,5,active,30,150,corresponding author(s)
+Klein(c),Klein(c),Klein 2009,NA,NA,NA,forest,low,280,reported,NA,NA,15,15,24,NA,Bees,5,active,30,150,corresponding author(s)
+Klein(c),Klein(c),Klein 2009,NA,NA,NA,forest,low,317.5,reported,NA,NA,15,15,24,NA,Bees,5,active,30,150,corresponding author(s)
+Klein(c),Klein(c),Klein 2009,NA,NA,NA,forest,low,20,reported,NA,NA,22,22,24,NA,Bees,5,active,30,150,corresponding author(s)
+Klein(c),Klein(c),Klein 2009,NA,NA,NA,forest,low,597.5,reported,NA,NA,16,16,24,NA,Bees,5,active,30,150,corresponding author(s)
+Klein(c),Klein(c),Klein 2009,NA,NA,NA,forest,low,160,reported,NA,NA,12,12,24,NA,Bees,5,active,30,150,corresponding author(s)
+Klein(c),Klein(c),Klein 2009,NA,NA,NA,forest,low,462.5,reported,NA,NA,8,8,24,NA,Bees,5,active,30,150,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,0,reported,NA,NA,3,NA,35,bas,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Small (<2ha),forest,NA,50,reported,NA,NA,2,NA,35,bas,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Small (<2ha),forest,NA,100,reported,NA,NA,3,NA,35,bas,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Small (<2ha),forest,NA,250,reported,NA,NA,3,NA,35,bas,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,500,reported,NA,NA,1,NA,35,bas,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,0,reported,NA,NA,3,NA,35,baso,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,50,reported,NA,NA,5,NA,35,baso,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,100,reported,NA,NA,2,NA,35,baso,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,100,reported,NA,NA,0,NA,35,be,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,0,reported,NA,NA,4,NA,35,chl,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,50,reported,NA,NA,1,NA,35,chl,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,100,reported,NA,NA,3,NA,35,chl,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,500,reported,NA,NA,0,NA,35,chl,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,0,reported,NA,NA,0,NA,35,chs,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,50,reported,NA,NA,0,NA,35,chs,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,100,reported,NA,NA,0,NA,35,chs,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,250,reported,NA,NA,2,NA,35,chs,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,500,reported,NA,NA,2,NA,35,chs,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,0,reported,NA,NA,5,NA,35,devpur,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,50,reported,NA,NA,3,NA,35,devpur,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,100,reported,NA,NA,4,NA,35,devpur,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,250,reported,NA,NA,3,NA,35,devpur,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,500,reported,NA,NA,6,NA,35,devpur,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,0,reported,NA,NA,3,NA,35,dhm,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,50,reported,NA,NA,3,NA,35,dhm,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,100,reported,NA,NA,2,NA,35,dhm,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,250,reported,NA,NA,3,NA,35,dhm,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,500,reported,NA,NA,6,NA,35,dhm,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,50,reported,NA,NA,2,NA,35,hal,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,250,reported,NA,NA,7,NA,35,hal,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,0,reported,NA,NA,3,NA,35,has,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,50,reported,NA,NA,2,NA,35,has,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,100,reported,NA,NA,3,NA,35,has,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,250,reported,NA,NA,0,NA,35,has,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,500,reported,NA,NA,2,NA,35,has,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,0,reported,NA,NA,4,NA,35,kap,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,50,reported,NA,NA,1,NA,35,kap,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,100,reported,NA,NA,2,NA,35,kap,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,250,reported,NA,NA,4,NA,35,kap,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,500,reported,NA,NA,4,NA,35,kap,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,0,reported,NA,NA,7,NA,35,kil,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,50,reported,NA,NA,4,NA,35,kil,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Small (<2ha),forest,NA,100,reported,NA,NA,2,NA,35,kil,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,250,reported,NA,NA,4,NA,35,kil,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,500,reported,NA,NA,4,NA,35,kil,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Small (<2ha),forest,NA,100,reported,NA,NA,1,NA,35,kis,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,250,reported,NA,NA,3,NA,35,kis,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,500,reported,NA,NA,3,NA,35,kis,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,250,reported,NA,NA,0,NA,35,beg,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,500,reported,NA,NA,3,NA,35,beg,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Small (<2ha),forest,NA,0,reported,NA,NA,4,NA,35,hardha,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Small (<2ha),forest,NA,50,reported,NA,NA,1,NA,35,hardha,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,100,reported,NA,NA,1,NA,35,hardha,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Small (<2ha),forest,NA,0,reported,NA,NA,1,NA,35,harkas,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Small (<2ha),forest,NA,50,reported,NA,NA,0,NA,35,harkas,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Small (<2ha),forest,NA,100,reported,NA,NA,0,NA,35,harkas,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,250,reported,NA,NA,1,NA,35,harkas,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,500,reported,NA,NA,1,NA,35,harkas,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,0,reported,NA,NA,2,NA,35,ichbha,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,50,reported,NA,NA,2,NA,35,ichbha,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,100,reported,NA,NA,4,NA,35,ichbha,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,250,reported,NA,NA,0,NA,35,ichbha,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,500,reported,NA,NA,0,NA,35,ichbha,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,0,reported,NA,NA,1,NA,35,kon,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,50,reported,NA,NA,0,NA,35,kon,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,100,reported,NA,NA,1,NA,35,kon,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,50,reported,NA,NA,3,NA,35,kottageri,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,250,reported,NA,NA,2,NA,35,kottageri,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,500,reported,NA,NA,1,NA,35,kottageri,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,0,reported,NA,NA,0,NA,35,kutnan,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,50,reported,NA,NA,0,NA,35,kutnan,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,100,reported,NA,NA,0,NA,35,kutnan,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,250,reported,NA,NA,0,NA,35,kutnan,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,250,reported,NA,NA,1,NA,35,nal,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,500,reported,NA,NA,4,NA,35,nal,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,50,reported,NA,NA,2,NA,35,nit,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,100,reported,NA,NA,0,NA,35,nit,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,250,reported,NA,NA,5,NA,35,nit,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,0,reported,NA,NA,3,NA,35,polche,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,50,reported,NA,NA,3,NA,35,polche,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,100,reported,NA,NA,3,NA,35,polche,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,250,reported,NA,NA,3,NA,35,polche,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,500,reported,NA,NA,6,NA,35,polche,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,0,reported,NA,NA,0,NA,35,porpon,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,50,reported,NA,NA,1,NA,35,porpon,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,100,reported,NA,NA,2,NA,35,porpon,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,250,reported,NA,NA,0,NA,35,porpon,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,100,reported,NA,NA,0,NA,35,tshgov,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,0,reported,NA,NA,1,NA,35,tshogr,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,50,reported,NA,NA,0,NA,35,tshogr,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,100,reported,NA,NA,1,NA,35,tshogr,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Small (<2ha),forest,NA,250,reported,NA,NA,2,NA,35,tshogr,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,500,reported,NA,NA,3,NA,35,tshogr,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,0,reported,NA,NA,4,NA,35,armnew,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,50,reported,NA,NA,4,NA,35,armnew,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,100,reported,NA,NA,3,NA,35,armnew,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,250,reported,NA,NA,4,NA,35,armnew,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,100,reported,NA,NA,4,NA,35,bolnew,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,250,reported,NA,NA,6,NA,35,bolnew,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,500,reported,NA,NA,4,NA,35,bolnew,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Small (<2ha),forest,NA,0,reported,NA,NA,4,NA,35,deviyynew,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,50,reported,NA,NA,6,NA,35,deviyynew,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,100,reported,NA,NA,3,NA,35,deviyynew,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,250,reported,NA,NA,5,NA,35,deviyynew,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,500,reported,NA,NA,4,NA,35,deviyynew,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Small (<2ha),forest,NA,0,reported,NA,NA,6,NA,35,devtatnew,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,50,reported,NA,NA,4,NA,35,devtatnew,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,100,reported,NA,NA,5,NA,35,devtatnew,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,0,reported,NA,NA,4,NA,35,hatvannew,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,50,reported,NA,NA,5,NA,35,hatvannew,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,100,reported,NA,NA,4,NA,35,hatvannew,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,250,reported,NA,NA,5,NA,35,hatvannew,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Small (<2ha),forest,NA,500,reported,NA,NA,3,NA,35,hatvannew,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,0,reported,NA,NA,3,NA,35,kottolinew,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,50,reported,NA,NA,3,NA,35,kottolinew,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,100,reported,NA,NA,3,NA,35,kottolinew,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,250,reported,NA,NA,4,NA,35,kottolinew,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Small (<2ha),forest,NA,0,reported,NA,NA,1,NA,35,maibatnew,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Small (<2ha),forest,NA,50,reported,NA,NA,1,NA,35,maibatnew,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,100,reported,NA,NA,4,NA,35,maibatnew,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,250,reported,NA,NA,4,NA,35,maibatnew,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,500,reported,NA,NA,4,NA,35,maibatnew,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,0,reported,NA,NA,7,NA,35,maimalnew,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,50,reported,NA,NA,4,NA,35,maimalnew,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,0,reported,NA,NA,4,NA,35,maimannew,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,50,reported,NA,NA,4,NA,35,maimannew,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,100,reported,NA,NA,0,NA,35,maimannew,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,250,reported,NA,NA,3,NA,35,maimannew,Bees,1,active,15,75,corresponding author(s)
+Krishnan,Krishnan,Krishnan et al. 2012,coffee,Great (40-90%),Medium (2-15ha),forest,NA,500,reported,NA,NA,2,NA,35,maimannew,Bees,1,active,15,75,corresponding author(s)
+Landaverde,Landaverde,Landaverde-Gonzales et al. 2017,chilli,Great (40-90%),Small (<2ha),other,high,45,estimated,44.44,300,3,3,37,"Yucatan, Alfonso Caso",Bees,1,mixed,15 (transects only),60 (transect only),corresponding author(s)
+Landaverde,Landaverde,Landaverde-Gonzales et al. 2017,chilli,Great (40-90%),Small (<2ha),other,high,5,estimated,9.03,300,20,20,37,"Yucatan, BECANCHAN",Bees,1,mixed,15 (transects only),60 (transect only),corresponding author(s)
+Landaverde,Landaverde,Landaverde-Gonzales et al. 2017,chilli,Great (40-90%),Small (<2ha),other,high,303,estimated,7.64,300,5,5,37,"Yucatan, Buctzots",Bees,1,mixed,15 (transects only),60 (transect only),corresponding author(s)
+Landaverde,Landaverde,Landaverde-Gonzales et al. 2017,chilli,Great (40-90%),Small (<2ha),other,high,113,estimated,20.14,300,21,21,37,"Yucatan, CEPEDA",Bees,1,mixed,15 (transects only),60 (transect only),corresponding author(s)
+Landaverde,Landaverde,Landaverde-Gonzales et al. 2017,chilli,Great (40-90%),Small (<2ha),other,high,0,estimated,0,300,11,11,37,"Yucatan, Homun",Bees,1,mixed,15 (transects only),60 (transect only),corresponding author(s)
+Landaverde,Landaverde,Landaverde-Gonzales et al. 2017,chilli,Great (40-90%),Small (<2ha),other,high,17,estimated,24.31,300,16,16,37,"Yucatan, ICHMUL",Bees,1,mixed,15 (transects only),60 (transect only),corresponding author(s)
+Landaverde,Landaverde,Landaverde-Gonzales et al. 2017,chilli,Great (40-90%),Small (<2ha),other,high,602,estimated,0,300,7,7,37,"Yucatan, moctezuma",Bees,1,mixed,15 (transects only),60 (transect only),corresponding author(s)
+Landaverde,Landaverde,Landaverde-Gonzales et al. 2017,chilli,Great (40-90%),Small (<2ha),other,high,8,estimated,18.06,300,14,14,37,"Yucatan, MOTUL",Bees,1,mixed,15 (transects only),60 (transect only),corresponding author(s)
+Landaverde,Landaverde,Landaverde-Gonzales et al. 2017,chilli,Great (40-90%),Small (<2ha),other,high,12,estimated,43.06,300,10,10,37,"Yucatan, Muna",Bees,1,mixed,15 (transects only),60 (transect only),corresponding author(s)
+Landaverde,Landaverde,Landaverde-Gonzales et al. 2017,chilli,Great (40-90%),Small (<2ha),other,high,4,estimated,84.72,300,7,7,37,"Yucatan, Nenela 1",Bees,1,mixed,15 (transects only),60 (transect only),corresponding author(s)
+Landaverde,Landaverde,Landaverde-Gonzales et al. 2017,chilli,Great (40-90%),Small (<2ha),other,high,17,estimated,63.19,300,6,6,37,"Yucatan, Nenela 3",Bees,1,mixed,15 (transects only),60 (transect only),corresponding author(s)
+Landaverde,Landaverde,Landaverde-Gonzales et al. 2017,chilli,Great (40-90%),Small (<2ha),other,high,47,estimated,16.08,300,9,9,37,"Yucatan, Rancho Alegre",Bees,1,mixed,15 (transects only),60 (transect only),corresponding author(s)
+Landaverde,Landaverde,Landaverde-Gonzales et al. 2017,chilli,Great (40-90%),Small (<2ha),other,high,71,estimated,75.69,300,12,12,37,"Yucatan, San Pedro Bacab",Bees,1,mixed,15 (transects only),60 (transect only),corresponding author(s)
+Landaverde,Landaverde,Landaverde-Gonzales et al. 2017,chilli,Great (40-90%),Small (<2ha),other,high,63,estimated,58.65,300,12,12,37,"Yucatan, Santa Maria",Bees,1,mixed,15 (transects only),60 (transect only),corresponding author(s)
+Landaverde,Landaverde,Landaverde-Gonzales et al. 2017,chilli,Great (40-90%),Small (<2ha),other,high,17,estimated,20.9,300,24,24,37,"Yucatan, STA MARIAçA SUR",Bees,1,mixed,15 (transects only),60 (transect only),corresponding author(s)
+Landaverde,Landaverde,Landaverde-Gonzales et al. 2017,chilli,Great (40-90%),Small (<2ha),other,high,56,estimated,54.06,300,9,9,37,"Yucatan, Tah Dziu",Bees,1,mixed,15 (transects only),60 (transect only),corresponding author(s)
+Landaverde,Landaverde,Landaverde-Gonzales et al. 2017,chilli,Great (40-90%),Small (<2ha),other,high,140,estimated,0,300,8,8,37,"Yucatan, Tah Dziu 2",Bees,1,mixed,15 (transects only),60 (transect only),corresponding author(s)
+Landaverde,Landaverde,Landaverde-Gonzales et al. 2017,chilli,Great (40-90%),Small (<2ha),other,high,21,estimated,26.39,300,17,17,37,"Yucatan, TEBEK",Bees,1,mixed,15 (transects only),60 (transect only),corresponding author(s)
+Landaverde,Landaverde,Landaverde-Gonzales et al. 2017,chilli,Great (40-90%),Small (<2ha),other,high,84,estimated,8.33,300,28,28,37,"Yucatan, TEKAL 2",Bees,1,mixed,15 (transects only),60 (transect only),corresponding author(s)
+Landaverde,Landaverde,Landaverde-Gonzales et al. 2017,chilli,Great (40-90%),Small (<2ha),other,high,108,estimated,0.92,300,13,13,37,"Yucatan, Tekal de Venegas",Bees,1,mixed,15 (transects only),60 (transect only),corresponding author(s)
+Landaverde,Landaverde,Landaverde-Gonzales et al. 2017,chilli,Great (40-90%),Small (<2ha),other,high,17,estimated,21.53,300,13,13,37,"Yucatan, TEKAX 1",Bees,1,mixed,15 (transects only),60 (transect only),corresponding author(s)
+Landaverde,Landaverde,Landaverde-Gonzales et al. 2017,chilli,Great (40-90%),Small (<2ha),other,high,23,estimated,2.08,300,24,24,37,"Yucatan, TEKAX 2",Bees,1,mixed,15 (transects only),60 (transect only),corresponding author(s)
+Landaverde,Landaverde,Landaverde-Gonzales et al. 2017,chilli,Great (40-90%),Small (<2ha),other,high,0,estimated,14.58,300,12,12,37,"Yucatan, Timul 1",Bees,1,mixed,15 (transects only),60 (transect only),corresponding author(s)
+Landaverde,Landaverde,Landaverde-Gonzales et al. 2017,chilli,Great (40-90%),Small (<2ha),other,high,30,estimated,31.35,300,11,11,37,"Yucatan, Tixcacaltuyub",Bees,1,mixed,15 (transects only),60 (transect only),corresponding author(s)
+Landaverde,Landaverde,Landaverde-Gonzales et al. 2017,chilli,Great (40-90%),Small (<2ha),other,high,19,estimated,0,300,9,9,37,"Yucatan, Tixcuytun ",Bees,1,mixed,15 (transects only),60 (transect only),corresponding author(s)
+Landaverde,Landaverde,Landaverde-Gonzales et al. 2017,chilli,Great (40-90%),Small (<2ha),other,high,15,estimated,21.49,300,4,4,37,"Yucatan, Tixcuytun 2",Bees,1,mixed,15 (transects only),60 (transect only),corresponding author(s)
+Landaverde,Landaverde,Landaverde-Gonzales et al. 2017,chilli,Great (40-90%),Small (<2ha),other,high,117,estimated,59.72,300,4,4,37,"Yucatan, Tixcuytun 3",Bees,1,mixed,15 (transects only),60 (transect only),corresponding author(s)
+Landaverde,Landaverde,Landaverde-Gonzales et al. 2017,chilli,Great (40-90%),Small (<2ha),other,high,134,estimated,4.83,300,11,11,37,"Yucatan, Tixmehuac 2",Bees,1,mixed,15 (transects only),60 (transect only),corresponding author(s)
+Landaverde,Landaverde,Landaverde-Gonzales et al. 2017,chilli,Great (40-90%),Small (<2ha),other,high,8,estimated,95.83,300,11,11,37,"Yucatan, TIZIMIN 1",Bees,1,mixed,15 (transects only),60 (transect only),corresponding author(s)
+Landaverde,Landaverde,Landaverde-Gonzales et al. 2017,chilli,Great (40-90%),Small (<2ha),other,high,33,estimated,63.19,300,20,20,37,"Yucatan, TIZIMIN 2",Bees,1,mixed,15 (transects only),60 (transect only),corresponding author(s)
+Landaverde,Landaverde,Landaverde-Gonzales et al. 2017,chilli,Great (40-90%),Small (<2ha),other,high,302,estimated,2.08,300,17,17,37,"Yucatan, TIZIMIN CEN",Bees,1,mixed,15 (transects only),60 (transect only),corresponding author(s)
+Landaverde,Landaverde,Landaverde-Gonzales et al. 2017,chilli,Great (40-90%),Small (<2ha),other,high,146,estimated,98.61,300,9,9,37,"Yucatan, TOH",Bees,1,mixed,15 (transects only),60 (transect only),corresponding author(s)
+Landaverde,Landaverde,Landaverde-Gonzales et al. 2017,chilli,Great (40-90%),Small (<2ha),other,high,4,estimated,19.38,300,25,25,37,"Yucatan, TZUCACAB 2",Bees,1,mixed,15 (transects only),60 (transect only),corresponding author(s)
+Landaverde,Landaverde,Landaverde-Gonzales et al. 2017,chilli,Great (40-90%),Small (<2ha),other,high,43,estimated,0,300,19,19,37,"Yucatan, TZUCACAB 3 ",Bees,1,mixed,15 (transects only),60 (transect only),corresponding author(s)
+Landaverde,Landaverde,Landaverde-Gonzales et al. 2017,chilli,Great (40-90%),Small (<2ha),other,high,3,estimated,18.75,300,13,13,37,"Yucatan, Xaya",Bees,1,mixed,15 (transects only),60 (transect only),corresponding author(s)
+Landaverde,Landaverde,Landaverde-Gonzales et al. 2017,chilli,Great (40-90%),Small (<2ha),other,high,4,estimated,69.44,300,7,7,37,"Yucatan, Yaxcopil",Bees,1,mixed,15 (transects only),60 (transect only),corresponding author(s)
+Landaverde,Landaverde,Landaverde-Gonzales et al. 2017,chilli,Great (40-90%),Small (<2ha),other,high,17,estimated,83.33,300,24,24,37,"Yucatan, YOBAiN",Bees,1,mixed,15 (transects only),60 (transect only),corresponding author(s)
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,20.26250483,reported,NA,NA,6,6,47,P047-122,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,61.78804715,reported,NA,NA,11,11,47,P062-121,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,2.15008501,reported,NA,NA,9,9,47,P135-66A,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,2.15008501,reported,NA,NA,8,8,47,P135-66B,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,48.72756343,reported,NA,NA,9,9,47,P074-157,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,61.78804715,reported,NA,NA,5,5,47,P062-41,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,81.49714809,reported,NA,NA,7,7,47,P026-146,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,3.904772788,reported,NA,NA,11,11,47,P128-3,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,80.99051244,reported,NA,NA,11,11,47,P023-9,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,80.99051244,reported,NA,NA,9,9,47,P023-8,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,39.82734574,reported,NA,NA,7,7,47,P110-24,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,39.82734574,reported,NA,NA,8,8,47,P110-23,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,2.15008501,reported,NA,NA,8,8,47,P135-145,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,2.15008501,reported,NA,NA,8,8,47,P135-144,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,61.78804715,reported,NA,NA,10,10,47,P062-63,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,81.49714809,reported,NA,NA,9,9,47,P026-45,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,81.49714809,reported,NA,NA,10,10,47,P026-6,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,81.49714809,reported,NA,NA,10,10,47,P026-x,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,31.38957795,reported,NA,NA,13,13,47,P100-156,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,31.38957795,reported,NA,NA,13,13,47,P100-159,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,72.0626115,reported,NA,NA,10,10,47,P036-22,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,72.0626115,reported,NA,NA,7,7,47,P036-21,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,12.33806564,reported,NA,NA,10,10,47,P107-168,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,44.6563423,reported,NA,NA,9,9,47,P089-27,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,2.15008501,reported,NA,NA,10,10,47,P135-12,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,20.26250483,reported,NA,NA,13,13,47,P047-129,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,66.54315351,reported,NA,NA,7,7,47,P052-138,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,66.54315351,reported,NA,NA,7,7,47,P052-139,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,66.5761296,reported,NA,NA,13,13,47,P014-141,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,39.82734574,reported,NA,NA,9,9,47,P110-29A,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,39.82734574,reported,NA,NA,15,15,47,P110-29B,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,39.2864228,reported,NA,NA,7,7,47,P101-61,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,5.841479046,reported,NA,NA,7,7,47,P134-55A,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,5.841479046,reported,NA,NA,10,10,47,P134-55B,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,84.48079893,reported,NA,NA,11,11,47,P024-5,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,18.09282084,reported,NA,NA,8,8,47,P122-25,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,54.73272618,reported,NA,NA,13,13,47,P028-26,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,7.693682058,reported,NA,NA,6,6,47,P133-126,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,7.693682058,reported,NA,NA,9,9,47,P133-54,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,65.88785904,reported,NA,NA,11,11,47,P037-53,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,94.17192239,reported,NA,NA,9,9,47,P018-154,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,12.29346513,reported,NA,NA,9,9,47,P087-30,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,7.292667585,reported,NA,NA,7,7,47,P096-35,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,7.292667585,reported,NA,NA,9,9,47,P096-163,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,12.33806564,reported,NA,NA,4,4,47,P107-136,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,60.21168806,reported,NA,NA,1,1,47,P013-107,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,36.64853698,reported,NA,NA,8,8,47,P057-40,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,60.21168806,reported,NA,NA,6,6,47,P013-11,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,26.99215635,reported,NA,NA,13,13,47,P046-42,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,12.29346513,reported,NA,NA,9,9,47,P087-149,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,9.88431914,reported,NA,NA,7,7,47,P127-59,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,26.99215635,reported,NA,NA,10,10,47,P046-152,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,31.38957795,reported,NA,NA,9,9,47,P100-65,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,36.94935016,reported,NA,NA,13,13,47,P049-75,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,20.26250483,reported,NA,NA,9,9,47,P047-13,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,62.35201053,reported,NA,NA,8,8,47,P007-130,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,48.34276971,reported,NA,NA,7,7,47,P071-119,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,48.34276971,reported,NA,NA,9,9,47,P071-44,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,20.26250483,reported,NA,NA,8,8,47,P047-52,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,66.54315351,reported,NA,NA,7,7,47,P052-19,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,48.34276971,reported,NA,NA,8,8,47,P071-34,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,100.9897414,reported,NA,NA,12,12,47,P004-14,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,36.94935016,reported,NA,NA,8,8,47,P049-15,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,81.49714809,reported,NA,NA,10,10,47,P026-32,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,36.94935016,reported,NA,NA,4,4,47,P049-x,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,9.88431914,reported,NA,NA,10,10,47,P127-37,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,12.33806564,reported,NA,NA,4,4,47,P107-161,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,44.6563423,reported,NA,NA,9,9,47,P089-43,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,36.94935016,reported,NA,NA,10,10,47,P049-148,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,44.6563423,reported,NA,NA,9,9,47,P089-62,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,60.21168806,reported,NA,NA,6,6,47,P013-36,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,36.64853698,reported,NA,NA,7,7,47,P057-57,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,13.05595349,reported,NA,NA,9,9,47,P132-170,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,62.35201053,reported,NA,NA,11,11,47,P007-131,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,62.35201053,reported,NA,NA,10,10,47,P007-167,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,85.1734471,reported,NA,NA,9,9,47,P017-18,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,100.9897414,reported,NA,NA,9,9,47,P004-28,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,11.85771288,reported,NA,NA,10,10,47,P069-17,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,84.48079893,reported,NA,NA,9,9,47,P024-151,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,63.56769687,reported,NA,NA,7,7,47,P041-68,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,5.841479046,reported,NA,NA,6,6,47,P134-16,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,72.00897558,reported,NA,NA,9,9,47,P033-56,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,3.43419868,reported,NA,NA,10,10,47,P124-31,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,16.85105678,reported,NA,NA,13,13,47,P094-155,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,39.82734574,reported,NA,NA,12,12,47,P110-39,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,38.36586712,reported,NA,NA,9,9,47,P091-134,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,20.26250483,reported,NA,NA,11,11,47,P047-51,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,7.292667585,reported,NA,NA,7,7,47,P096-140,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,80.99051244,reported,NA,NA,11,11,47,P023-147,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,66.5761296,reported,NA,NA,8,8,47,P014-116,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,100.9897414,reported,NA,NA,12,12,47,P004-164,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,85.1734471,reported,NA,NA,13,13,47,P017-91,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,69.65070129,reported,NA,NA,8,8,47,P015-113,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,69.65070129,reported,NA,NA,10,10,47,P015-90,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,2.15008501,reported,NA,NA,10,10,47,P135-89,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,2.15008501,reported,NA,NA,10,10,47,P135-114,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,5.841479046,reported,NA,NA,14,14,47,P134-88,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,59.83693797,reported,NA,NA,9,9,47,P008-143,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,44.6563423,reported,NA,NA,12,12,47,P089-124,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,94.17192239,reported,NA,NA,11,11,47,P018-125,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,66.5761296,reported,NA,NA,6,6,47,P014-106,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,48.72756343,reported,NA,NA,11,11,47,P074-82,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,31.38957795,reported,NA,NA,12,12,47,P100-102,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,59.83693797,reported,NA,NA,9,9,47,P008-83,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,66.5761296,reported,NA,NA,10,10,47,P014-100,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,38.36586712,reported,NA,NA,11,11,47,P091-86,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,3.43419868,reported,NA,NA,10,10,47,P124-80,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,13.05595349,reported,NA,NA,12,12,47,P132-172,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,85.1734471,reported,NA,NA,9,9,47,P017-171,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,2.15008501,reported,NA,NA,15,15,47,P135-109,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,94.17192239,reported,NA,NA,14,14,47,P018-77,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,69.65070129,reported,NA,NA,9,9,47,P015-108,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,80.99051244,reported,NA,NA,17,17,47,P023-95,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,38.36586712,reported,NA,NA,5,5,47,P091-72,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,11.85771288,reported,NA,NA,8,8,47,P069-74,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,36.64853698,reported,NA,NA,10,10,47,P057-78,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,84.48079893,reported,NA,NA,8,8,47,P024-105,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,72.00897558,reported,NA,NA,9,9,47,P033-137,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,63.56769687,reported,NA,NA,12,12,47,P041-120,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,0.610094646,reported,NA,NA,9,9,47,P138-97,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,69.65070129,reported,NA,NA,6,6,47,P015-70,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,14.99628204,reported,NA,NA,8,8,47,P130-132,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,69.65070129,reported,NA,NA,9,9,47,P015-150,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,39.82734574,reported,NA,NA,9,9,47,P110-166,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,7.292667585,reported,NA,NA,12,12,47,P096-64,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,16.85105678,reported,NA,NA,10,10,47,P094-33,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,9.88431914,reported,NA,NA,9,9,47,P127-127,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,61.78804715,reported,NA,NA,12,12,47,P062-38,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,9.88431914,reported,NA,NA,10,10,47,P127-69,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,12.29346513,reported,NA,NA,7,7,47,P087-48,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,14.99628204,reported,NA,NA,8,8,47,P130-58,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,37.8895171,reported,NA,NA,11,11,47,P103-81,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,18.09282084,reported,NA,NA,8,8,47,P122-142,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,3.43419868,reported,NA,NA,8,8,47,P124-73,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,59.83693797,reported,NA,NA,10,10,47,P008-67,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,3.904772788,reported,NA,NA,12,12,47,P128-118,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,30.90377784,reported,NA,NA,11,11,47,P112-96,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,39.2864228,reported,NA,NA,9,9,47,P101-117,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,38.36586712,reported,NA,NA,12,12,47,P091-98,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,72.0626115,reported,NA,NA,11,11,47,P036-92,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,72.0626115,reported,NA,NA,10,10,47,P036-165,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,62.35201053,reported,NA,NA,10,10,47,P007-169,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,3.43419868,reported,NA,NA,12,12,47,P124-153,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,5.841479046,reported,NA,NA,8,8,47,P134-84,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,30.90377784,reported,NA,NA,13,13,47,P112-99,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,11.85771288,reported,NA,NA,9,9,47,P069-135,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,17.10732782,reported,NA,NA,11,11,47,P114-85,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,14.99628204,reported,NA,NA,13,13,47,P130-123,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,18.09282084,reported,NA,NA,9,9,47,P122-112,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,84.48079893,reported,NA,NA,8,8,47,P024-46,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,84.48079893,reported,NA,NA,12,12,47,P024-47,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,66.54315351,reported,NA,NA,8,8,47,P052-128A,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,66.54315351,reported,NA,NA,9,9,47,P052-128B,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,39.82734574,reported,NA,NA,6,6,47,P110-49,Arthropods,1,passive,1440,1440,open access data
+Li,Li,Li et al. 2022,oil palm,Little (0-10%),1.5ha,forest,high,26.99215635,reported,NA,NA,12,12,47,P046-110,Arthropods,1,passive,1440,1440,open access data
+LucasGarcia,LucasGarcia,"Lucas-Garcia and Rosas-Guerrero, unpub",mango,Great (40-90%),0.9 ha,forest,high,787.5,reported,NA,NA,6,6,18,Gregmix,Insecta,1,active,45,45,corresponding author(s)
+LucasGarcia,LucasGarcia,"Lucas-Garcia and Rosas-Guerrero, unpub",mango,Great (40-90%),1.7 ha,forest,high,747.2,reported,NA,NA,4,4,18,Aldmix,Insecta,1,active,45,45,corresponding author(s)
+LucasGarcia,LucasGarcia,"Lucas-Garcia and Rosas-Guerrero, unpub",mango,Great (40-90%),3.0 ha,forest,high,1106.6,reported,NA,NA,1,0,18,Alcanfor,Insecta,1,active,45,45,corresponding author(s)
+LucasGarcia,LucasGarcia,"Lucas-Garcia and Rosas-Guerrero, unpub",mango,Great (40-90%),2.5 ha,forest,high,398.74,reported,NA,NA,6,5,18,Fonseca,Insecta,1,active,45,45,corresponding author(s)
+LucasGarcia,LucasGarcia,"Lucas-Garcia and Rosas-Guerrero, unpub",mango,Great (40-90%),1.8 ha,forest,high,1016.81,reported,NA,NA,5,4,18,Bombamix,Insecta,1,active,45,45,corresponding author(s)
+LucasGarcia,LucasGarcia,"Lucas-Garcia and Rosas-Guerrero, unpub",mango,Great (40-90%),0.8 ha,forest,high,212.15,reported,NA,NA,9,8,18,Aserr,Insecta,1,active,45,45,corresponding author(s)
+LucasGarcia,LucasGarcia,"Lucas-Garcia and Rosas-Guerrero, unpub",mango,Great (40-90%),3.0 ha,forest,high,386.34,reported,NA,NA,9,9,18,Vicuno,Insecta,1,active,45,45,corresponding author(s)
+LucasGarcia,LucasGarcia,"Lucas-Garcia and Rosas-Guerrero, unpub",mango,Great (40-90%),2.9 ha,forest,high,652.6,reported,NA,NA,5,4,18,Corn,Insecta,1,active,45,45,corresponding author(s)
+LucasGarcia,LucasGarcia,"Lucas-Garcia and Rosas-Guerrero, unpub",mango,Great (40-90%),3.0 ha,forest,high,515.44,reported,NA,NA,4,3,18,Galdos,Insecta,1,active,45,45,corresponding author(s)
+LucasGarcia,LucasGarcia,"Lucas-Garcia and Rosas-Guerrero, unpub",mango,Great (40-90%),1.8 ha,forest,high,1016.81,reported,NA,NA,7,6,18,Fonsecab,Insecta,1,active,45,45,corresponding author(s)
+LucasGarcia,LucasGarcia,"Lucas-Garcia and Rosas-Guerrero, unpub",mango,Great (40-90%),2.8 ha,forest,high,476.95,reported,NA,NA,8,7,18,Cuatas,Insecta,1,active,45,45,corresponding author(s)
+LucasGarcia,LucasGarcia,"Lucas-Garcia and Rosas-Guerrero, unpub",mango,Great (40-90%),2.6 ha,forest,high,538.32,reported,NA,NA,8,7,18,Entrada,Insecta,1,active,45,45,corresponding author(s)
+LucasGarcia,LucasGarcia,"Lucas-Garcia and Rosas-Guerrero, unpub",mango,Great (40-90%),2.0 ha,forest,high,474.15,reported,NA,NA,8,7,18,Fogata,Insecta,1,active,45,45,corresponding author(s)
+LucasGarcia,LucasGarcia,"Lucas-Garcia and Rosas-Guerrero, unpub",mango,Great (40-90%),2.4 ha,forest,high,52.63,reported,NA,NA,8,7,18,Limon,Insecta,1,active,45,45,corresponding author(s)
+LucasGarcia,LucasGarcia,"Lucas-Garcia and Rosas-Guerrero, unpub",mango,Great (40-90%),2.0 ha,forest,high,614.92,reported,NA,NA,10,10,18,Ojoagua,Insecta,1,active,45,45,corresponding author(s)
+LucasGarcia,LucasGarcia,"Lucas-Garcia and Rosas-Guerrero, unpub",mango,Great (40-90%),3.0 ha,forest,high,1030.49,reported,NA,NA,4,3,18,Playa,Insecta,1,active,45,45,corresponding author(s)
+LucasGarcia,LucasGarcia,"Lucas-Garcia and Rosas-Guerrero, unpub",mango,Great (40-90%),2.9 ha,forest,high,265.16,reported,NA,NA,5,4,18,SanLuis,Insecta,1,active,45,45,corresponding author(s)
+LucasGarcia,LucasGarcia,"Lucas-Garcia and Rosas-Guerrero, unpub",mango,Great (40-90%),2.5 ha,forest,high,87.01,reported,NA,NA,5,4,18,Sustrato,Insecta,1,active,45,45,corresponding author(s)
+Obregon,Obregon,Obregon et al. 2021,lulo' or 'naranjilla',Essential (90-100%),Medium (2-15ha),forest,high,90,estimated,0.2,500,0.666666667,NA,10,1 Centro Sur,Bees,6,active,30,180,corresponding author(s)
+Obregon,Obregon,Obregon et al. 2021,lulo' or 'naranjilla',Essential (90-100%),Medium (2-15ha),forest,high,55,estimated,0.44,500,2.666666667,NA,10,10 Barriales,Bees,6,active,30,180,corresponding author(s)
+Obregon,Obregon,Obregon et al. 2021,lulo' or 'naranjilla',Essential (90-100%),Medium (2-15ha),forest,high,10,estimated,0.27,500,5,NA,10,2 Mundo viejo ,Bees,6,active,30,180,corresponding author(s)
+Obregon,Obregon,Obregon et al. 2021,lulo' or 'naranjilla',Essential (90-100%),Medium (2-15ha),forest,high,0,estimated,0.15,500,4,NA,10,3 Chuyagua,Bees,6,active,30,180,corresponding author(s)
+Obregon,Obregon,Obregon et al. 2021,lulo' or 'naranjilla',Essential (90-100%),Medium (2-15ha),forest,high,50,estimated,0.46,500,6,NA,10,4 Teguita baja,Bees,6,active,30,180,corresponding author(s)
+Obregon,Obregon,Obregon et al. 2021,lulo' or 'naranjilla',Essential (90-100%),Medium (2-15ha),forest,high,23,estimated,0.62,500,7.333333333,NA,10,5 Teguita baja,Bees,6,active,30,180,corresponding author(s)
+Obregon,Obregon,Obregon et al. 2021,lulo' or 'naranjilla',Essential (90-100%),Medium (2-15ha),forest,high,0,estimated,0.21,500,4.333333333,NA,10,6 Barriales,Bees,6,active,30,180,corresponding author(s)
+Obregon,Obregon,Obregon et al. 2021,lulo' or 'naranjilla',Essential (90-100%),Medium (2-15ha),forest,high,70,estimated,0.29,500,3.666666667,NA,10,7 Centro Sur,Bees,6,active,30,180,corresponding author(s)
+Obregon,Obregon,Obregon et al. 2021,lulo' or 'naranjilla',Essential (90-100%),Medium (2-15ha),forest,high,30,estimated,0.27,500,4,NA,10,8 Centro Norte,Bees,6,active,30,180,corresponding author(s)
+Obregon,Obregon,Obregon et al. 2021,lulo' or 'naranjilla',Essential (90-100%),Medium (2-15ha),forest,high,0,estimated,0.38,500,3,NA,10,9 Chuyagua,Bees,6,active,30,180,corresponding author(s)
+Schrader,Schrader,Schrader et al. 2018,"Rice, sweet potato, petchay, cucurbits",NA,Small (<2ha),other,low,5,estimated,NA,NA,3,2,10,Bocos (coonected),Bees,4,active,15,60,corresponding author(s)
+Schrader,Schrader,Schrader et al. 2018,"Rice, sweet potato, petchay, cucurbits",NA,Small (<2ha),other,low,30,estimated,NA,NA,2,2,10,Bocos (isolated),Bees,4,active,15,60,corresponding author(s)
+Schrader,Schrader,Schrader et al. 2018,"Rice, sweet potato, petchay, cucurbits",NA,Small (<2ha),other,low,0,estimated,NA,NA,5,5,10,Cab«uy (connected),Bees,4,active,15,60,corresponding author(s)
+Schrader,Schrader,Schrader et al. 2018,"Rice, sweet potato, petchay, cucurbits",NA,Small (<2ha),other,low,50,estimated,NA,NA,4,3,10,Cab«uy (isolated),Bees,4,active,15,60,corresponding author(s)
+Schrader,Schrader,Schrader et al. 2018,"Rice, sweet potato, petchay, cucurbits",NA,Small (<2ha),other,low,0,estimated,NA,NA,6,5,10,Guihob (connected),Bees,4,active,15,60,corresponding author(s)
+Schrader,Schrader,Schrader et al. 2018,"Rice, sweet potato, petchay, cucurbits",NA,Small (<2ha),other,low,75,estimated,NA,NA,2,2,10,Guihob (isolated),Bees,4,active,15,60,corresponding author(s)
+Schrader,Schrader,Schrader et al. 2018,"Rice, sweet potato, petchay, cucurbits",NA,Small (<2ha),other,low,0,estimated,NA,NA,4,3,10,Habbang (connected),Bees,4,active,15,60,corresponding author(s)
+Schrader,Schrader,Schrader et al. 2018,"Rice, sweet potato, petchay, cucurbits",NA,Small (<2ha),other,low,50,estimated,NA,NA,3,2,10,Habbang (isolated),Bees,4,active,15,60,corresponding author(s)
+Schrader,Schrader,Schrader et al. 2018,"Rice, sweet potato, petchay, cucurbits",NA,Small (<2ha),other,low,10,estimated,NA,NA,7,6,10,Ibayong (connected),Bees,4,active,15,60,corresponding author(s)
+Schrader,Schrader,Schrader et al. 2018,"Rice, sweet potato, petchay, cucurbits",NA,Small (<2ha),other,low,85,estimated,NA,NA,1,0,10,Ibayong (isolated),Bees,4,active,15,60,corresponding author(s)
+Schrader,Schrader,Schrader et al. 2018,"Rice, sweet potato, petchay, cucurbits",NA,Small (<2ha),other,low,0,estimated,NA,NA,5,4,10,Lubbun (connected),Bees,4,active,15,60,corresponding author(s)
+Schrader,Schrader,Schrader et al. 2018,"Rice, sweet potato, petchay, cucurbits",NA,Small (<2ha),other,low,40,estimated,NA,NA,2,1,10,Lubbun (isolated),Bees,4,active,15,60,corresponding author(s)
+Schrader,Schrader,Schrader et al. 2018,"Rice, sweet potato, petchay, cucurbits",NA,Small (<2ha),other,low,0,estimated,NA,NA,2,4,10,Poitan A (connected),Bees,4,active,15,60,corresponding author(s)
+Schrader,Schrader,Schrader et al. 2018,"Rice, sweet potato, petchay, cucurbits",NA,Small (<2ha),other,low,90,estimated,NA,NA,3,2,10,Poitan A (isolated),Bees,4,active,15,60,corresponding author(s)
+Schrader,Schrader,Schrader et al. 2018,"Rice, sweet potato, petchay, cucurbits",NA,Small (<2ha),other,low,15,estimated,NA,NA,4,2,10,Poitan B (connected),Bees,4,active,15,60,corresponding author(s)
+Schrader,Schrader,Schrader et al. 2018,"Rice, sweet potato, petchay, cucurbits",NA,Small (<2ha),other,low,55,estimated,NA,NA,3,3,10,Poitan B (isolated),Bees,4,active,15,60,corresponding author(s)
+Schrader,Schrader,Schrader et al. 2018,"Rice, sweet potato, petchay, cucurbits",NA,Small (<2ha),other,low,5,estimated,NA,NA,5,4,10,Pugo (connected),Bees,4,active,15,60,corresponding author(s)
+Schrader,Schrader,Schrader et al. 2018,"Rice, sweet potato, petchay, cucurbits",NA,Small (<2ha),other,low,80,estimated,NA,NA,3,2,10,Pugo (isolated),Bees,4,active,15,60,corresponding author(s)
+SeverianoGaleana,SeverianoGaleana,Severiano-Galeana et al. 2024,Mango,Great (40-90%),6,forest,high,913.57,reported,NA,NA,3,NA,24,aldo,Insecta,18,active,15,270,open access data (https://figshare.com/articles/dataset/Dataset_forest_mango_Ataulfo/24540940/1?file=43104718)
+SeverianoGaleana,SeverianoGaleana,Severiano-Galeana et al. 2024,Mango,Great (40-90%),3,forest,high,313.13,reported,NA,NA,4,NA,24,bomba_tres,Insecta,18,active,15,270,open access data (https://figshare.com/articles/dataset/Dataset_forest_mango_Ataulfo/24540940/1?file=43104718)
+SeverianoGaleana,SeverianoGaleana,Severiano-Galeana et al. 2024,Mango,Great (40-90%),2,forest,high,496.75,reported,NA,NA,3,NA,24,chivos,Insecta,18,active,15,270,open access data (https://figshare.com/articles/dataset/Dataset_forest_mango_Ataulfo/24540940/1?file=43104718)
+SeverianoGaleana,SeverianoGaleana,Severiano-Galeana et al. 2024,Mango,Great (40-90%),6,forest,high,1007.66,reported,NA,NA,2,NA,24,cornelio_dos,Insecta,18,active,15,270,open access data (https://figshare.com/articles/dataset/Dataset_forest_mango_Ataulfo/24540940/1?file=43104718)
+SeverianoGaleana,SeverianoGaleana,Severiano-Galeana et al. 2024,Mango,Great (40-90%),6,forest,high,599.56,reported,NA,NA,5,NA,24,cornelio_tres,Insecta,18,active,15,270,open access data (https://figshare.com/articles/dataset/Dataset_forest_mango_Ataulfo/24540940/1?file=43104718)
+SeverianoGaleana,SeverianoGaleana,Severiano-Galeana et al. 2024,Mango,Great (40-90%),2,forest,high,653.68,reported,NA,NA,4,NA,24,cuberto,Insecta,18,active,15,270,open access data (https://figshare.com/articles/dataset/Dataset_forest_mango_Ataulfo/24540940/1?file=43104718)
+SeverianoGaleana,SeverianoGaleana,Severiano-Galeana et al. 2024,Mango,Great (40-90%),2,forest,high,626.11,reported,NA,NA,6,NA,24,curva,Insecta,18,active,15,270,open access data (https://figshare.com/articles/dataset/Dataset_forest_mango_Ataulfo/24540940/1?file=43104718)
+SeverianoGaleana,SeverianoGaleana,Severiano-Galeana et al. 2024,Mango,Great (40-90%),1,forest,high,894.86,reported,NA,NA,9,NA,24,david_sotelo,Insecta,18,active,15,270,open access data (https://figshare.com/articles/dataset/Dataset_forest_mango_Ataulfo/24540940/1?file=43104718)
+SeverianoGaleana,SeverianoGaleana,Severiano-Galeana et al. 2024,Mango,Great (40-90%),2,forest,high,178.17,reported,NA,NA,5,NA,24,dorado,Insecta,18,active,15,270,open access data (https://figshare.com/articles/dataset/Dataset_forest_mango_Ataulfo/24540940/1?file=43104718)
+SeverianoGaleana,SeverianoGaleana,Severiano-Galeana et al. 2024,Mango,Great (40-90%),4,forest,high,380.88,reported,NA,NA,5,NA,24,gregorio,Insecta,18,active,15,270,open access data (https://figshare.com/articles/dataset/Dataset_forest_mango_Ataulfo/24540940/1?file=43104718)
+SeverianoGaleana,SeverianoGaleana,Severiano-Galeana et al. 2024,Mango,Great (40-90%),3,forest,high,2000,reported,NA,NA,1,NA,24,jesus,Insecta,18,active,15,270,open access data (https://figshare.com/articles/dataset/Dataset_forest_mango_Ataulfo/24540940/1?file=43104718)
+SeverianoGaleana,SeverianoGaleana,Severiano-Galeana et al. 2024,Mango,Great (40-90%),4,forest,high,168.35,reported,NA,NA,10,NA,24,marcelino,Insecta,18,active,15,270,open access data (https://figshare.com/articles/dataset/Dataset_forest_mango_Ataulfo/24540940/1?file=43104718)
+SeverianoGaleana,SeverianoGaleana,Severiano-Galeana et al. 2024,Mango,Great (40-90%),4,forest,high,168.34,reported,NA,NA,6,NA,24,marcelino_dos,Insecta,18,active,15,270,open access data (https://figshare.com/articles/dataset/Dataset_forest_mango_Ataulfo/24540940/1?file=43104718)
+SeverianoGaleana,SeverianoGaleana,Severiano-Galeana et al. 2024,Mango,Great (40-90%),4,forest,high,400.94,reported,NA,NA,2,NA,24,marcelino_tres,Insecta,18,active,15,270,open access data (https://figshare.com/articles/dataset/Dataset_forest_mango_Ataulfo/24540940/1?file=43104718)
+SeverianoGaleana,SeverianoGaleana,Severiano-Galeana et al. 2024,Mango,Great (40-90%),3,forest,high,700.67,reported,NA,NA,5,NA,24,margarito,Insecta,18,active,15,270,open access data (https://figshare.com/articles/dataset/Dataset_forest_mango_Ataulfo/24540940/1?file=43104718)
+SeverianoGaleana,SeverianoGaleana,Severiano-Galeana et al. 2024,Mango,Great (40-90%),3,forest,high,700.66,reported,NA,NA,5,NA,24,margarito_dos,Insecta,18,active,15,270,open access data (https://figshare.com/articles/dataset/Dataset_forest_mango_Ataulfo/24540940/1?file=43104718)
+SeverianoGaleana,SeverianoGaleana,Severiano-Galeana et al. 2024,Mango,Great (40-90%),4,forest,high,602.07,reported,NA,NA,5,NA,24,militar,Insecta,18,active,15,270,open access data (https://figshare.com/articles/dataset/Dataset_forest_mango_Ataulfo/24540940/1?file=43104718)
+SeverianoGaleana,SeverianoGaleana,Severiano-Galeana et al. 2024,Mango,Great (40-90%),2,forest,high,567.05,reported,NA,NA,13,NA,24,nuxco,Insecta,18,active,15,270,open access data (https://figshare.com/articles/dataset/Dataset_forest_mango_Ataulfo/24540940/1?file=43104718)
+SeverianoGaleana,SeverianoGaleana,Severiano-Galeana et al. 2024,Mango,Great (40-90%),4,forest,high,1464.77,reported,NA,NA,3,NA,24,nuxco_tres,Insecta,18,active,15,270,open access data (https://figshare.com/articles/dataset/Dataset_forest_mango_Ataulfo/24540940/1?file=43104718)
+SeverianoGaleana,SeverianoGaleana,Severiano-Galeana et al. 2024,Mango,Great (40-90%),3,forest,high,1024.37,reported,NA,NA,5,NA,24,profe ,Insecta,18,active,15,270,open access data (https://figshare.com/articles/dataset/Dataset_forest_mango_Ataulfo/24540940/1?file=43104718)
+SeverianoGaleana,SeverianoGaleana,Severiano-Galeana et al. 2024,Mango,Great (40-90%),2,forest,high,261.63,reported,NA,NA,6,NA,24,profe_dos,Insecta,18,active,15,270,open access data (https://figshare.com/articles/dataset/Dataset_forest_mango_Ataulfo/24540940/1?file=43104718)
+SeverianoGaleana,SeverianoGaleana,Severiano-Galeana et al. 2024,Mango,Great (40-90%),3,forest,high,262.39,reported,NA,NA,9,NA,24,san_jeronimo,Insecta,18,active,15,270,open access data (https://figshare.com/articles/dataset/Dataset_forest_mango_Ataulfo/24540940/1?file=43104718)
+SeverianoGaleana,SeverianoGaleana,Severiano-Galeana et al. 2024,Mango,Great (40-90%),3,forest,high,479.25,reported,NA,NA,6,NA,24,san_jeronimo_dos,Insecta,18,active,15,270,open access data (https://figshare.com/articles/dataset/Dataset_forest_mango_Ataulfo/24540940/1?file=43104718)
+SeverianoGaleana,SeverianoGaleana,Severiano-Galeana et al. 2024,Mango,Great (40-90%),1,forest,high,52.22,reported,NA,NA,5,NA,24,vista_hermosa,Insecta,18,active,15,270,open access data (https://figshare.com/articles/dataset/Dataset_forest_mango_Ataulfo/24540940/1?file=43104718)
+Sitotaw,Sitotaw,Sitotaw et al. 2022,Coffee,Modest (10-40%),0.6,forest,low,200,reported,NA,NA,9,8,72,Giyorgis-06,Insecta,2,active,15,30,corresponding author(s)
+Sitotaw,Sitotaw,Sitotaw et al. 2022,Coffee,Modest (10-40%),0.6,forest,low,500,reported,NA,NA,8,7,72,Giyorgis-06,Insecta,2,active,15,30,corresponding author(s)
+Sitotaw,Sitotaw,Sitotaw et al. 2022,Coffee,Modest (10-40%),0.6,forest,low,1000,reported,NA,NA,6,5,72,Giyorgis-06,Insecta,2,active,15,30,corresponding author(s)
+Sitotaw,Sitotaw,Sitotaw et al. 2022,Coffee,Modest (10-40%),0.6,forest,low,1500,reported,NA,NA,6,5,72,Giyorgis-06,Insecta,2,active,15,30,corresponding author(s)
+Sitotaw,Sitotaw,Sitotaw et al. 2022,Coffee,Modest (10-40%),0.5,forest,low,200,reported,NA,NA,9,8,72,ZegeTek-16,Insecta,2,active,15,30,corresponding author(s)
+Sitotaw,Sitotaw,Sitotaw et al. 2022,Coffee,Modest (10-40%),0.5,forest,low,500,reported,NA,NA,7,6,72,ZegeTek-16,Insecta,2,active,15,30,corresponding author(s)
+Sitotaw,Sitotaw,Sitotaw et al. 2022,Coffee,Modest (10-40%),0.5,forest,low,1000,reported,NA,NA,6,5,72,ZegeTek-16,Insecta,2,active,15,30,corresponding author(s)
+Sitotaw,Sitotaw,Sitotaw et al. 2022,Coffee,Modest (10-40%),0.5,forest,low,1500,reported,NA,NA,6,5,72,ZegeTek-16,Insecta,2,active,15,30,corresponding author(s)
+Sitotaw,Sitotaw,Sitotaw et al. 2022,Coffee,Modest (10-40%),0.5,forest,low,200,reported,NA,NA,7,6,72,ZegeUra-17,Insecta,2,active,15,30,corresponding author(s)
+Sitotaw,Sitotaw,Sitotaw et al. 2022,Coffee,Modest (10-40%),0.5,forest,low,500,reported,NA,NA,7,6,72,ZegeUra-17,Insecta,2,active,15,30,corresponding author(s)
+Sitotaw,Sitotaw,Sitotaw et al. 2022,Coffee,Modest (10-40%),0.5,forest,low,1000,reported,NA,NA,6,5,72,ZegeUra-17,Insecta,2,active,15,30,corresponding author(s)
+Sitotaw,Sitotaw,Sitotaw et al. 2022,Coffee,Modest (10-40%),0.7,forest,low,200,reported,NA,NA,9,8,72,ZegeMedh-18,Insecta,2,active,15,30,corresponding author(s)
+Sitotaw,Sitotaw,Sitotaw et al. 2022,Coffee,Modest (10-40%),0.7,forest,low,500,reported,NA,NA,7,6,72,ZegeMedh-18,Insecta,2,active,15,30,corresponding author(s)
+Sitotaw,Sitotaw,Sitotaw et al. 2022,Coffee,Modest (10-40%),0.7,forest,low,1000,reported,NA,NA,6,5,72,ZegeMedh-18,Insecta,2,active,15,30,corresponding author(s)
+Sitotaw,Sitotaw,Sitotaw et al. 2022,Faba bean,Modest (10-40%),0.8,forest,low,200,reported,NA,NA,7,6,72,Debresina-01,Insecta,2,active,15,30,corresponding author(s)
+Sitotaw,Sitotaw,Sitotaw et al. 2022,Faba bean,Modest (10-40%),0.8,forest,low,500,reported,NA,NA,7,5,72,Debresina-01,Insecta,2,active,15,30,corresponding author(s)
+Sitotaw,Sitotaw,Sitotaw et al. 2022,Faba bean,Modest (10-40%),0.8,forest,low,1000,reported,NA,NA,6,5,72,Debresina-01,Insecta,2,active,15,30,corresponding author(s)
+Sitotaw,Sitotaw,Sitotaw et al. 2022,Faba bean,Modest (10-40%),0.8,forest,low,1500,reported,NA,NA,5,4,72,Debresina-01,Insecta,2,active,15,30,corresponding author(s)
+Sitotaw,Sitotaw,Sitotaw et al. 2022,Faba bean,Modest (10-40%),0.8,forest,low,200,reported,NA,NA,7,6,72,Silassie-03,Insecta,2,active,15,30,corresponding author(s)
+Sitotaw,Sitotaw,Sitotaw et al. 2022,Faba bean,Modest (10-40%),0.8,forest,low,500,reported,NA,NA,7,6,72,Silassie-03,Insecta,2,active,15,30,corresponding author(s)
+Sitotaw,Sitotaw,Sitotaw et al. 2022,Faba bean,Modest (10-40%),0.8,forest,low,1000,reported,NA,NA,7,6,72,Silassie-03,Insecta,2,active,15,30,corresponding author(s)
+Sitotaw,Sitotaw,Sitotaw et al. 2022,Faba bean,Modest (10-40%),1.2,forest,low,200,reported,NA,NA,7,6,72,TaraGedam-11,Insecta,2,active,15,30,corresponding author(s)
+Sitotaw,Sitotaw,Sitotaw et al. 2022,Faba bean,Modest (10-40%),1.2,forest,low,500,reported,NA,NA,7,6,72,TaraGedam-11,Insecta,2,active,15,30,corresponding author(s)
+Sitotaw,Sitotaw,Sitotaw et al. 2022,Faba bean,Modest (10-40%),1.2,forest,low,1000,reported,NA,NA,7,6,72,TaraGedam-11,Insecta,2,active,15,30,corresponding author(s)
+Sitotaw,Sitotaw,Sitotaw et al. 2022,Faba bean,Modest (10-40%),1.2,forest,low,1500,reported,NA,NA,6,5,72,TaraGedam-11,Insecta,2,active,15,30,corresponding author(s)
+Sitotaw,Sitotaw,Sitotaw et al. 2022,Faba bean,Modest (10-40%),0.9,forest,low,200,reported,NA,NA,6,5,72,TaraGedam-12,Insecta,2,active,15,30,corresponding author(s)
+Sitotaw,Sitotaw,Sitotaw et al. 2022,Faba bean,Modest (10-40%),0.9,forest,low,500,reported,NA,NA,6,5,72,TaraGedam-12,Insecta,2,active,15,30,corresponding author(s)
+Sitotaw,Sitotaw,Sitotaw et al. 2022,Faba bean,Modest (10-40%),0.9,forest,low,1000,reported,NA,NA,5,4,72,TaraGedam-12,Insecta,2,active,15,30,corresponding author(s)
+Sitotaw,Sitotaw,Sitotaw et al. 2022,Faba bean,Modest (10-40%),0.9,forest,low,1500,reported,NA,NA,3,3,72,TaraGedam-12,Insecta,2,active,15,30,corresponding author(s)
+Sitotaw,Sitotaw,Sitotaw et al. 2022,Faba bean,Modest (10-40%),1.2,forest,low,200,reported,NA,NA,6,5,72,TaraKmihret-13,Insecta,2,active,15,30,corresponding author(s)
+Sitotaw,Sitotaw,Sitotaw et al. 2022,Faba bean,Modest (10-40%),1.2,forest,low,500,reported,NA,NA,6,5,72,TaraKmihret-13,Insecta,2,active,15,30,corresponding author(s)
+Sitotaw,Sitotaw,Sitotaw et al. 2022,Faba bean,Modest (10-40%),1.2,forest,low,1000,reported,NA,NA,6,5,72,TaraKmihret-13,Insecta,2,active,15,30,corresponding author(s)
+Sitotaw,Sitotaw,Sitotaw et al. 2022,Faba bean,Modest (10-40%),1.2,forest,low,1500,reported,NA,NA,5,4,72,TaraKmihret-13,Insecta,2,active,15,30,corresponding author(s)
+Sitotaw,Sitotaw,Sitotaw et al. 2022,Field pea,Little (0-10%),1,forest,low,200,reported,NA,NA,7,6,72,Iyesus-02,Insecta,2,active,15,30,corresponding author(s)
+Sitotaw,Sitotaw,Sitotaw et al. 2022,Field pea,Little (0-10%),1,forest,low,500,reported,NA,NA,7,6,72,Iyesus-02,Insecta,2,active,15,30,corresponding author(s)
+Sitotaw,Sitotaw,Sitotaw et al. 2022,Field pea,Little (0-10%),1,forest,low,1000,reported,NA,NA,7,6,72,Iyesus-02,Insecta,2,active,15,30,corresponding author(s)
+Sitotaw,Sitotaw,Sitotaw et al. 2022,Field pea,Little (0-10%),0.8,forest,low,200,reported,NA,NA,5,5,72,Zahara-14,Insecta,2,active,15,30,corresponding author(s)
+Sitotaw,Sitotaw,Sitotaw et al. 2022,Field pea,Little (0-10%),0.8,forest,low,500,reported,NA,NA,5,4,72,Zahara-14,Insecta,2,active,15,30,corresponding author(s)
+Sitotaw,Sitotaw,Sitotaw et al. 2022,Field pea,Little (0-10%),0.8,forest,low,1000,reported,NA,NA,5,4,72,Zahara-14,Insecta,2,active,15,30,corresponding author(s)
+Sitotaw,Sitotaw,Sitotaw et al. 2022,Field pea,Little (0-10%),0.8,forest,low,1500,reported,NA,NA,4,3,72,Zahara-14,Insecta,2,active,15,30,corresponding author(s)
+Sitotaw,Sitotaw,Sitotaw et al. 2022,Mango,Great (40-90%),0.5,forest,low,200,reported,NA,NA,7,6,72,Kota-04,Insecta,2,active,15,30,corresponding author(s)
+Sitotaw,Sitotaw,Sitotaw et al. 2022,Mango,Great (40-90%),0.5,forest,low,500,reported,NA,NA,7,6,72,Kota-04,Insecta,2,active,15,30,corresponding author(s)
+Sitotaw,Sitotaw,Sitotaw et al. 2022,Mango,Great (40-90%),0.5,forest,low,1000,reported,NA,NA,7,6,72,Kota-04,Insecta,2,active,15,30,corresponding author(s)
+Sitotaw,Sitotaw,Sitotaw et al. 2022,Mango,Great (40-90%),0.5,forest,low,1500,reported,NA,NA,6,5,72,Kota-04,Insecta,2,active,15,30,corresponding author(s)
+Sitotaw,Sitotaw,Sitotaw et al. 2022,Mango,Great (40-90%),0.5,forest,low,200,reported,NA,NA,8,7,72,Jega-05,Insecta,2,active,15,30,corresponding author(s)
+Sitotaw,Sitotaw,Sitotaw et al. 2022,Mango,Great (40-90%),0.5,forest,low,500,reported,NA,NA,7,6,72,Jega-05,Insecta,2,active,15,30,corresponding author(s)
+Sitotaw,Sitotaw,Sitotaw et al. 2022,Mango,Great (40-90%),0.5,forest,low,1000,reported,NA,NA,7,6,72,Jega-05,Insecta,2,active,15,30,corresponding author(s)
+Sitotaw,Sitotaw,Sitotaw et al. 2022,Mango,Great (40-90%),0.5,forest,low,200,reported,NA,NA,8,5,72,Weba-07,Insecta,2,active,15,30,corresponding author(s)
+Sitotaw,Sitotaw,Sitotaw et al. 2022,Mango,Great (40-90%),0.5,forest,low,500,reported,NA,NA,8,7,72,Weba-07,Insecta,2,active,15,30,corresponding author(s)
+Sitotaw,Sitotaw,Sitotaw et al. 2022,Mango,Great (40-90%),0.5,forest,low,1000,reported,NA,NA,6,5,72,Weba-07,Insecta,2,active,15,30,corresponding author(s)
+Sitotaw,Sitotaw,Sitotaw et al. 2022,Mango,Great (40-90%),0.5,forest,low,1500,reported,NA,NA,5,5,72,Weba-07,Insecta,2,active,15,30,corresponding author(s)
+Sitotaw,Sitotaw,Sitotaw et al. 2022,Mango,Great (40-90%),0.7,forest,low,200,reported,NA,NA,7,6,72,Weba-08,Insecta,2,active,15,30,corresponding author(s)
+Sitotaw,Sitotaw,Sitotaw et al. 2022,Mango,Great (40-90%),0.7,forest,low,500,reported,NA,NA,8,7,72,Weba-08,Insecta,2,active,15,30,corresponding author(s)
+Sitotaw,Sitotaw,Sitotaw et al. 2022,Mango,Great (40-90%),0.7,forest,low,1000,reported,NA,NA,5,4,72,Weba-08,Insecta,2,active,15,30,corresponding author(s)
+Sitotaw,Sitotaw,Sitotaw et al. 2022,Mango,Great (40-90%),0.7,forest,low,1500,reported,NA,NA,5,4,72,Weba-08,Insecta,2,active,15,30,corresponding author(s)
+Sitotaw,Sitotaw,Sitotaw et al. 2022,Mango,Great (40-90%),0.5,forest,low,200,reported,NA,NA,7,6,72,Arsema-09,Insecta,2,active,15,30,corresponding author(s)
+Sitotaw,Sitotaw,Sitotaw et al. 2022,Mango,Great (40-90%),0.5,forest,low,500,reported,NA,NA,7,6,72,Arsema-09,Insecta,2,active,15,30,corresponding author(s)
+Sitotaw,Sitotaw,Sitotaw et al. 2022,Mango,Great (40-90%),0.5,forest,low,1000,reported,NA,NA,6,5,72,Arsema-09,Insecta,2,active,15,30,corresponding author(s)
+Sitotaw,Sitotaw,Sitotaw et al. 2022,Mango,Great (40-90%),0.8,forest,low,200,reported,NA,NA,9,8,72,MedAlem-10,Insecta,2,active,15,30,corresponding author(s)
+Sitotaw,Sitotaw,Sitotaw et al. 2022,Mango,Great (40-90%),0.8,forest,low,500,reported,NA,NA,7,6,72,MedAlem-10,Insecta,2,active,15,30,corresponding author(s)
+Sitotaw,Sitotaw,Sitotaw et al. 2022,Mango,Great (40-90%),0.8,forest,low,1000,reported,NA,NA,4,3,72,MedAlem-10,Insecta,2,active,15,30,corresponding author(s)
+Sitotaw,Sitotaw,Sitotaw et al. 2022,Mango,Great (40-90%),0.8,forest,low,1500,reported,NA,NA,3,2,72,MedAlem-10,Insecta,2,active,15,30,corresponding author(s)
+Sitotaw,Sitotaw,Sitotaw et al. 2022,Mango,Great (40-90%),0.5,forest,low,200,reported,NA,NA,8,6,72,Zahara-15,Insecta,2,active,15,30,corresponding author(s)
+Sitotaw,Sitotaw,Sitotaw et al. 2022,Mango,Great (40-90%),0.5,forest,low,500,reported,NA,NA,6,5,72,Zahara-15,Insecta,2,active,15,30,corresponding author(s)
+Sitotaw,Sitotaw,Sitotaw et al. 2022,Mango,Great (40-90%),0.5,forest,low,1000,reported,NA,NA,6,5,72,Zahara-15,Insecta,2,active,15,30,corresponding author(s)
+Sitotaw,Sitotaw,Sitotaw et al. 2022,Mango,Great (40-90%),0.5,forest,low,1500,reported,NA,NA,5,4,72,Zahara-15,Insecta,2,active,15,30,corresponding author(s)
+Sitotaw,Sitotaw,Sitotaw et al. 2022,Other land cover,NA,0.4,forest,low,1500,reported,NA,NA,3,2,72,Iyesus-02,Insecta,2,active,15,30,corresponding author(s)
+Sitotaw,Sitotaw,Sitotaw et al. 2022,Other land cover,NA,0.5,forest,low,1500,reported,NA,NA,3,2,72,Silassie-03,Insecta,2,active,15,30,corresponding author(s)
+Sitotaw,Sitotaw,Sitotaw et al. 2022,Other land cover,NA,1,forest,low,1500,reported,NA,NA,3,2,72,Jega-05,Insecta,2,active,15,30,corresponding author(s)
+Sitotaw,Sitotaw,Sitotaw et al. 2022,Other land cover,NA,1,forest,low,1500,reported,NA,NA,3,2,72,Arsema-09,Insecta,2,active,15,30,corresponding author(s)
+Sitotaw,Sitotaw,Sitotaw et al. 2022,Other land cover,NA,0.8,forest,low,1500,reported,NA,NA,3,2,72,ZegeUra-17,Insecta,2,active,15,30,corresponding author(s)
+Sitotaw,Sitotaw,Sitotaw et al. 2022,Other land cover,NA,1.2,forest,low,1500,reported,NA,NA,2,1,72,ZegeMedh-18,Insecta,2,active,15,30,corresponding author(s)
+Sritongchuay,Sritongchuay,Sritongchuay et al. 2019,NA,NA,Medium (2-15 ha),forest,low,6590,estimated,20.68711271,4000,131,NA,20,KBT_far,Insecta,12,active,15,300,corresponding author(s)
+Sritongchuay,Sritongchuay,Sritongchuay et al. 2019,NA,NA,Medium (2-15 ha),forest,low,948,estimated,70.11662246,4000,85,NA,20,KBT_near,Insecta,12,active,15,300,corresponding author(s)
+Sritongchuay,Sritongchuay,Sritongchuay et al. 2019,NA,NA,Medium (2-15 ha),forest,low,3620,estimated,59.53807757,4000,93,NA,20,KH_far,Insecta,12,active,15,300,corresponding author(s)
+Sritongchuay,Sritongchuay,Sritongchuay et al. 2019,NA,NA,Medium (2-15 ha),forest,low,1217,estimated,39.75441866,4000,54,NA,20,KH_near,Insecta,12,active,15,300,corresponding author(s)
+Sritongchuay,Sritongchuay,Sritongchuay et al. 2019,NA,NA,Medium (2-15 ha),forest,low,7436,estimated,5.532802309,4000,164,NA,20,KKW_far,Insecta,12,active,15,300,corresponding author(s)
+Sritongchuay,Sritongchuay,Sritongchuay et al. 2019,NA,NA,Medium (2-15 ha),forest,low,743,estimated,85.2232743,4000,54,NA,20,KKW_near,Insecta,12,active,15,300,corresponding author(s)
+Sritongchuay,Sritongchuay,Sritongchuay et al. 2019,NA,NA,Medium (2-15 ha),forest,low,5717,estimated,15.71687078,4000,102,NA,20,KL _far,Insecta,12,active,15,300,corresponding author(s)
+Sritongchuay,Sritongchuay,Sritongchuay et al. 2019,NA,NA,Medium (2-15 ha),forest,low,1563,estimated,77.79309073,4000,78,NA,20,KL _near,Insecta,12,active,15,300,corresponding author(s)
+Sritongchuay,Sritongchuay,Sritongchuay et al. 2019,NA,NA,Medium (2-15 ha),forest,low,7351,estimated,38.83114438,4000,104,NA,20,KNH_far,Insecta,12,active,15,300,corresponding author(s)
+Sritongchuay,Sritongchuay,Sritongchuay et al. 2019,NA,NA,Medium (2-15 ha),forest,low,684,estimated,84.28326517,4000,61,NA,20,KNH_near,Insecta,12,active,15,300,corresponding author(s)
+Sritongchuay,Sritongchuay,Sritongchuay et al. 2019,NA,NA,Medium (2-15 ha),forest,low,7384,estimated,8.581366226,4000,123,NA,20,KNK_far,Insecta,12,active,15,300,corresponding author(s)
+Sritongchuay,Sritongchuay,Sritongchuay et al. 2019,NA,NA,Medium (2-15 ha),forest,low,755,estimated,0,4000,39,NA,20,KNK_near,Insecta,12,active,15,300,corresponding author(s)
+Sritongchuay,Sritongchuay,Sritongchuay et al. 2019,NA,NA,Medium (2-15 ha),forest,low,7732,estimated,6.509356506,4000,111,NA,20,KP_far,Insecta,12,active,15,300,corresponding author(s)
+Sritongchuay,Sritongchuay,Sritongchuay et al. 2019,NA,NA,Medium (2-15 ha),forest,low,1022,estimated,55.25084826,4000,68,NA,20,KP_near,Insecta,12,active,15,300,corresponding author(s)
+Sritongchuay,Sritongchuay,Sritongchuay et al. 2019,NA,NA,Medium (2-15 ha),forest,low,7923,estimated,53.79793598,4000,97,NA,20,LK_far,Insecta,12,active,15,300,corresponding author(s)
+Sritongchuay,Sritongchuay,Sritongchuay et al. 2019,NA,NA,Medium (2-15 ha),forest,low,935,estimated,55.53403088,4000,93,NA,20,LK_near,Insecta,12,active,15,300,corresponding author(s)
+Sritongchuay,Sritongchuay,Sritongchuay et al. 2019,NA,NA,Medium (2-15 ha),forest,low,7182,estimated,22.66480012,4000,99,NA,20,TB_far,Insecta,12,active,15,300,corresponding author(s)
+Sritongchuay,Sritongchuay,Sritongchuay et al. 2019,NA,NA,Medium (2-15 ha),forest,low,690,estimated,58.70879393,4000,72,NA,20,TB_near,Insecta,12,active,15,300,corresponding author(s)
+Sritongchuay,Sritongchuay,Sritongchuay et al. 2019,NA,NA,Medium (2-15 ha),forest,low,9160,estimated,31.87117557,4000,120,NA,20,TNC_far,Insecta,12,active,15,300,corresponding author(s)
+Sritongchuay,Sritongchuay,Sritongchuay et al. 2019,NA,NA,Medium (2-15 ha),forest,low,595,estimated,65.80682036,4000,64,NA,20,TNC_near,Insecta,12,active,15,300,corresponding author(s)
+Tangtorwongsakul,Tangtorwongsakul,Tangtorwongsakul et al. 2017,mango,Great (40-90%),4.731,other,high,106,estimated,0.334352701,1000,11,11,24,Site17,Insecta,2,mixed,120 (visual counts) + 480 (pan traps),600,corresponding author(s)
+Tangtorwongsakul,Tangtorwongsakul,Tangtorwongsakul et al. 2017,mango,Great (40-90%),1.451,other,high,290,estimated,0.207220125,1000,3,3,24,Site06,Insecta,2,mixed,120 (visual counts) + 480 (pan traps),600,corresponding author(s)
+Tangtorwongsakul,Tangtorwongsakul,Tangtorwongsakul et al. 2017,mango,Great (40-90%),1.0914,other,high,390,estimated,0.014851485,1000,8,8,24,Site02,Insecta,2,mixed,120 (visual counts) + 480 (pan traps),600,corresponding author(s)
+Tangtorwongsakul,Tangtorwongsakul,Tangtorwongsakul et al. 2017,mango,Great (40-90%),1.0095,other,high,400,estimated,0.162371133,1000,8,8,24,Site01,Insecta,2,mixed,120 (visual counts) + 480 (pan traps),600,corresponding author(s)
+Tangtorwongsakul,Tangtorwongsakul,Tangtorwongsakul et al. 2017,mango,Great (40-90%),2.0519,other,high,780,estimated,0.169890664,1000,6,6,24,Site16,Insecta,2,mixed,120 (visual counts) + 480 (pan traps),600,corresponding author(s)
+Tangtorwongsakul,Tangtorwongsakul,Tangtorwongsakul et al. 2017,mango,Great (40-90%),1.135,other,high,1150,estimated,0.032669674,1000,5,5,24,Site12,Insecta,2,mixed,120 (visual counts) + 480 (pan traps),600,corresponding author(s)
+Tangtorwongsakul,Tangtorwongsakul,Tangtorwongsakul et al. 2017,mango,Great (40-90%),1.686,other,high,1200,estimated,0.149999999,1000,4,4,24,Site14,Insecta,2,mixed,120 (visual counts) + 480 (pan traps),600,corresponding author(s)
+Tangtorwongsakul,Tangtorwongsakul,Tangtorwongsakul et al. 2017,mango,Great (40-90%),4.982,other,high,1520,estimated,0.043551772,1000,5,5,24,Site13,Insecta,2,mixed,120 (visual counts) + 480 (pan traps),600,corresponding author(s)
+Tangtorwongsakul,Tangtorwongsakul,Tangtorwongsakul et al. 2017,mango,Great (40-90%),2.131,other,high,1560,estimated,0.135186596,1000,6,6,24,Site18,Insecta,2,mixed,120 (visual counts) + 480 (pan traps),600,corresponding author(s)
+Tangtorwongsakul,Tangtorwongsakul,Tangtorwongsakul et al. 2017,mango,Great (40-90%),10.023,other,high,1800,estimated,0.01754386,1000,3,3,24,Site04,Insecta,2,mixed,120 (visual counts) + 480 (pan traps),600,corresponding author(s)
+Tangtorwongsakul,Tangtorwongsakul,Tangtorwongsakul et al. 2017,mango,Great (40-90%),3.546,other,high,1900,estimated,0.09825998,1000,14,14,24,Site10,Insecta,2,mixed,120 (visual counts) + 480 (pan traps),600,corresponding author(s)
+Tangtorwongsakul,Tangtorwongsakul,Tangtorwongsakul et al. 2017,mango,Great (40-90%),2.7488,other,high,1990,estimated,0.045000001,1000,5,5,24,Site19,Insecta,2,mixed,120 (visual counts) + 480 (pan traps),600,corresponding author(s)
+Tangtorwongsakul,Tangtorwongsakul,Tangtorwongsakul et al. 2017,mango,Great (40-90%),4.264,other,high,2280,estimated,0.059786748,1000,5,5,24,Site15,Insecta,2,mixed,120 (visual counts) + 480 (pan traps),600,corresponding author(s)
+Tangtorwongsakul,Tangtorwongsakul,Tangtorwongsakul et al. 2017,mango,Great (40-90%),1.161,other,high,2295,estimated,0.190784463,1000,14,14,24,Site07,Insecta,2,mixed,120 (visual counts) + 480 (pan traps),600,corresponding author(s)
+Tangtorwongsakul,Tangtorwongsakul,Tangtorwongsakul et al. 2017,mango,Great (40-90%),2.321,other,high,2400,estimated,0.058663936,1000,11,11,24,Site03,Insecta,2,mixed,120 (visual counts) + 480 (pan traps),600,corresponding author(s)
+Tangtorwongsakul,Tangtorwongsakul,Tangtorwongsakul et al. 2017,mango,Great (40-90%),1.143,other,high,2400,estimated,0.026118236,1000,8,8,24,Site05,Insecta,2,mixed,120 (visual counts) + 480 (pan traps),600,corresponding author(s)
+Tangtorwongsakul,Tangtorwongsakul,Tangtorwongsakul et al. 2017,mango,Great (40-90%),15.74,other,high,2595,estimated,0.115306122,1000,3,3,24,Site21,Insecta,2,mixed,120 (visual counts) + 480 (pan traps),600,corresponding author(s)
+Tangtorwongsakul,Tangtorwongsakul,Tangtorwongsakul et al. 2017,mango,Great (40-90%),4.7925,other,high,2930,estimated,0.010112543,1000,5,5,24,Site22,Insecta,2,mixed,120 (visual counts) + 480 (pan traps),600,corresponding author(s)
+Tangtorwongsakul,Tangtorwongsakul,Tangtorwongsakul et al. 2017,mango,Great (40-90%),10.706,other,high,3410,estimated,0.153084539,1000,2,2,24,Site23,Insecta,2,mixed,120 (visual counts) + 480 (pan traps),600,corresponding author(s)
+Tangtorwongsakul,Tangtorwongsakul,Tangtorwongsakul et al. 2017,mango,Great (40-90%),2.494,other,high,3900,estimated,0.160732452,1000,20,20,24,Site09,Insecta,2,mixed,120 (visual counts) + 480 (pan traps),600,corresponding author(s)
+Tangtorwongsakul,Tangtorwongsakul,Tangtorwongsakul et al. 2017,mango,Great (40-90%),1.065,other,high,4175,estimated,0.015090173,1000,12,12,24,Site11,Insecta,2,mixed,120 (visual counts) + 480 (pan traps),600,corresponding author(s)
+Tangtorwongsakul,Tangtorwongsakul,Tangtorwongsakul et al. 2017,mango,Great (40-90%),2.018,other,high,4640,estimated,0.346153846,1000,15,15,24,Site08,Insecta,2,mixed,120 (visual counts) + 480 (pan traps),600,corresponding author(s)
+Tangtorwongsakul,Tangtorwongsakul,Tangtorwongsakul et al. 2017,mango,Great (40-90%),4.3303,other,high,4680,estimated,0.028560548,1000,9,9,24,Site20,Insecta,2,mixed,120 (visual counts) + 480 (pan traps),600,corresponding author(s)
+Tangtorwongsakul,Tangtorwongsakul,Tangtorwongsakul et al. 2017,mango,Great (40-90%),7.7304,other,high,5420,estimated,0.150818246,1000,3,3,24,Site24,Insecta,2,mixed,120 (visual counts) + 480 (pan traps),600,corresponding author(s)
+Toledo,Toledo,Toledo-Hernandez et al. 2021,cocoa,Essential (90-100%),Small (<2ha),other,low,108,reported,0.36,100,0,0,18,Plot N. 1,Diptera,1,passive,1440,4320,corresponding author(s)
+Toledo,Toledo,Toledo-Hernandez et al. 2021,cocoa,Essential (90-100%),Small (<2ha),other,low,130,reported,0.49,100,3,3,18,Plot N. 2,Diptera,1,passive,1440,4320,corresponding author(s)
+Toledo,Toledo,Toledo-Hernandez et al. 2021,cocoa,Essential (90-100%),Small (<2ha),other,low,306,reported,0.71,100,4,4,18,Plot N. 3,Diptera,1,passive,1440,4320,corresponding author(s)
+Toledo,Toledo,Toledo-Hernandez et al. 2021,cocoa,Essential (90-100%),Small (<2ha),other,low,426,reported,0.45,100,7,7,18,Plot N. 4,Diptera,1,passive,1440,4320,corresponding author(s)
+Toledo,Toledo,Toledo-Hernandez et al. 2021,cocoa,Essential (90-100%),Small (<2ha),other,low,192,reported,0.7,100,4,4,18,Plot N. 5,Diptera,1,passive,1440,4320,corresponding author(s)
+Toledo,Toledo,Toledo-Hernandez et al. 2021,cocoa,Essential (90-100%),Small (<2ha),other,low,479,reported,0.79,100,6,6,18,Plot N. 6,Diptera,1,passive,1440,4320,corresponding author(s)
+Toledo,Toledo,Toledo-Hernandez et al. 2021,cocoa,Essential (90-100%),Small (<2ha),other,low,387,reported,0.69,100,3,3,18,Plot N. 7,Diptera,1,passive,1440,4320,corresponding author(s)
+Toledo,Toledo,Toledo-Hernandez et al. 2021,cocoa,Essential (90-100%),Small (<2ha),other,low,168,reported,0.56,100,2,2,18,Plot N. 8,Diptera,1,passive,1440,4320,corresponding author(s)
+Toledo,Toledo,Toledo-Hernandez et al. 2021,cocoa,Essential (90-100%),Small (<2ha),other,low,170,reported,0.85,100,5,5,18,Plot N. 9,Diptera,1,passive,1440,4320,corresponding author(s)
+Toledo,Toledo,Toledo-Hernandez et al. 2021,cocoa,Essential (90-100%),Small (<2ha),other,low,2949,reported,0.94,100,8,8,18,Plot N. 10,Diptera,1,passive,1440,4320,corresponding author(s)
+Toledo,Toledo,Toledo-Hernandez et al. 2021,cocoa,Essential (90-100%),Small (<2ha),other,low,3094,reported,0.68,100,5,5,18,Plot N. 11,Diptera,1,passive,1440,4320,corresponding author(s)
+Toledo,Toledo,Toledo-Hernandez et al. 2021,cocoa,Essential (90-100%),Small (<2ha),other,low,3169,reported,0.82,100,6,6,18,Plot N. 12,Diptera,1,passive,1440,4320,corresponding author(s)
+Toledo,Toledo,Toledo-Hernandez et al. 2021,cocoa,Essential (90-100%),Small (<2ha),other,low,1773,reported,0.64,100,3,3,18,Plot N. 13,Diptera,1,passive,1440,4320,corresponding author(s)
+Toledo,Toledo,Toledo-Hernandez et al. 2021,cocoa,Essential (90-100%),Small (<2ha),other,low,2140,reported,0.86,100,2,2,18,Plot N. 14,Diptera,1,passive,1440,4320,corresponding author(s)
+Toledo,Toledo,Toledo-Hernandez et al. 2021,cocoa,Essential (90-100%),Small (<2ha),other,low,2398,reported,0.55,100,1,1,18,Plot N. 15,Diptera,1,passive,1440,4320,corresponding author(s)
+Toledo,Toledo,Toledo-Hernandez et al. 2021,cocoa,Essential (90-100%),Small (<2ha),other,low,2842,reported,0.77,100,5,5,18,Plot N. 16,Diptera,1,passive,1440,4320,corresponding author(s)
+Toledo,Toledo,Toledo-Hernandez et al. 2021,cocoa,Essential (90-100%),Small (<2ha),other,low,2216,reported,0.62,100,6,6,18,Plot N. 17,Diptera,1,passive,1440,4320,corresponding author(s)
+Toledo,Toledo,Toledo-Hernandez et al. 2021,cocoa,Essential (90-100%),Small (<2ha),other,low,2396,reported,0.57,100,8,8,18,Plot N. 18,Diptera,1,passive,1440,4320,corresponding author(s)
+Viswanathan,Viswanathan,Viswanathan et al. 2020,NA,NA,Small (<2ha),forest,both,270,reported,NA,NA,8,8,7,Bhavani Sagar,Insecta,3,active,NA,NA,Figure 2 A
+Viswanathan,Viswanathan,Viswanathan et al. 2020,NA,NA,Small (<2ha),forest,both,2200,reported,NA,NA,3,3,7,Iduhatty,Insecta,3,active,NA,NA,Figure 2 A
+Viswanathan,Viswanathan,Viswanathan et al. 2020,NA,NA,Small (<2ha),forest,both,510,reported,NA,NA,9,9,7,Punanjanur - Kolipalya,Insecta,3,active,NA,NA,Figure 2 A
+Viswanathan,Viswanathan,Viswanathan et al. 2020,NA,NA,Small (<2ha),forest,both,1390,reported,NA,NA,5.3,5.3,7,Punanjanur - Ramapura,Insecta,3,active,NA,NA,Figure 2 A
+Viswanathan,Viswanathan,Viswanathan et al. 2020,NA,NA,Small (<2ha),forest,both,950,reported,NA,NA,7,7,7,Sirumugai,Insecta,3,active,NA,NA,Figure 2 A
+Viswanathan,Viswanathan,Viswanathan et al. 2020,NA,NA,Small (<2ha),forest,both,100,reported,NA,NA,11,11,7,Tadisallatty,Insecta,3,active,NA,NA,Figure 2 A
+Viswanathan,Viswanathan,Viswanathan et al. 2020,NA,NA,Small (<2ha),forest,both,500,reported,NA,NA,5,5,7,Thekkampatti,Insecta,3,active,NA,NA,Figure 2 A
+Vogel(a),Vogel(a),Vogel et al. 2021,pigeonpea,Modest (10-40%),Small (<2ha),other,low,10,estimated,0.265491232,1000,1,0,10,V2,Bees,3,active,10,30,corresponding author(s)
+Vogel(a),Vogel(a),Vogel et al. 2021,pigeonpea,Modest (10-40%),Small (<2ha),other,low,250,estimated,0.019010923,1000,6,5,10,V25,Bees,3,active,10,30,corresponding author(s)
+Vogel(a),Vogel(a),Vogel et al. 2021,pigeonpea,Modest (10-40%),Small (<2ha),other,low,20,estimated,0.15496052,1000,2,1,10,V26,Bees,3,active,10,30,corresponding author(s)
+Vogel(a),Vogel(a),Vogel et al. 2021,pigeonpea,Modest (10-40%),Small (<2ha),other,low,40,estimated,0.125692455,1000,2,2,10,V27,Bees,3,active,10,30,corresponding author(s)
+Vogel(a),Vogel(a),Vogel et al. 2021,pigeonpea,Modest (10-40%),Small (<2ha),other,low,25,estimated,0.064414443,1000,9,8,10,V28,Bees,3,active,10,30,corresponding author(s)
+Vogel(a),Vogel(a),Vogel et al. 2021,pigeonpea,Modest (10-40%),Small (<2ha),other,low,20,estimated,0.065501766,1000,2,1,10,V30,Bees,3,active,10,30,corresponding author(s)
+Vogel(a),Vogel(a),Vogel et al. 2021,pigeonpea,Modest (10-40%),Small (<2ha),other,low,20,estimated,0.322547771,1000,1,0,10,V31,Bees,3,active,10,30,corresponding author(s)
+Vogel(a),Vogel(a),Vogel et al. 2021,pigeonpea,Modest (10-40%),Small (<2ha),other,low,25,estimated,0.305963259,1000,4,3,10,V32,Bees,3,active,10,30,corresponding author(s)
+Vogel(a),Vogel(a),Vogel et al. 2021,pigeonpea,Modest (10-40%),Small (<2ha),other,low,140,estimated,0.282625999,1000,0,0,10,V4,Bees,3,active,10,30,corresponding author(s)
+Vogel(b),Vogel(b),Vogel et al. 2023,pumpkin,Essential (90-100%),0.5-1.4,other,low,170,estimated,48.22562367,1000,2,1,24,V1,Insecta,3,active,15,45,open access data
+Vogel(b),Vogel(b),Vogel et al. 2023,pumpkin,Essential (90-100%),0.5-1.4,other,low,25,estimated,26.24665666,1000,2,1,24,V10,Insecta,3,active,15,45,open access data
+Vogel(b),Vogel(b),Vogel et al. 2023,pumpkin,Essential (90-100%),0.5-1.4,other,low,70,estimated,33.84499036,1000,2,1,24,V11,Insecta,3,active,15,45,open access data
+Vogel(b),Vogel(b),Vogel et al. 2023,pumpkin,Essential (90-100%),0.5-1.4,other,low,80,estimated,23.41244875,1000,4,3,24,V12,Insecta,3,active,15,45,open access data
+Vogel(b),Vogel(b),Vogel et al. 2023,pumpkin,Essential (90-100%),0.5-1.4,other,low,55,estimated,23.38843977,1000,2,1,24,V13,Insecta,3,active,15,45,open access data
+Vogel(b),Vogel(b),Vogel et al. 2023,pumpkin,Essential (90-100%),0.5-1.4,other,low,12,estimated,65.44076643,1000,4,3,24,V14,Insecta,3,active,15,45,open access data
+Vogel(b),Vogel(b),Vogel et al. 2023,pumpkin,Essential (90-100%),0.5-1.4,other,low,15,estimated,22.83873584,1000,1,0,24,V15,Insecta,3,active,15,45,open access data
+Vogel(b),Vogel(b),Vogel et al. 2023,pumpkin,Essential (90-100%),0.5-1.4,other,low,NA,estimated,42.30514738,1000,4,3,24,V16,Insecta,3,active,15,45,open access data
+Vogel(b),Vogel(b),Vogel et al. 2023,pumpkin,Essential (90-100%),0.5-1.4,other,low,30,estimated,24.61051959,1000,2,1,24,V17,Insecta,3,active,15,45,open access data
+Vogel(b),Vogel(b),Vogel et al. 2023,pumpkin,Essential (90-100%),0.5-1.4,other,low,50,estimated,73.89973388,1000,3,2,24,V18,Insecta,3,active,15,45,open access data
+Vogel(b),Vogel(b),Vogel et al. 2023,pumpkin,Essential (90-100%),0.5-1.4,other,low,5,estimated,33.52842872,1000,3,3,24,V19,Insecta,3,active,15,45,open access data
+Vogel(b),Vogel(b),Vogel et al. 2023,pumpkin,Essential (90-100%),0.5-1.4,other,low,25,estimated,47.2912995,1000,4,3,24,V2,Insecta,3,active,15,45,open access data
+Vogel(b),Vogel(b),Vogel et al. 2023,pumpkin,Essential (90-100%),0.5-1.4,other,low,200,estimated,29.2875729,1000,3,2,24,V20,Insecta,3,active,15,45,open access data
+Vogel(b),Vogel(b),Vogel et al. 2023,pumpkin,Essential (90-100%),0.5-1.4,other,low,75,estimated,17.22328813,1000,2,1,24,V21,Insecta,3,active,15,45,open access data
+Vogel(b),Vogel(b),Vogel et al. 2023,pumpkin,Essential (90-100%),0.5-1.4,other,low,95,estimated,17.8849843,1000,1,0,24,V22,Insecta,3,active,15,45,open access data
+Vogel(b),Vogel(b),Vogel et al. 2023,pumpkin,Essential (90-100%),0.5-1.4,other,low,15,estimated,23.13752153,1000,1,0,24,V23,Insecta,3,active,15,45,open access data
+Vogel(b),Vogel(b),Vogel et al. 2023,pumpkin,Essential (90-100%),0.5-1.4,other,low,90,estimated,21.20518945,1000,2,1,24,V24,Insecta,3,active,15,45,open access data
+Vogel(b),Vogel(b),Vogel et al. 2023,pumpkin,Essential (90-100%),0.5-1.4,other,low,70,estimated,29.24872971,1000,5,4,24,V3,Insecta,3,active,15,45,open access data
+Vogel(b),Vogel(b),Vogel et al. 2023,pumpkin,Essential (90-100%),0.5-1.4,other,low,15,estimated,65.48812773,1000,4,3,24,V4,Insecta,3,active,15,45,open access data
+Vogel(b),Vogel(b),Vogel et al. 2023,pumpkin,Essential (90-100%),0.5-1.4,other,low,69,estimated,53.26609398,1000,3,2,24,V5,Insecta,3,active,15,45,open access data
+Vogel(b),Vogel(b),Vogel et al. 2023,pumpkin,Essential (90-100%),0.5-1.4,other,low,20,estimated,41.34371646,1000,3,2,24,V6,Insecta,3,active,15,45,open access data
+Vogel(b),Vogel(b),Vogel et al. 2023,pumpkin,Essential (90-100%),0.5-1.4,other,low,45,estimated,43.8991511,1000,6,5,24,V7,Insecta,3,active,15,45,open access data
+Vogel(b),Vogel(b),Vogel et al. 2023,pumpkin,Essential (90-100%),0.5-1.4,other,low,10,estimated,72.29734266,1000,3,2,24,V8,Insecta,3,active,15,45,open access data
+Vogel(b),Vogel(b),Vogel et al. 2023,pumpkin,Essential (90-100%),0.5-1.4,other,low,30,estimated,26.44740983,1000,1,0,24,V9,Insecta,3,active,15,45,open access data
+Wayo,Wayo,Wayo et al. 2020,"longan, mango, coconut",NA,Medium (2-15 ha),forest,low,731.25,reported,0,1000,0.5,0.5,30,PL01,Stingless Bees,2,active,10,20?,corresponding author(s)
+Wayo,Wayo,Wayo et al. 2020,"longan, mango, coconut",NA,Medium (2-15 ha),forest,low,788.14,reported,5.24,1000,0.4,0.4,30,PL02,Stingless Bees,2,active,10,20?,corresponding author(s)
+Wayo,Wayo,Wayo et al. 2020,"longan, mango, coconut",NA,Medium (2-15 ha),forest,low,1148.16,reported,1.46,1000,0.5,0.5,30,PL03,Stingless Bees,2,active,10,20?,corresponding author(s)
+Wayo,Wayo,Wayo et al. 2020,"longan, mango, coconut",NA,Medium (2-15 ha),forest,low,1152.62,reported,0,1000,0,0,30,PL04,Stingless Bees,2,active,10,20?,corresponding author(s)
+Wayo,Wayo,Wayo et al. 2020,"longan, mango, coconut",NA,Medium (2-15 ha),forest,low,1410.95,reported,18.43,1000,0,0,30,PL05,Stingless Bees,2,active,10,20?,corresponding author(s)
+Wayo,Wayo,Wayo et al. 2020,"longan, mango, coconut",NA,Medium (2-15 ha),forest,low,1465.88,reported,28.6,1000,0.75,0.75,30,PL06,Stingless Bees,2,active,10,20?,corresponding author(s)
+Wayo,Wayo,Wayo et al. 2020,"longan, mango, coconut",NA,Medium (2-15 ha),forest,low,2242.13,reported,5.72,1000,0,0,30,PL07,Stingless Bees,2,active,10,20?,corresponding author(s)
+Wayo,Wayo,Wayo et al. 2020,"longan, mango, coconut",NA,Medium (2-15 ha),forest,low,2330.01,reported,0,1000,0,0,30,PL08,Stingless Bees,2,active,10,20?,corresponding author(s)
+Wayo,Wayo,Wayo et al. 2020,"longan, mango, coconut",NA,Medium (2-15 ha),forest,low,3032.59,reported,3.43,1000,0,0,30,PL09,Stingless Bees,2,active,10,20?,corresponding author(s)
+Wayo,Wayo,Wayo et al. 2020,"longan, mango, coconut",NA,Medium (2-15 ha),forest,low,3045.69,reported,7.69,1000,0,0,30,PL10,Stingless Bees,2,active,10,20?,corresponding author(s)
+Wayo,Wayo,Wayo et al. 2020,"longan, mango, coconut",NA,Medium (2-15 ha),forest,low,0,reported,28.49,1000,1.5,1.5,30,SK01,Stingless Bees,2,active,10,20?,corresponding author(s)
+Wayo,Wayo,Wayo et al. 2020,"longan, mango, coconut",NA,Medium (2-15 ha),forest,low,45.12,reported,0,1000,4,4,30,SK02,Stingless Bees,2,active,10,20?,corresponding author(s)
+Wayo,Wayo,Wayo et al. 2020,"longan, mango, coconut",NA,Medium (2-15 ha),forest,low,79.2,reported,0,1000,2.5,2.5,30,SK03,Stingless Bees,2,active,10,20?,corresponding author(s)
+Wayo,Wayo,Wayo et al. 2020,"longan, mango, coconut",NA,Medium (2-15 ha),forest,low,101.12,reported,58.08,1000,3.15,3.15,30,SK04,Stingless Bees,2,active,10,20?,corresponding author(s)
+Wayo,Wayo,Wayo et al. 2020,"longan, mango, coconut",NA,Medium (2-15 ha),forest,low,101.94,reported,0,1000,1.5,1.5,30,SK05,Stingless Bees,2,active,10,20?,corresponding author(s)
+Wayo,Wayo,Wayo et al. 2020,"longan, mango, coconut",NA,Medium (2-15 ha),forest,low,163.95,reported,0,1000,3.5,3.5,30,SK06,Stingless Bees,2,active,10,20?,corresponding author(s)
+Wayo,Wayo,Wayo et al. 2020,"longan, mango, coconut",NA,Medium (2-15 ha),forest,low,164.78,reported,4.01,1000,2.5,2.5,30,SK07,Stingless Bees,2,active,10,20?,corresponding author(s)
+Wayo,Wayo,Wayo et al. 2020,"longan, mango, coconut",NA,Medium (2-15 ha),forest,low,191.1,reported,0,1000,2.5,2.5,30,SK08,Stingless Bees,2,active,10,20?,corresponding author(s)
+Wayo,Wayo,Wayo et al. 2020,"longan, mango, coconut",NA,Medium (2-15 ha),forest,low,191.11,reported,41.11,1000,2,2,30,SK09,Stingless Bees,2,active,10,20?,corresponding author(s)
+Wayo,Wayo,Wayo et al. 2020,"longan, mango, coconut",NA,Medium (2-15 ha),forest,low,260.89,reported,0,1000,0.25,0.25,30,SK10,Stingless Bees,2,active,10,20?,corresponding author(s)
+Wayo,Wayo,Wayo et al. 2020,"longan, mango, coconut",NA,Medium (2-15 ha),forest,low,290.79,reported,10.78,1000,0,0,30,SK11,Stingless Bees,2,active,10,20?,corresponding author(s)
+Wayo,Wayo,Wayo et al. 2020,"longan, mango, coconut",NA,Medium (2-15 ha),forest,low,455.09,reported,35.19,1000,0.5,0.5,30,SK12,Stingless Bees,2,active,10,20?,corresponding author(s)
+Wayo,Wayo,Wayo et al. 2020,"longan, mango, coconut",NA,Medium (2-15 ha),forest,low,498.03,reported,10.04,1000,0.65,0.65,30,SK13,Stingless Bees,2,active,10,20?,corresponding author(s)
+Wayo,Wayo,Wayo et al. 2020,"longan, mango, coconut",NA,Medium (2-15 ha),forest,low,533.17,reported,0,1000,2.15,2.15,30,SK14,Stingless Bees,2,active,10,20?,corresponding author(s)
+Wayo,Wayo,Wayo et al. 2020,"longan, mango, coconut",NA,Medium (2-15 ha),forest,low,575.93,reported,38.07,1000,1.5,1.5,30,SK15,Stingless Bees,2,active,10,20?,corresponding author(s)
+Wayo,Wayo,Wayo et al. 2020,"longan, mango, coconut",NA,Medium (2-15 ha),forest,low,704.24,reported,0,1000,1,1,30,SK16,Stingless Bees,2,active,10,20?,corresponding author(s)
+Wayo,Wayo,Wayo et al. 2020,"longan, mango, coconut",NA,Medium (2-15 ha),forest,low,4567.65,reported,0,1000,0.5,0.5,30,ST01,Stingless Bees,2,active,10,20?,corresponding author(s)
+Wayo,Wayo,Wayo et al. 2020,"longan, mango, coconut",NA,Medium (2-15 ha),forest,low,4688.05,reported,6.08,1000,0.65,0.65,30,ST02,Stingless Bees,2,active,10,20?,corresponding author(s)
+Wayo,Wayo,Wayo et al. 2020,"longan, mango, coconut",NA,Medium (2-15 ha),forest,low,5767.99,reported,59.45,1000,0.5,0.5,30,ST03,Stingless Bees,2,active,10,20?,corresponding author(s)
+Wayo,Wayo,Wayo et al. 2020,"longan, mango, coconut",NA,Medium (2-15 ha),forest,low,9936.99,reported,47.26,1000,0,0,30,ST04,Stingless Bees,2,active,10,20?,corresponding author(s)
