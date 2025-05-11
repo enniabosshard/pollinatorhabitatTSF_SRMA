@@ -139,7 +139,7 @@ for (study in unique_study) {
   sites <- unique(data$sites)
   distance_measure <- unique(data$distance_measure)
   max_distance <- unique(data$max_distance)
-  RoB <- unique(data$RoB)
+  #RoB <- unique(data$RoB)
   
   # Append the results to the data frame
   results <- rbind(results, data.frame(
@@ -152,8 +152,8 @@ for (study in unique_study) {
     AgrIntensity = agr_intensity,
     Sites = sites,
     DistanceMeasure = distance_measure,
-    MaxDistance = max_distance,
-    RoB = RoB
+    MaxDistance = max_distance
+    #RoB = RoB
   ))
 }
 
@@ -372,23 +372,23 @@ res.modmaxdistance
 
 ### Subgroup analysis excl studies with high RoB ###
 # Filter for medium RoB studies in the fruitset dataset
-results_mediumRoB <- subset(fruitset_es, RoB == "medium")
+# results_mediumRoB <- subset(fruitset_es, RoB == "medium")
 
 # Calculate variance for the meta-analysis
-results_mediumRoB$Variance <- results_mediumRoB$StdError^2
+# results_mediumRoB$Variance <- results_mediumRoB$StdError^2
 
 # Fit random-effects model
-res_fruitset_mediumRoB <- rma(yi = Slope, vi = Variance, data = results_mediumRoB)
-print(res_fruitset_mediumRoB)
+# res_fruitset_mediumRoB <- rma(yi = Slope, vi = Variance, data = results_mediumRoB)
+# print(res_fruitset_mediumRoB)
 
 # Create a forest plot
-forest(res_fruitset_mediumRoB,
-       slab = results_mediumRoB$Authors,                # Labels for the studies
-       xlab = "Slope",                                  # Label for the x-axis
-       xlim = c(-4, 3),                                 # Customise x-axis limits
-       refline = 0,                                     # Add reference line at 0
-       header = "Fruit set subgroup; medium Risk of Bias", # Header for the plot
-       annotate = TRUE,                                 # Add study annotations
-       ilab.xpos = -0.015,                              # Adjust position of study effect size labels
-       cex = 0.8                                        # Manage overall font size
-)
+# forest(res_fruitset_mediumRoB,
+#       slab = results_mediumRoB$Authors,                # Labels for the studies
+#       xlab = "Slope",                                  # Label for the x-axis
+#       xlim = c(-4, 3),                                 # Customise x-axis limits
+#       refline = 0,                                     # Add reference line at 0
+#       header = "Fruit set subgroup; medium Risk of Bias", # Header for the plot
+#       annotate = TRUE,                                 # Add study annotations
+#       ilab.xpos = -0.015,                              # Adjust position of study effect size labels
+#       cex = 0.8                                        # Manage overall font size
+#       )

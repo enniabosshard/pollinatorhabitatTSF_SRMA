@@ -76,7 +76,7 @@ for (report in unique_report) {
 }
 
 ############################## Fit GLM Models ###############################
-# Loop through each study to fit the GLM and store the results
+# Loop through each report to fit the GLM and store the results
 for (report in unique_report) {
   dataset_name <- paste0("A_", report)   # Construct the dataset name
   data <- get(dataset_name)
@@ -106,7 +106,7 @@ for (report in unique_report) {
 
 # Create an empty data frame to store the results
 results <- data.frame(
-  Study = character(),
+  Report = character(),
   Authors = character(),
   Slope = numeric(),
   StdError = numeric(),
@@ -140,7 +140,6 @@ for (report in unique_report) {
   p_value <- coef_summary["log(distance_m + 1)", "Pr(>|z|)"]
   
   # Extract additional information from the dataset
-  study <- unique(data$study)
   authors <- unique(data$authors)
   agr_intensity <- unique(data$agr_intensity)
   sites <- unique(data$sites)
@@ -148,11 +147,10 @@ for (report in unique_report) {
   sampling_method <- unique(data$sampling_method)
   distance_measure <- unique(data$distance_measure)
   max_distance <- unique(data$max_distance)
-  RoB <- unique(data$RoB)
+  #RoB <- unique(data$RoB)
   
   # Append the results to the data frame
   results <- rbind(results, data.frame(
-    Study = study,
     Authors = authors,
     Slope = slope,
     StdError = std_error,
@@ -162,8 +160,8 @@ for (report in unique_report) {
     Pollinator = pollinator,
     Method = sampling_method,
     DistanceMeasure = distance_measure,
-    MaxDistance = max_distance,
-    RoB = RoB
+    MaxDistance = max_distance
+    #RoB = RoB
   ))
 }
 
@@ -391,26 +389,26 @@ res.modmaxdistance
 
 ### Subgroup analysis excl studies with high RoB ###
 # Filter for medium RoB studies
-results_mediumRoB <- subset(abundance_es, RoB == "medium")
+# results_mediumRoB <- subset(abundance_es, RoB == "medium")
 
 # Calculate variance for the meta-analysis
-results_mediumRoB$Variance <- results_mediumRoB$StdError^2
+# results_mediumRoB$Variance <- results_mediumRoB$StdError^2
 
 # Fit random-effects model
-res_abundance_mediumRoB <- rma(yi = Slope, vi = Variance, data = results_mediumRoB)
-print(res_abundance_mediumRoB)
+# res_abundance_mediumRoB <- rma(yi = Slope, vi = Variance, data = results_mediumRoB)
+# print(res_abundance_mediumRoB)
 
 # Create a forest plot
-forest(res_abundance_mediumRoB,
-       slab = results_mediumRoB$Authors,                # Labels for the studies
-       xlab = "Slope",                                  # Label for the x-axis
-       xlim = c(-4, 3),                                 # Customize x-axis limits
-       refline = 0,                                     # Add reference line at 0
-       header = "Pollinator abundance subgroup; medium Risk of Bias", # Header for the plot
-       annotate = TRUE,                                 # Add study annotations
-       ilab.xpos = -0.015,                              # Adjust position of study effect size labels
-       cex = 0.8                                        # Manage overall font size
-)
+# forest(res_abundance_mediumRoB,
+#       slab = results_mediumRoB$Authors,                # Labels for the studies
+#       xlab = "Slope",                                  # Label for the x-axis
+#       xlim = c(-4, 3),                                 # Customize x-axis limits
+#       refline = 0,                                     # Add reference line at 0
+#       header = "Pollinator abundance subgroup; medium Risk of Bias", # Header for the plot
+#       annotate = TRUE,                                 # Add study annotations
+#       ilab.xpos = -0.015,                              # Adjust position of study effect size labels
+#       cex = 0.8                                        # Manage overall font size
+#       )
 
 ########################## Wild pollinators ###########################
 
@@ -418,7 +416,7 @@ forest(res_abundance_mediumRoB,
 wild_data <- df[!is.na(df$abundance_wild), ]# Filter rows with non-NA values in abundance_wild
 nrow(wild_data)
 
-# Get all individual study names
+# Get all individual report names
 unique_report_wild <- unique(wild_data$report)
 unique_report_wild
 length(unique_report_wild) #number of studies

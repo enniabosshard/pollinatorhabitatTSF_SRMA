@@ -1,28 +1,28 @@
-"Authors","Slope","StdError","PValue","AgrIntensity","Sites","Pollinator","Method","DistanceMeasure","MaxDistance","RoB"
-"Banks et al. 2013",0.0227012540167867,0.223848952387647,0.919222403665593,"high",12,"Hymenoptera","passive","estimated",305,"high"
-"Basu et al. 2016",0.019258566444947,0.060084258169326,0.748569630183245,"both",12,"Bees","passive","reported",331.43,"high"
-"Deepthi et al 2019",0.0265218850609494,0.142429507706005,0.852279606382347,"high",10,"Bees","active","reported",60,"high"
-"Enriquez et al. 2015",-0.0246149311960056,0.128190459074144,0.847727765920933,"low",10,"Bees","active","reported",239.01,"high"
-"Geeraert et al. 2020",-0.204128127327866,0.19754390705064,0.301449298680298,"low",15,"Bees","passive","estimated",390,"high"
-"Gemmill-Herren and Ochieng' 2008",-5.84953039111611e-17,0.134806577765096,1,"high",NA,"Bees","active","reported",150,"high"
-"Hansen et al. 2020",-0.340552885551804,0.168101201014141,0.0427770683224328,"high",6,"Insecta","active","reported",8676,"high"
-"Hass et al. 2018",-0.141511106439679,0.0667068833810473,0.0338892594148304,"high",16,"Bees","active","reported",255,"high"
-"Kasina et al. 2009",-0.00393146883925279,0.0590962303783258,0.946958613756376,"low",28,"Bees","active","reported",8721,"high"
-"Klein et al. 2003 a)",-0.101183925011976,0.0227307893025187,8.53106946373208e-06,"low",24,"Bees","active","reported",2500,"high"
-"Klein et al. 2003 b)",-0.0523941315017752,0.0268269075532202,0.0508143787513544,"low",15,"Bees","active","reported",1500,"high"
-"Klein 2009",-0.135919849883279,0.0325954064213275,3.04722466741506e-05,"low",24,"Bees","active","reported",1415,"high"
-"Krishnan et al. 2012",-0.0180816010659663,0.0294526930878082,0.539268109690215,NA,35,"Bees","active","reported",500,"medium"
-"Landaverde-Gonzales et al. 2017",-0.041885644829888,0.0554006458211628,0.449619363755582,"high",37,"Bees","mixed","estimated",602,"medium"
-"Li et al. 2022",0.0059663341504401,0.0258633984941459,0.817558444019765,"high",47,"Arthropods","passive","reported",100.9897414,"high"
-"Lucas-Garcia and Rosas-Guerrero, unpub",-0.13785977565451,0.109091400569793,0.20633452344134,"high",18,"Insecta","active","reported",1106.6,"high"
-"Obregon et al. 2021",-0.0207035045296389,0.0873751495058878,0.812695909707392,"high",10,"Bees","active","estimated",90,"medium"
-"Schrader et al. 2018",-0.12528597897406,0.0690159659627898,0.0694749349311976,"low",10,"Bees","active","estimated",90,"high"
-"Severiano-Galeana et al. 2024",-0.201562408353326,0.118360205170674,0.0885760075245264,"high",24,"Insecta","active","reported",2000,"medium"
-"Sitotaw et al. 2022",-0.227750388542608,0.0610995269845768,0.000193364687137785,"low",72,"Insecta","active","reported",1500,"high"
-"Sritongchuay et al. 2019",0.262441704604835,0.0396910126226756,3.78856861684823e-11,"low",20,"Insecta","active","estimated",9160,"medium"
-"Tangtorwongsakul et al. 2017",0.0789066656457119,0.124178152284049,0.525147259862195,"high",24,"Insecta","mixed","estimated",5420,"medium"
-"Toledo-Hernandez et al. 2021",0.172935773834142,0.0943154075526438,0.0667149002701974,"low",18,"Diptera","passive","reported",3169,"medium"
-"Viswanathan et al. 2020",-0.312335243256364,0.144530367762202,0.030692603841068,"both",7,"Insecta","active","reported",2200,"high"
-"Vogel et al. 2021",0.152438200582343,0.300335084663789,0.611761656539277,"low",10,"Bees","active","estimated",250,"high"
-"Vogel et al. 2023",-0.0211786020628177,0.141527897738058,0.881046599576985,"low",24,"Insecta","active","estimated",200,"medium"
-"Wayo et al. 2020",-0.282658993642204,0.0756704898654819,0.000187422500346573,"low",30,"Stingless Bees","active","reported",9936.99,"high"
+"Authors","Slope","StdError","PValue","AgrIntensity","Sites","Pollinator","Method","DistanceMeasure","MaxDistance"
+"Banks et al. 2013",0.0227012540167867,0.223848952387647,0.919222403665593,"high",12,"Hymenoptera","passive","estimated",305
+"Basu et al. 2016",0.019258566444947,0.060084258169326,0.748569630183245,"both",12,"Bees","passive","reported",331.43
+"Deepthi et al 2019",0.0265218850609494,0.142429507706005,0.852279606382347,"high",10,"Bees","active","reported",60
+"Enriquez et al. 2015",-0.0246149311960056,0.128190459074144,0.847727765920933,"low",10,"Bees","active","reported",239.01
+"Geeraert et al. 2020",-0.204128127327866,0.19754390705064,0.301449298680298,"low",15,"Bees","passive","estimated",390
+"Gemmill-Herren and Ochieng' 2008",-5.84953039111611e-17,0.134806577765096,1,"high",NA,"Bees","active","reported",150
+"Hansen et al. 2020",-0.340552885551804,0.168101201014141,0.0427770683224328,"high",6,"Insecta","active","reported",8676
+"Hass et al. 2018",-0.141511106439679,0.0667068833810473,0.0338892594148304,"high",16,"Bees","active","reported",255
+"Kasina et al. 2009",-0.00393146883925279,0.0590962303783258,0.946958613756376,"low",28,"Bees","active","reported",8721
+"Klein et al. 2003 a)",-0.101183925011976,0.0227307893025187,8.53106946373208e-06,"low",24,"Bees","active","reported",2500
+"Klein et al. 2003 b)",-0.0523941315017752,0.0268269075532202,0.0508143787513544,"low",15,"Bees","active","reported",1500
+"Klein 2009",-0.135919849883279,0.0325954064213275,3.04722466741506e-05,"low",24,"Bees","active","reported",1415
+"Krishnan et al. 2012",-0.0180816010659663,0.0294526930878082,0.539268109690215,NA,35,"Bees","active","reported",500
+"Landaverde-Gonzales et al. 2017",-0.041885644829888,0.0554006458211628,0.449619363755582,"high",37,"Bees","mixed","estimated",602
+"Li et al. 2022",0.0059663341504401,0.0258633984941459,0.817558444019765,"high",47,"Arthropods","passive","reported",100.9897414
+"Lucas-Garcia and Rosas-Guerrero, unpub",-0.13785977565451,0.109091400569793,0.20633452344134,"high",18,"Insecta","active","reported",1106.6
+"Obregon et al. 2021",-0.0207035045296389,0.0873751495058878,0.812695909707392,"high",10,"Bees","active","estimated",90
+"Schrader et al. 2018",-0.12528597897406,0.0690159659627898,0.0694749349311976,"low",10,"Bees","active","estimated",90
+"Severiano-Galeana et al. 2024",-0.201562408353326,0.118360205170674,0.0885760075245264,"high",24,"Insecta","active","reported",2000
+"Sitotaw et al. 2022",-0.227750388542608,0.0610995269845768,0.000193364687137785,"low",72,"Insecta","active","reported",1500
+"Sritongchuay et al. 2019",0.262441704604835,0.0396910126226756,3.78856861684823e-11,"low",20,"Insecta","active","estimated",9160
+"Tangtorwongsakul et al. 2017",0.0789066656457119,0.124178152284049,0.525147259862195,"high",24,"Insecta","mixed","estimated",5420
+"Toledo-Hernandez et al. 2021",0.172935773834142,0.0943154075526438,0.0667149002701974,"low",18,"Diptera","passive","reported",3169
+"Viswanathan et al. 2020",-0.312335243256364,0.144530367762202,0.030692603841068,"both",7,"Insecta","active","reported",2200
+"Vogel et al. 2021",0.152438200582343,0.300335084663789,0.611761656539277,"low",10,"Bees","active","estimated",250
+"Vogel et al. 2023",-0.0211786020628177,0.141527897738058,0.881046599576985,"low",24,"Insecta","active","estimated",200
+"Wayo et al. 2020",-0.282658993642204,0.0756704898654819,0.000187422500346573,"low",30,"Stingless Bees","active","reported",9936.99
