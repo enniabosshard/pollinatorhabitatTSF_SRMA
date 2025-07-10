@@ -113,6 +113,7 @@ results <- data.frame(
   PValue = numeric(),
   AgrIntensity = character(),
   Sites = character(),
+  Habitat = character(),
   Pollinator = character(),
   Method = character(),
   DistanceMeasure = character(),
@@ -143,6 +144,7 @@ for (report in unique_report) {
   authors <- unique(data$authors)
   agr_intensity <- unique(data$agr_intensity)
   sites <- unique(data$sites)
+  habitat <- unique(data$habitat)
   pollinator <- unique(data$pollinator)
   sampling_method <- unique(data$sampling_method)
   distance_measure <- unique(data$distance_measure)
@@ -157,6 +159,7 @@ for (report in unique_report) {
     PValue = p_value,
     AgrIntensity = agr_intensity,
     Sites = sites,
+    Habitat = habitat,
     Pollinator = pollinator,
     Method = sampling_method,
     DistanceMeasure = distance_measure,
@@ -216,7 +219,7 @@ for (report in unique_report) {
     geom_ribbon(data = smooth_distance, aes(x = distance_m, ymin = lower_CI, ymax = upper_CI), 
                 inherit.aes = FALSE, fill = "grey70", alpha = 0.4) +  # Confidence interval shading
     geom_line(data = smooth_distance, aes(x = distance_m, y = predicted), 
-              inherit.aes = FALSE, color = "blue", size = 1) +  # Smooth fitted line
+              inherit.aes = FALSE, color = "blue", linewidth = 1) +  # Smooth fitted line
     geom_point(size = 3, alpha = 0.6, colour = "black") + # Raw data points
     labs(x = "distance in m", y = "Pollinator abundance (all)", title = paste(report, "et al.")) +
     theme_minimal(base_size = 12)  # Clean theme
@@ -327,7 +330,7 @@ print(paste("Predicted % decline at 1km:", round(percentage_decline, 2), "%"))
 
 ### Moderator analysis ###
 # Summarise each moderators distribution
-moderators <- c("Method", "DistanceMeasure" , "MaxDistance", "AgrIntensity", "Pollinator") # List of moderator variables
+moderators <- c("Method", "DistanceMeasure" , "MaxDistance", "AgrIntensity", "Pollinator", "Habitat") # List of moderator variables
 
 # Use lapply to get counts for each moderator
 moderator_summaries <- lapply(moderators, function(moderator) {
@@ -340,11 +343,17 @@ names(moderator_summaries) <- moderators # Name the list elements
 moderator_summaries # Print all summaries
 
 ## Meta-analysis with individual moderators
+# Moderator analysis for agricultural intensity
 res.modintensity <- rma(Slope, Variance, mods = ~ 0 + AgrIntensity, data=abundance_es)
 res.modintensity
 
+# Moderator analysis for distance measure
 res.modpollinator <- rma(Slope, Variance, mods = ~ 0 + Pollinator, data=abundance_es)
 res.modpollinator
+
+# Moderator analysis for habitat type
+res.modhabitat <- rma(Slope, Variance, mods = ~ 0 + Habitat, data=abundance_es)
+res.modhabitat
 
 ########################## Sensitivity analyses ###########################
 
@@ -450,6 +459,7 @@ results_wild <- data.frame(
   PValue = numeric(),
   AgrIntensity = character(),
   Sites = character(),
+  Habitat = character(),
   Pollinator = character(),
   Method = character(),
   DistanceMeasure = character(),
@@ -477,6 +487,7 @@ for (report in unique_report_wild) {
   authors <- unique(data$authors)
   agr_intensity <- unique(data$agr_intensity)
   sites <- unique(data$sites)
+  habitat <- unique(data$habitat)
   pollinator <- unique(data$pollinator)
   sampling_method <- unique(data$sampling_method)
   distance_m_measure <- unique(data$distance_m_measure)
@@ -490,6 +501,7 @@ for (report in unique_report_wild) {
     PValue = p_value,
     AgrIntensity = agr_intensity,
     Sites = sites,
+    Habitat = habitat,
     Pollinator = pollinator,
     Method = sampling_method,
     DistanceMeasure = distance_measure,

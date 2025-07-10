@@ -108,6 +108,7 @@ results <- data.frame(
   PollDependency = character(),
   AgrIntensity = character(),
   Sites = character(),
+  Haibtat = character(),
   DistanceMeasure = character(),
   MaxDistance = numeric(),
   RoB = character(),
@@ -137,6 +138,7 @@ for (study in unique_study) {
   agr_intensity <- unique(data$agr_intensity)
   p_dependency <- unique(data$p_dependency)
   sites <- unique(data$sites)
+  habitat <- unique(data$habitat)
   distance_measure <- unique(data$distance_measure)
   max_distance <- unique(data$max_distance)
   #RoB <- unique(data$RoB)
@@ -151,6 +153,7 @@ for (study in unique_study) {
     PollDependency = p_dependency,
     AgrIntensity = agr_intensity,
     Sites = sites,
+    Habitat = habitat,
     DistanceMeasure = distance_measure,
     MaxDistance = max_distance
     #RoB = RoB
@@ -309,7 +312,7 @@ print(paste("Predicted % decline at 1km:", round(percentage_decline, 2), "%"))
 
 ### Moderator analysis ###
 # Summarise each moderators distribution
-moderators <- c("DistanceMeasure" , "PollDependency", "AgrIntensity") # List of moderator variables
+moderators <- c("DistanceMeasure" , "PollDependency", "AgrIntensity", "Habitat") # List of moderator variables
 
 # Use lapply to get counts for each moderator
 moderator_summaries <- lapply(moderators, function(moderator) {
@@ -322,11 +325,17 @@ names(moderator_summaries) <- moderators # Name the list elements
 moderator_summaries # Print all summaries
 
 ## Meta-analysis with individual moderators
+# Moderator analysis for agricultural intensity
 res.modintensity <- rma(Slope, Variance, mods = ~ 0 + AgrIntensity, data=fruitset_es)
 res.modintensity
 
+# Moderator analysis for pollinator dependency
 res.modpdep <- rma(Slope, Variance, mods = ~ 0 + PollDependency, data=fruitset_es)
 res.modpdep
+
+# Moderator analysis for habitat type
+res.modhabitat <- rma(Slope, Variance, mods = ~ 0 + Habitat, data=fruitset_es)
+res.modhabitat
 
 ########################## Sensitivity analyses ###########################
 

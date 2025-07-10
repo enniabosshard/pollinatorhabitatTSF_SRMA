@@ -1,17 +1,17 @@
-"Authors","Slope","StdError","PValue","Crop","PollDependency","AgrIntensity","Sites","DistanceMeasure","MaxDistance"
-"Enriquez et al. 2015",0.465975894641751,1.37398081361839,0.73450205067646,"squash","Essential (90-100%)","low",10,"reported",239.01
-"Escobedo-Kenefic et al. 2024",-0.0315703961370945,0.3069946026782,0.918092359385327,"Brassica rapa (rape, rape seed)","Modest (10-40%)","both",22,"reported",661.38
-"Geeraert et al. 2020",-0.0681517490949119,0.983176438121433,0.944736559187127,"coffee","Modest (10-40%)","low",18,"estimated",390
-"Hansen et al. 2020",0.325900289406362,0.719304516452506,0.650493339526324,"guava","Little (0-10%)","high",6,"reported",8676
-"Klein et al. 2003 a)",-0.109319327894393,0.197610803229971,0.580122892891653,"coffee arabica","Modest (10-40%)","low",24,"reported",2500
-"Klein et al. 2003 b)",-0.16841377136964,0.260490426481642,0.517938918897862,"coffee canephora","Great (40-90%)","low",15,"reported",1500
-"Krishnan et al. 2012",0.0146185158491181,0.0886174116008863,0.868973799490924,"coffee","Great (40-90%)",NA,35,"reported",500
-"Landaverde-Gonzales et al. 2017",-0.13992081714142,0.405421466344275,0.730000893564161,"chilli","Great (40-90%)","high",11,"estimated",140
-"Latini et al 2020",-0.066775619074176,0.218544480234403,0.759949548851534,"coffee","Modest (10-40%)","both",8,"reported",250
-"Li et al. 2022",-0.20805977436982,0.472246838927617,0.659521282478762,"oil palm","Little (0-10%)","high",22,"reported",94.17192
-"Lucas-Garcia and Rosas-Guerrero, unpub",-0.379672668578645,2.48421218461514,0.878528999327797,"mango","Great (40-90%)","high",18,"reported",1106.6
-"Munyuli 2012",-0.329352151317525,0.285981610076571,0.24946287056163,"coffee","Great (40-90%)","low",17,"reported",7000
-"Obregon et al. 2021",0.0566610029219498,0.467551369371669,0.903543166149558,"lulo' or 'naranjilla'","Essential (90-100%)","high",10,"estimated",90
-"Severiano-Galeana et al. 2024",-0.273641464335219,1.03204845556512,0.790898526370562,"mango","Great (40-90%)","high",24,"reported",2000
-"Vogel et al. (a) 2021",0.266664922473505,0.73209289981725,0.715671247707269,"pigeonpea","Modest (10-40%)","low",9,"estimated",250
-"Vogel et al. (b) 2023",-0.185932641836624,0.486844404173868,0.702525234658474,"pumpkin","Essential (90-100%)","low",24,"estimated",200
+"Authors","Slope","StdError","PValue","Crop","PollDependency","AgrIntensity","Sites","Habitat","DistanceMeasure","MaxDistance"
+"Enriquez et al. 2015",0.465975894641751,1.37398081361839,0.73450205067646,"squash","Essential (90-100%)","low",10,"other","reported",239.01
+"Escobedo-Kenefic et al. 2024",-0.0315703961370945,0.3069946026782,0.918092359385327,"Brassica rapa (rape, rape seed)","Modest (10-40%)","both",22,"natural forest","reported",661.38
+"Geeraert et al. 2020",-0.0681517490949119,0.983176438121433,0.944736559187127,"coffee","Modest (10-40%)","low",18,"other","estimated",390
+"Hansen et al. 2020",0.325900289406362,0.719304516452506,0.650493339526324,"guava","Little (0-10%)","high",6,"natural forest","reported",8676
+"Klein et al. 2003 a)",-0.109319327894393,0.197610803229971,0.580122892891653,"coffee arabica","Modest (10-40%)","low",24,"natural forest","reported",2500
+"Klein et al. 2003 b)",-0.16841377136964,0.260490426481642,0.517938918897862,"coffee canephora","Great (40-90%)","low",15,"natural forest","reported",1500
+"Krishnan et al. 2012",0.0146185158491181,0.0886174116008863,0.868973799490924,"coffee","Great (40-90%)",NA,35,"natural forest","reported",500
+"Landaverde-Gonzales et al. 2017",-0.13992081714142,0.405421466344275,0.730000893564161,"chilli","Great (40-90%)","high",11,"other","estimated",140
+"Latini et al 2020",-0.066775619074176,0.218544480234403,0.759949548851534,"coffee","Modest (10-40%)","both",8,"natural forest","reported",250
+"Li et al. 2022",-0.20805977436982,0.472246838927617,0.659521282478762,"oil palm","Little (0-10%)","high",22,"natural forest","reported",94.17192
+"Lucas-Garcia and Rosas-Guerrero, unpub",-0.379672668578645,2.48421218461514,0.878528999327797,"mango","Great (40-90%)","high",18,"natural forest","reported",1106.6
+"Munyuli 2012",-0.329352151317525,0.285981610076571,0.24946287056163,"coffee","Great (40-90%)","low",17,"other","reported",7000
+"Obregon et al. 2021",0.0566610029219498,0.467551369371669,0.903543166149558,"lulo' or 'naranjilla'","Essential (90-100%)","high",10,"natural forest","estimated",90
+"Severiano-Galeana et al. 2024",-0.273641464335219,1.03204845556512,0.790898526370562,"mango","Great (40-90%)","high",24,"natural forest","reported",2000
+"Vogel et al. (a) 2021",0.266664922473505,0.73209289981725,0.715671247707269,"pigeonpea","Modest (10-40%)","low",9,"other","estimated",250
+"Vogel et al. (b) 2023",-0.185932641836624,0.486844404173868,0.702525234658474,"pumpkin","Essential (90-100%)","low",24,"other","estimated",200

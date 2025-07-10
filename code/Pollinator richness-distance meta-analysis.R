@@ -29,6 +29,17 @@ author_location_count <- df %>%
   bind_rows(tibble(authors = "Total", unique_locations = sum(.$unique_locations)))
 print(author_location_count)
 
+# Summarise species richness per study
+ richness_overview <- df %>%
+  group_by(study) %>%
+  summarise(
+    min_species = min(richness_all, na.rm = TRUE),
+    max_species = max(richness_all, na.rm = TRUE),
+    mean_species = mean(richness_all, na.rm = TRUE),
+    .groups = "drop"
+  )
+write.csv(richness_overview, "outputs/richness/Richness overview per study.csv", row.names = FALSE)
+
 range(df$distance_m, na.rm = TRUE)
 
 # Calculate the range of distance values for each report
@@ -115,6 +126,7 @@ results <- data.frame(
   PValue = numeric(),
   AgrIntensity = character(),
   Sites = character(),
+  Habitat = character(),
   Pollinator = character(),
   Method = character(),
   DistanceMeasure = character(),
@@ -145,6 +157,7 @@ for (report in unique_report) {
   authors <- unique(data$authors)
   agr_intensity <- unique(data$agr_intensity)
   sites <- unique(data$sites)
+  habitat <- unique(data$habitat)
   pollinator <- unique(data$pollinator)
   sampling_method <- unique(data$sampling_method)
   distance_measure <- unique(data$distance_measure)
@@ -159,6 +172,7 @@ for (report in unique_report) {
     PValue = p_value,
     AgrIntensity = agr_intensity,
     Sites = sites,
+    Habitat = habitat,
     Pollinator = pollinator,
     Method = sampling_method,
     DistanceMeasure = distance_measure,
@@ -214,7 +228,7 @@ for (report in unique_report) {
     geom_ribbon(data = smooth_distance, aes(x = distance_m, ymin = lower_CI, ymax = upper_CI), 
                 inherit.aes = FALSE, fill = "grey70", alpha = 0.4) +  # Confidence interval shading
     geom_line(data = smooth_distance, aes(x = distance_m, y = predicted), 
-              inherit.aes = FALSE, color = "blue", size = 1) +  # Smooth fitted line
+              inherit.aes = FALSE, color = "blue", linewidth = 1) +  # Smooth fitted line
     geom_point(size = 3, alpha = 0.6, colour = "black") + # Raw data points
     labs(x = "Distance in m", y = "Pollinator richness (all)", title = paste(report, "et al.")) +
     theme_minimal(base_size = 12)  # Clean theme
@@ -322,7 +336,7 @@ print(paste("Predicted % decline at 1km:", round(percentage_decline, 2), "%"))
 
 ### Moderator analysis ###
 # Summarise each moderators distribution
-moderators <- c("Method", "DistanceMeasure" , "AgrIntensity", "Pollinator") # List of moderator variables
+moderators <- c("Method", "DistanceMeasure" , "AgrIntensity", "Pollinator", "Habitat") # List of moderator variables
 
 # Use lapply to get counts for each moderator
 moderator_summaries <- lapply(moderators, function(moderator) {
@@ -335,11 +349,17 @@ names(moderator_summaries) <- moderators # Name the list elements
 moderator_summaries # Print all summaries
 
 ## Meta-analysis with individual moderators
+# Moderator analysis for agricultural intensity
 res.modintensity <- rma(Slope, Variance, mods = ~ 0 + AgrIntensity, data=richness_es)
 res.modintensity
 
+# Moderator analysis for pollinator groups
 res.modpollinator <- rma(Slope, Variance, mods = ~ 0 + Pollinator, data=richness_es)
 res.modpollinator
+
+# Moderator analysis for habitat type
+res.modhabitat <- rma(Slope, Variance, mods = ~ 0 + Habitat, data=richness_es)
+res.modhabitat
 
 ########################## Sensitivity analyses ###########################
 
@@ -405,110 +425,3 @@ res.modmaxdistance
 #       cex = 0.8                                        # Manage overall font size
 # )
 
-########################## Wild Pollinators ###########################
-
-# Subgroup analysis for wild pollinators only (dataset excl Apis mellifera and Apis cerana where it was managed)
-wild_data <- df[!is.na(df$richness_wild), ]# Filter rows with non-NA values in richness_wild
-
-# Get all individual report names
-unique_report_wild <- unique(wild_data$report)
-length(unique_report_wild) #number of reports
-unique_report_wild
-nrow(wild_data)
-
-# Loop through each report in the wild dataset
-for (report in unique_report_wild) {
-  # Filter the dataset for the current report
-  dataset_name <- paste0("RWild_", report)
-  data <- wild_data[wild_data$report == report, ]
-  
-  # Assign the filtered dataset to a new variable in the global environment
-  assign(dataset_name, data, envir = .GlobalEnv)
-  
-  # Fit the GLM for richness_wild
-  model <- glm.nb(richness_wild ~ log(distance_m + 1), data = data, link = log)
-  
-  # Dynamically name the model
-  model_name <- paste0("GLM_RWild_", report)
-  assign(model_name, model, envir = .GlobalEnv)
-  
-  # Print model summary
-  print(paste("Model stored as", model_name))
-  print(summary(model))
-}
-
-# Create an empty data frame for results
-results_wild <- data.frame(
-  Authors = character(),
-  Slope = numeric(),
-  StdError = numeric(),
-  PValue = numeric(),
-  AgrIntensity = character(),
-  Sites = character(),
-  Pollinator = character(),
-  Method = character(),
-  DistanceMeasure = character(),
-  stringsAsFactors = FALSE
-)
-
-# Loop through each report in the wild dataset
-for (report in unique_report_wild) {
-  # Construct model and dataset names
-  model_name <- paste0("GLM_RWild_", report)
-  dataset_name <- paste0("RWild_", report)
-  
-  # Get the model and dataset
-  model <- get(model_name)
-  data <- get(dataset_name)
-  
-  # Extract coefficients
-  coef_summary <- summary(model)$coefficients
-  slope <- coef_summary["log(distance_m + 1)", "Estimate"]
-  std_error <- coef_summary["log(distance_m + 1)", "Std. Error"]
-  p_value <- coef_summary["log(distance_m + 1)", "Pr(>|z|)"]
-  
-  # Additional information from the dataset
-  authors <- unique(data$authors)
-  agr_intensity <- unique(data$agr_intensity)
-  sites <- unique(data$sites)
-  pollinator <- unique(data$pollinator)
-  method <- unique(data$sampling_method)
-  distance_measure <- unique(data$distance_measure)
-  
-  # Append results
-  results_wild <- rbind(results_wild, data.frame(
-    Authors = authors,
-    Slope = slope,
-    StdError = std_error,
-    PValue = p_value,
-    AgrIntensity = agr_intensity,
-    Sites = sites,
-    Pollinator = pollinator,
-    Method = sampling_method,
-    DistanceMeasure = distance_measure
-  ))
-}
-
-# Save the results
-write.csv(results_wild, "outputs/richness/Wild richness results.csv", row.names = FALSE)
-
-# Calculate variance for the meta-analysis
-results_wild$Variance <- results_wild$StdError^2
-
-# Fit random-effects model
-res_richness_wild <- rma(yi = Slope, vi = Variance, data = results_wild)
-print(res_richness_wild)
-
-# Create a forest plot
-tiff(file = here("outputs", "richness", "Richness (wild) forest plot.tiff"), width = 9, height = 7, units = "in", res = 600)  # Open TIFF device
-forest(res_richness_wild,
-       slab = results_wild$Authors,                    # Labels for the reports
-       xlab = "Slope",               # Label for the x-axis
-       xlim = c(-2, 2),                      # Customize x-axis limits if needed
-       refline = 0,                                # Add reference line at 0
-       header = "b) Wild pollinator richness (excluding managed honeybees)", # Header for the plot
-       annotate = TRUE,                            # Add report annotations
-       ilab.xpos = -0.015,                         # Adjust position of report effect size labels
-       cex = 0.8                                   # Manage overall font size
-) 
-dev.off()  # Close device to save the file
