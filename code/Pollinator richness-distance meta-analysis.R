@@ -131,6 +131,7 @@ results <- data.frame(
   Method = character(),
   DistanceMeasure = character(),
   MaxDistance = numeric(),
+  TaxonomicResolution = character(),
   #RoB = character(),
   stringsAsFactors = FALSE
 )
@@ -162,6 +163,7 @@ for (report in unique_report) {
   sampling_method <- unique(data$sampling_method)
   distance_measure <- unique(data$distance_measure)
   max_distance <- unique(data$max_distance)
+  taxonomic_resolution <- unique(data$taxonomic_resolution)
   #RoB <- unique(data$RoB)
   
   # Append the results to the data frame
@@ -176,7 +178,8 @@ for (report in unique_report) {
     Pollinator = pollinator,
     Method = sampling_method,
     DistanceMeasure = distance_measure,
-    MaxDistance = max_distance
+    MaxDistance = max_distance,
+    TaxonomicResolution = taxonomic_resolution
     #RoB = RoB
   ))
 }
@@ -305,7 +308,7 @@ decaycurve <- ggplot(df_richness, aes(x = distance_seq)) +
   labs(
     x = "Distance to nearest natural habitat (m)",
     y = "Relative change in pollinator richness",
-    title = "c) Predicted decay curve") +
+    title = "b) Predicted decay curve") +
   theme_classic(base_size = 14) +  # Standard font size
   theme(
     plot.title = element_text(size = 9, face = "bold"),  # Match forest plot title
@@ -336,7 +339,7 @@ print(paste("Predicted % decline at 1km:", round(percentage_decline, 2), "%"))
 
 ### Moderator analysis ###
 # Summarise each moderators distribution
-moderators <- c("Method", "DistanceMeasure" , "AgrIntensity", "Pollinator", "Habitat") # List of moderator variables
+moderators <- c("Method", "DistanceMeasure" , "AgrIntensity", "Pollinator", "Habitat", "TaxonomicResolution") # List of moderator variables
 
 # Use lapply to get counts for each moderator
 moderator_summaries <- lapply(moderators, function(moderator) {
@@ -349,6 +352,11 @@ names(moderator_summaries) <- moderators # Name the list elements
 moderator_summaries # Print all summaries
 
 ## Meta-analysis with individual moderators
+
+# Moderator analysis for habitat type
+res.modhabitat <- rma(Slope, Variance, mods = ~ 0 + Habitat, data=richness_es)
+res.modhabitat
+
 # Moderator analysis for agricultural intensity
 res.modintensity <- rma(Slope, Variance, mods = ~ 0 + AgrIntensity, data=richness_es)
 res.modintensity
@@ -357,9 +365,6 @@ res.modintensity
 res.modpollinator <- rma(Slope, Variance, mods = ~ 0 + Pollinator, data=richness_es)
 res.modpollinator
 
-# Moderator analysis for habitat type
-res.modhabitat <- rma(Slope, Variance, mods = ~ 0 + Habitat, data=richness_es)
-res.modhabitat
 
 ########################## Sensitivity analyses ###########################
 
@@ -387,6 +392,9 @@ res.modmethod
 
 res.moddistance <- rma(Slope, Variance, mods = ~ 0 + DistanceMeasure, data=richness_es)
 res.moddistance
+
+res.modtaxonomic <- rma(Slope, Variance, mods = ~ 0 + TaxonomicResolution, data=richness_es)
+res.modtaxonomic
 
 # Add categories for the maximum distance scales (small, medium, large) for sensitivty analysis
 richness_es <- richness_es %>%

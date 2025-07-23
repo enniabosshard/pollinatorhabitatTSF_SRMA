@@ -343,6 +343,11 @@ names(moderator_summaries) <- moderators # Name the list elements
 moderator_summaries # Print all summaries
 
 ## Meta-analysis with individual moderators
+
+# Moderator analysis for habitat type
+res.modhabitat <- rma(Slope, Variance, mods = ~ 0 + Habitat, data=abundance_es)
+res.modhabitat
+
 # Moderator analysis for agricultural intensity
 res.modintensity <- rma(Slope, Variance, mods = ~ 0 + AgrIntensity, data=abundance_es)
 res.modintensity
@@ -351,9 +356,6 @@ res.modintensity
 res.modpollinator <- rma(Slope, Variance, mods = ~ 0 + Pollinator, data=abundance_es)
 res.modpollinator
 
-# Moderator analysis for habitat type
-res.modhabitat <- rma(Slope, Variance, mods = ~ 0 + Habitat, data=abundance_es)
-res.modhabitat
 
 ########################## Sensitivity analyses ###########################
 
