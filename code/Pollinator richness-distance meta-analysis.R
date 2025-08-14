@@ -6,11 +6,10 @@ library(dplyr)
 library(MASS)
 library(lme4)
 library(metafor)
-library(here)
+library(ggeffects)
 
 # Load data
 setwd(rprojroot::find_rstudio_root_file())
-getwd()
 df <- read.csv("raw_data/Fulldataset_richness.csv", header = TRUE, stringsAsFactors = FALSE)
 
 # Remove rows with NA in 'richness' or 'distance' columns
@@ -23,7 +22,12 @@ unique_report <- unique(df$report)
 length(unique_report) #number of reports
 unique_report
 
-# Count unique locations per author and add total sum
+# Check distribution of study design types across datasets
+df %>%
+  distinct(report, study_design) %>%  # keep only unique study-design pairs
+  count(study_design)  # count how many studies per design
+
+# Count unique locations (i.e. study sites) per author and add total sum
 author_location_count <- df %>%
   group_by(authors) %>%
   summarise(unique_locations = n_distinct(location)) %>%
@@ -97,18 +101,18 @@ for (report in unique_report) {
   data <- get(dataset_name)
   
   # Determine model type
-  balanced_effort <- length(unique(data$sampling_effort)) > 1
+  unbalanced_effort <- length(unique(data$sampling_effort)) > 1
   design <- unique(data$study_design)
   
   # Print report-level details
   print(paste("report:", report))
   print(paste("Study design:", design))
-  print(paste("balanced sampling effort:", balanced_effort))
+  print(paste("unbalanced sampling effort:", unbalanced_effort))
   
   # Choose model type based on study design and sampling effort
-  if (design == "one distance per farm") {
+  if (design == "single distance per site") {
     # Use GLM
-    if (balanced_effort) {
+    if (unbalanced_effort) {
       model <- glm.nb(richness_all ~ log(distance_m + 1) + offset(log(sampling_effort)), data = data, link = log)
     } else {
       model <- glm.nb(richness_all ~ log(distance_m + 1), data = data, link = log)
@@ -116,7 +120,7 @@ for (report in unique_report) {
     
   } else {
     # Use GLMM with random effect for location
-    if (balanced_effort) {
+    if (unbalanced_effort) {
       model <- glmer.nb(richness_all ~ log(distance_m + 1) + offset(log(sampling_effort)) + (1 | location), data = data)
     } else {
       model <- glmer.nb(richness_all ~ log(distance_m + 1) + (1 | location), data = data)
@@ -147,7 +151,6 @@ results <- data.frame(
   DistanceMeasure = character(),
   MaxDistance = numeric(),
   TaxonomicResolution = character(),
-  #RoB = character(),
   stringsAsFactors = FALSE
 )
 
@@ -180,7 +183,6 @@ for (report in unique_report) {
   distance_measure <- unique(data$distance_measure)
   max_distance <- unique(data$max_distance)
   taxonomic_resolution <- unique(data$taxonomic_resolution)
-  #RoB <- unique(data$RoB)
   
   # Append the results to the data frame
   results <- rbind(results, data.frame(
@@ -197,7 +199,6 @@ for (report in unique_report) {
     DistanceMeasure = distance_measure,
     MaxDistance = max_distance,
     TaxonomicResolution = taxonomic_resolution
-    #RoB = RoB
   ))
 }
 
@@ -209,7 +210,7 @@ write.csv(results, "outputs/richness/Richness-distance stage 1 results.csv", row
 
 ### Plot model fit for each individual report ####
 # Create folder to save the plots
-dir.create(here("outputs", "richness", "Model fits"), recursive = TRUE, showWarnings = FALSE)
+dir.create(here("outputs", "richness", "model fits"), recursive = TRUE, showWarnings = FALSE)
 
 # Loop through each report to generate plots
 for (report in unique_report) {
@@ -221,45 +222,65 @@ for (report in unique_report) {
   dataset <- get(dataset_name)
   model <- get(model_name)
   
-  # Create a smooth sequence of distances for prediction
-  smooth_distance <- data.frame(distance_m = seq(min(dataset$distance_m), max(dataset$distance_m), length.out = 100))
-  
-  # Check if sampling_effort was used as an offset
-  balanced_effort <- "sampling_effort" %in% colnames(dataset) && length(unique(dataset$sampling_effort)) > 1
-  
-  # If sampling_effort was used as an offset, include it in smooth_distance
-  if (balanced_effort) {  
-    smooth_distance$sampling_effort <- mean(dataset$sampling_effort, na.rm = TRUE)  # Use a representative value
+  ### For the GLMs
+  if (inherits(model, "glm")) {
+    
+    # Create smooth sequence of distances
+    smooth_distance <- data.frame(distance_m = seq(min(dataset$distance_m), max(dataset$distance_m), length.out = 100))
+    
+    # Check if sampling_effort used as offset
+    balanced_effort <- "sampling_effort" %in% colnames(dataset) && length(unique(dataset$sampling_effort)) > 1
+    if (balanced_effort) {
+      smooth_distance$sampling_effort <- mean(dataset$sampling_effort, na.rm = TRUE)
+    }
+    
+    # Predict with SEs
+    preds <- predict(model, newdata = smooth_distance, type = "response", se.fit = TRUE)
+    smooth_distance <- smooth_distance %>%
+      mutate(
+        predicted = preds$fit,
+        lower_CI = preds$fit - 1.96 * preds$se.fit,
+        upper_CI = preds$fit + 1.96 * preds$se.fit
+      )
+    
+    # Build plot
+    p <- ggplot(dataset, aes(x = distance_m, y = richness_all)) +
+      geom_ribbon(data = smooth_distance, aes(x = distance_m, ymin = lower_CI, ymax = upper_CI),
+                  inherit.aes = FALSE, fill = "grey70", alpha = 0.4) +
+      geom_line(data = smooth_distance, aes(x = distance_m, y = predicted),
+                inherit.aes = FALSE, color = "blue", linewidth = 1) +
+      geom_point(size = 3, alpha = 0.6, colour = "black") +
+      labs(x = "Distance to forest (m)",
+           y = "Pollinator richness (all)",
+           title = paste(report, "et al. (GLM)")) +
+      theme_minimal(base_size = 12)
+    
+    ggsave(filename = here("outputs", "richness", "model fits",
+                           paste0(report, "_GLM_fit.png")),
+           plot = p, width = 8, height = 6, dpi = 300)
+    
+    next
   }
   
-  # Predict values for smooth distance sequence
-  preds <- predict(model, newdata = smooth_distance, type = "response", se.fit = TRUE)
-  
-  # Add predictions and confidence intervals to smooth dataset
-  smooth_distance <- smooth_distance %>%
-    mutate(
-      predicted = preds$fit,
-      lower_CI = preds$fit - 1.96 * preds$se.fit,
-      upper_CI = preds$fit + 1.96 * preds$se.fit
-    )
-  
-  # Plot raw data with a **smooth** fitted line and confidence intervals
-  p <- ggplot(dataset, aes(x = distance_m, y = richness_all)) +  # Base plot with actual data
-    geom_ribbon(data = smooth_distance, aes(x = distance_m, ymin = lower_CI, ymax = upper_CI), 
-                inherit.aes = FALSE, fill = "grey70", alpha = 0.4) +  # Confidence interval shading
-    geom_line(data = smooth_distance, aes(x = distance_m, y = predicted), 
-              inherit.aes = FALSE, color = "blue", linewidth = 1) +  # Smooth fitted line
-    geom_point(size = 3, alpha = 0.6, colour = "black") + # Raw data points
-    labs(x = "Distance in m", y = "Pollinator richness (all)", title = paste(report, "et al.")) +
-    theme_minimal(base_size = 12)  # Clean theme
-  
-  # Print the plots
-  print(p)
-  
-  # Save the plots
-  ggsave(filename = here("outputs", "richness", "Model fits", paste0("Model_Fit_", report, ".png")), 
-         plot = p, width = 8, height = 6, dpi = 300)
+  ### For the GLMMs
+  if (inherits(model, "glmerMod")) {
+    
+    # Predictions from ggpredict
+    preds <- ggpredict(model, terms = "distance_m", condition = c(sampling_effort = 1)) # set offset to 1
+    
+    # Build plot (same style)
+    p <- ggplot() +
+      geom_ribbon(data = preds, aes(x = x, ymin = conf.low, ymax = conf.high), fill = "grey70", alpha = 0.4) +
+      geom_line(data = preds, aes(x = x, y = predicted), colour = "blue", linewidth = 1) +
+      geom_point(data = dataset, aes(x = distance_m, y = richness_all), colour = "black", alpha = 0.6, size = 3) +
+      labs(x = "Distance to forest (m)", y = "Pollinator richness (all)", title = paste(report, "et al. (GLMM)")) +
+      theme_minimal(base_size = 12)
+    
+    ggsave(filename = here("outputs", "richness", "model fits",
+                           paste0(report, "_GLMM_fit.png")),
+           plot = p, width = 8, height = 6, dpi = 300)
   }
+}
 
 ########################## Meta-Analysis ###########################
 
@@ -430,28 +451,3 @@ res.modmaxdistance
 # Sensitivity model 4: Taxonomic resolution
 res.modtaxonomic <- rma(Slope, Variance, mods = ~ 0 + TaxonomicResolution, data=richness_es)
 res.modtaxonomic
-
-# Sensitivity model 5: RoB assessment
-### Subgroup analysis excl reports with high RoB ###
-# Filter for medium RoB reports in the richness dataset
-# results_mediumRoB <- subset(richness_es, RoB == "medium")
-
-# Calculate variance for the meta-analysis
-# results_mediumRoB$Variance <- results_mediumRoB$StdError^2
-
-# Fit random-effects model
-# res_richness_mediumRoB <- rma(yi = Slope, vi = Variance, data = results_mediumRoB)
-# print(res_richness_mediumRoB)
-
-# Create a forest plot
-# forest(res_richness_mediumRoB,
-#       slab = results_mediumRoB$Authors,                # Labels for the reports
-#       xlab = "Slope",                                  # Label for the x-axis
-#       xlim = c(-2, 1.5),                                 # Customise x-axis limits
-#       refline = 0,                                     # Add reference line at 0
-#       header = "Pollinator richness subgroup; medium Risk of Bias", # Header for the plot
-#       annotate = TRUE,                                 # Add report annotations
-#       ilab.xpos = -0.015,                              # Adjust position of report effect size labels
-#       cex = 0.8                                        # Manage overall font size
-# )
-
