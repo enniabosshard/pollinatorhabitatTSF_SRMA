@@ -90,18 +90,18 @@ for (report in unique_report) {
   data <- get(dataset_name)
   
   # Determine model type
-  balanced_effort <- length(unique(data$sampling_effort)) > 1
+  unbalanced_effort <- length(unique(data$sampling_effort)) > 1
   design <- unique(data$study_design)
   
   # Print report-level details
   print(paste("Report:", report))
   print(paste("Study design:", design))
-  print(paste("Balanced sampling effort:", balanced_effort))
+  print(paste("Unbalanced sampling effort:", unbalanced_effort))
   
   # Choose model type based on study design and sampling effort
   if (design == "single distance per site") {
     # Use GLM
-    if (balanced_effort) {
+    if (unbalanced_effort) {
       model <- glm.nb(abundance_all ~ log(distance_m + 1) + offset(log(sampling_effort)), data = data, link = log)
     } else {
       model <- glm.nb(abundance_all ~ log(distance_m + 1), data = data, link = log)
@@ -109,7 +109,7 @@ for (report in unique_report) {
     
   } else {
     # Use GLMM with random effect for location
-    if (balanced_effort) {
+    if (unbalanced_effort) {
       model <- glmer.nb(abundance_all ~ log(distance_m + 1) + offset(log(sampling_effort)) + (1 | location), data = data)
     } else {
       model <- glmer.nb(abundance_all ~ log(distance_m + 1) + (1 | location), data = data)
