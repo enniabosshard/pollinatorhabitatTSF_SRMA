@@ -4,8 +4,10 @@
 library(ggplot2)
 library(dplyr)
 library(MASS)
+library(lme4)
 library(metafor)
 library(here)
+library(ggeffects)
 
 # Load the data
 setwd(rprojroot::find_rstudio_root_file())
@@ -17,10 +19,16 @@ colnames(df)
 df <- df[!is.na(df$abundance_all) & !is.na(df$distance_m), ]
 nrow(df)
 
+### Qualitative insights / overview of the datasets
 # Get all individual report names
 unique_report <- unique(df$report)
 length(unique_report) #number of studies
 unique_report
+
+# Check distribution of study design types across datasets
+df %>%
+  distinct(report, study_design) %>%  # keep only unique study-design pairs
+  count(study_design)  # count how many studies per design
 
 # Count unique locations per author and add total sum
 author_location_count <- df %>%
@@ -31,12 +39,12 @@ print(author_location_count)
 
 range(df$distance_m, na.rm = TRUE)
 
-# Calculate the range of distance_m values for each report
+# Calculate the range of distance_m values for each dataset
 distance_range_by_report <- df %>%
   group_by(report) %>%
   summarise(min_distance = min(distance_m, na.rm = TRUE),
             max_distance = max(distance_m, na.rm = TRUE),
-            n_observations = n()) # Optional: count number of observations per report
+            n_observations = n()) # Optional: count number of observations per dataset
 
 # Print the results
 print(distance_range_by_report)
@@ -62,41 +70,54 @@ write.csv(distance_range_by_report, "outputs/abundance/Distance range by report 
 
 ########################## Estimate Effect Sizes ###########################
 
-# Loop through each report and create a separate data frame for each
+# Loop through each dataset and create a separate data frame for each
 for (report in unique_report) {
   
-  # Filter the df for the current report
+  # Filter the df for the current dataset
   report_data <- df %>% filter(report == !!report)
   
-  # Create a variable name dynamically based on the report name
+  # Create a variable name dynamically based on the dataset name
   dataset_name <- paste0("A_", gsub(" ", "_", report))
   
   # Assign the filtered data frame to a new variable in the global environment
   assign(dataset_name, report_data, envir = .GlobalEnv)
 }
 
-############################## Fit GLM Models ###############################
-# Loop through each report to fit the GLM and store the results
+############################## Fit Models ###############################
+# Loop through each dataset to fit the models and store the results
 for (report in unique_report) {
   dataset_name <- paste0("A_", report)   # Construct the dataset name
   data <- get(dataset_name)
   
   # Determine model type
   balanced_effort <- length(unique(data$sampling_effort)) > 1
+  design <- unique(data$study_design)
   
   # Print report-level details
   print(paste("Report:", report))
+  print(paste("Study design:", design))
   print(paste("Balanced sampling effort:", balanced_effort))
   
-  # Check if sampling effort is constant within the report
-  if (balanced_effort) {
-    model <- glm.nb(abundance_all ~ log(distance_m + 1) + offset(log(sampling_effort)), data = data, link = log) # Negative Binomial model with offset
+  # Choose model type based on study design and sampling effort
+  if (design == "single distance per site") {
+    # Use GLM
+    if (balanced_effort) {
+      model <- glm.nb(abundance_all ~ log(distance_m + 1) + offset(log(sampling_effort)), data = data, link = log)
+    } else {
+      model <- glm.nb(abundance_all ~ log(distance_m + 1), data = data, link = log)
+    }
+    
   } else {
-    model <- glm.nb(abundance_all ~ log(distance_m + 1), data = data, link = log) # Simple Negative Binomial model
+    # Use GLMM with random effect for location
+    if (balanced_effort) {
+      model <- glmer.nb(abundance_all ~ log(distance_m + 1) + offset(log(sampling_effort)) + (1 | location), data = data)
+    } else {
+      model <- glmer.nb(abundance_all ~ log(distance_m + 1) + (1 | location), data = data)
+    }
   }
   
   # Save the model
-  model_name <- paste0("GLM_A_", report)
+  model_name <- paste0("model_A_", report)
   assign(model_name, model, envir = .GlobalEnv)
   
   # Print summary for debugging
@@ -113,19 +134,19 @@ results <- data.frame(
   PValue = numeric(),
   AgrIntensity = character(),
   Sites = character(),
+  Design = character(),
   Habitat = character(),
   Pollinator = character(),
   Method = character(),
   DistanceMeasure = character(),
   MaxDistance = numeric(),
-  RoB = character(),
   stringsAsFactors = FALSE
 )
 
-# Loop through each report to extract coefficients and store them
+# Loop through each dataset to extract coefficients and store them
 for (report in unique_report) {
   # Construct model name
-  model_name <- paste0("GLM_A_", report)
+  model_name <- paste0("model_A_", report)
   dataset_name <- paste0("A_", report)
   
   # Get the model and dataset from the global environment
@@ -144,12 +165,12 @@ for (report in unique_report) {
   authors <- unique(data$authors)
   agr_intensity <- unique(data$agr_intensity)
   sites <- unique(data$sites)
+  design <- unique(data$study_design)
   habitat <- unique(data$habitat)
   pollinator <- unique(data$pollinator)
   sampling_method <- unique(data$sampling_method)
   distance_measure <- unique(data$distance_measure)
   max_distance <- unique(data$max_distance)
-  #RoB <- unique(data$RoB)
   
   # Append the results to the data frame
   results <- rbind(results, data.frame(
@@ -159,12 +180,12 @@ for (report in unique_report) {
     PValue = p_value,
     AgrIntensity = agr_intensity,
     Sites = sites,
+    Design = design,
     Habitat = habitat,
     Pollinator = pollinator,
     Method = sampling_method,
     DistanceMeasure = distance_measure,
     MaxDistance = max_distance
-    #RoB = RoB
   ))
 }
 
@@ -179,57 +200,78 @@ write.csv(results, "outputs/abundance/Abundance-distance stage 1 results.csv", r
 
 ### Plot model fit for each individual report ####
 
-# Define the folder path to save the plots
-dir.create(here("outputs", "abundance", "GLM fits"), recursive = TRUE, showWarnings = FALSE)
+# Create output folder
+dir.create(here("outputs", "abundance", "model fits"), recursive = TRUE, showWarnings = FALSE)
 
-# Loop through each report to generate plots
+# Loop through all reports and plot appropriately
 for (report in unique_report) {
-  # Construct dataset and model names
   dataset_name <- paste0("A_", report)
-  model_name <- paste0("GLM_A_", report)
+  model_name <- paste0("model_A_", report)
   
-  # Get dataset and model
   dataset <- get(dataset_name)
   model <- get(model_name)
   
-  # Create a smooth sequence of distances for prediction
-  smooth_distance <- data.frame(distance_m = seq(min(dataset$distance_m), max(dataset$distance_m), length.out = 100))
-  
-  # Check if sampling_effort was used as an offset
-  balanced_effort <- "sampling_effort" %in% colnames(dataset) && length(unique(dataset$sampling_effort)) > 1
-  
-  # If sampling_effort was used as an offset, include it in smooth_distance
-  if (balanced_effort) {  
-    smooth_distance$sampling_effort <- mean(dataset$sampling_effort, na.rm = TRUE)  # Use a representative value
+  ### For the GLMs
+  if (inherits(model, "glm")) {
+    
+    # Create smooth sequence of distances
+    smooth_distance <- data.frame(distance_m = seq(min(dataset$distance_m),
+                                                   max(dataset$distance_m),
+                                                   length.out = 100))
+    
+    # Check if sampling_effort used as offset
+    balanced_effort <- "sampling_effort" %in% colnames(dataset) && length(unique(dataset$sampling_effort)) > 1
+    if (balanced_effort) {
+      smooth_distance$sampling_effort <- mean(dataset$sampling_effort, na.rm = TRUE)
+    }
+    
+    # Predict with SEs
+    preds <- predict(model, newdata = smooth_distance, type = "response", se.fit = TRUE)
+    smooth_distance <- smooth_distance %>%
+      mutate(
+        predicted = preds$fit,
+        lower_CI = preds$fit - 1.96 * preds$se.fit,
+        upper_CI = preds$fit + 1.96 * preds$se.fit
+      )
+    
+    # Build plot
+    p <- ggplot(dataset, aes(x = distance_m, y = abundance_all)) +
+      geom_ribbon(data = smooth_distance, aes(x = distance_m, ymin = lower_CI, ymax = upper_CI),
+                  inherit.aes = FALSE, fill = "grey70", alpha = 0.4) +
+      geom_line(data = smooth_distance, aes(x = distance_m, y = predicted),
+                inherit.aes = FALSE, color = "blue", linewidth = 1) +
+      geom_point(size = 3, alpha = 0.6, colour = "black") +
+      labs(x = "Distance to forest (m)",
+           y = "Pollinator abundance (all)",
+           title = paste(report, "et al. (GLM)")) +
+      theme_minimal(base_size = 12)
+    
+    ggsave(filename = here("outputs", "abundance", "model fits",
+                           paste0(report, "_GLM_fit.png")),
+           plot = p, width = 8, height = 6, dpi = 300)
+    
+    next
   }
   
-  # Predict values for smooth distance sequence
-  preds <- predict(model, newdata = smooth_distance, type = "response", se.fit = TRUE)
-  
-  # Add predictions and confidence intervals to smooth dataset
-  smooth_distance <- smooth_distance %>%
-    mutate(
-      predicted = preds$fit,
-      lower_CI = preds$fit - 1.96 * preds$se.fit,
-      upper_CI = preds$fit + 1.96 * preds$se.fit
-    )
-  
-  # Plot raw data with a **smooth** fitted line and confidence intervals
-  p <- ggplot(dataset, aes(x = distance_m, y = abundance_all)) +  # Base plot with actual data
-    geom_ribbon(data = smooth_distance, aes(x = distance_m, ymin = lower_CI, ymax = upper_CI), 
-                inherit.aes = FALSE, fill = "grey70", alpha = 0.4) +  # Confidence interval shading
-    geom_line(data = smooth_distance, aes(x = distance_m, y = predicted), 
-              inherit.aes = FALSE, color = "blue", linewidth = 1) +  # Smooth fitted line
-    geom_point(size = 3, alpha = 0.6, colour = "black") + # Raw data points
-    labs(x = "distance in m", y = "Pollinator abundance (all)", title = paste(report, "et al.")) +
-    theme_minimal(base_size = 12)  # Clean theme
-  
-  # Print the plots
-  print(p)
-  
-  # Save the plots
-  ggsave(filename = here("outputs", "abundance", "GLM fits", paste0("Model_Fit_", report, ".png")), 
-         plot = p, width = 8, height = 6, dpi = 300)}
+  ### For the GLMMs
+  if (inherits(model, "glmerMod")) {
+    
+    # Predictions from ggpredict
+    preds <- ggpredict(model, terms = "distance_m", condition = c(sampling_effort = 1)) # set offset to 1
+    
+    # Build plot (same style)
+    p <- ggplot() +
+      geom_ribbon(data = preds, aes(x = x, ymin = conf.low, ymax = conf.high), fill = "grey70", alpha = 0.4) +
+      geom_line(data = preds, aes(x = x, y = predicted), colour = "blue", linewidth = 1) +
+      geom_point(data = dataset, aes(x = distance_m, y = abundance_all), colour = "black", alpha = 0.6, size = 3) +
+      labs(x = "Distance to forest (m)", y = "Pollinator abundance (all)", title = paste(report, "et al. (GLMM)")) +
+      theme_minimal(base_size = 12)
+    
+    ggsave(filename = here("outputs", "abundance", "model fits",
+                           paste0(report, "_GLMM_fit.png")),
+           plot = p, width = 8, height = 6, dpi = 300)
+  }
+}
 
 ########################## Meta-analysis ###########################
 
@@ -291,7 +333,7 @@ df_abundance <- data.frame(
 # Decay curve
 decaycurve <- ggplot(df_abundance, aes(x = distance)) +
   geom_ribbon(aes(ymin = rel_abundance_lower, ymax = rel_abundance_upper), fill = "lightgrey", alpha = 0.5) +  # Shaded CI region
-  geom_line(aes(y = rel_abundance_mean), color = "blue", size = 1) +  # Mean effect
+  geom_line(aes(y = rel_abundance_mean), color = "blue", linewidth = 1) +  # Mean effect
   geom_line(aes(y = rel_abundance_upper), linetype = "dashed", color = "black") +  # Upper CI
   geom_line(aes(y = rel_abundance_lower), linetype = "dashed", color = "black") +  # Lower CI
   scale_x_continuous(limits = c(0, 5000), expand = c(0, 0)) +
@@ -398,28 +440,6 @@ abundance_es$DistanceCategory <- factor(abundance_es$DistanceCategory, levels = 
 res.modmaxdistance <- rma(Slope, Variance, mods = ~ 0 + DistanceCategory, data=abundance_es)
 res.modmaxdistance
 
-### Subgroup analysis excl studies with high RoB ###
-# Filter for medium RoB studies
-# results_mediumRoB <- subset(abundance_es, RoB == "medium")
-
-# Calculate variance for the meta-analysis
-# results_mediumRoB$Variance <- results_mediumRoB$StdError^2
-
-# Fit random-effects model
-# res_abundance_mediumRoB <- rma(yi = Slope, vi = Variance, data = results_mediumRoB)
-# print(res_abundance_mediumRoB)
-
-# Create a forest plot
-# forest(res_abundance_mediumRoB,
-#       slab = results_mediumRoB$Authors,                # Labels for the studies
-#       xlab = "Slope",                                  # Label for the x-axis
-#       xlim = c(-4, 3),                                 # Customize x-axis limits
-#       refline = 0,                                     # Add reference line at 0
-#       header = "Pollinator abundance subgroup; medium Risk of Bias", # Header for the plot
-#       annotate = TRUE,                                 # Add study annotations
-#       ilab.xpos = -0.015,                              # Adjust position of study effect size labels
-#       cex = 0.8                                        # Manage overall font size
-#       )
 
 ########################## Wild pollinators ###########################
 
@@ -445,7 +465,7 @@ for (report in unique_report_wild) {
   model <- glm.nb(abundance_wild ~ log(distance_m + 1), data = data, link = log)
   
   # Dynamically name the model
-  model_name <- paste0("GLM_AWild_", report)
+  model_name <- paste0("model_AWild_", report)
   assign(model_name, model, envir = .GlobalEnv)
   
   # Print model summary
@@ -472,7 +492,7 @@ results_wild <- data.frame(
 # Loop through each report in the wild dataset
 for (report in unique_report_wild) {
   # Construct model and dataset names
-  model_name <- paste0("GLM_AWild_", report)
+  model_name <- paste0("model_AWild_", report)
   dataset_name <- paste0("AWild_", report)
   
   # Get the model and dataset

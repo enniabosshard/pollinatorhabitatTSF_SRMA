@@ -4,6 +4,7 @@
 library(ggplot2)
 library(dplyr)
 library(MASS)
+library(lme4)
 library(metafor)
 library(here)
 
@@ -38,7 +39,7 @@ print(author_location_count)
     mean_species = mean(richness_all, na.rm = TRUE),
     .groups = "drop"
   )
-write.csv(richness_overview, "outputs/richness/Richness overview per study.csv", row.names = FALSE)
+write.csv(richness_overview, "outputs/richness/Study-level species richness overview.csv", row.names = FALSE)
 
 range(df$distance_m, na.rm = TRUE)
 
@@ -68,7 +69,7 @@ df <- df %>%
 
 # View as a sorted table for better readability
 distance_range_by_report %>% arrange(min_distance, max_distance)
-write.csv(distance_range_by_report, "outputs/richness/Distance range by report.csv", row.names = FALSE)
+write.csv(distance_range_by_report, "outputs/richness/Study-level distance ranges.csv", row.names = FALSE)
 
 ########################## Estimate Effect Sizes ###########################
 
@@ -87,8 +88,8 @@ for (report in unique_report) {
   assign(dataset_name, report_data, envir = .GlobalEnv)
 }
 
-## Fit GLM Models ###
-# Loop through each report to fit the GLM and store the results
+## Fit Models ###
+# Loop through each report to fit the models and store the results
 
 for (report in unique_report) {
   # Construct the dataset name
@@ -97,20 +98,33 @@ for (report in unique_report) {
   
   # Determine model type
   balanced_effort <- length(unique(data$sampling_effort)) > 1
+  design <- unique(data$study_design)
   
   # Print report-level details
   print(paste("report:", report))
+  print(paste("Study design:", design))
   print(paste("balanced sampling effort:", balanced_effort))
   
-  # Check if sampling effort is constant within the report
-  if (balanced_effort) {
-    model <- glm.nb(richness_all ~ log(distance_m + 1) + offset(log(sampling_effort)), data = data, link = log) # Negative Binomial model with offset
+  # Choose model type based on study design and sampling effort
+  if (design == "one distance per farm") {
+    # Use GLM
+    if (balanced_effort) {
+      model <- glm.nb(richness_all ~ log(distance_m + 1) + offset(log(sampling_effort)), data = data, link = log)
+    } else {
+      model <- glm.nb(richness_all ~ log(distance_m + 1), data = data, link = log)
+    }
+    
   } else {
-    model <- glm.nb(richness_all ~ log(distance_m + 1), data = data, link = log) # Simple Negative Binomial model
+    # Use GLMM with random effect for location
+    if (balanced_effort) {
+      model <- glmer.nb(richness_all ~ log(distance_m + 1) + offset(log(sampling_effort)) + (1 | location), data = data)
+    } else {
+      model <- glmer.nb(richness_all ~ log(distance_m + 1) + (1 | location), data = data)
+    }
   }
   
   # Save the model
-  model_name <- paste0("GLM_R_", report)
+  model_name <- paste0("model_R_", report)
   assign(model_name, model, envir = .GlobalEnv)
   
   # Print summary for debugging
@@ -126,6 +140,7 @@ results <- data.frame(
   PValue = numeric(),
   AgrIntensity = character(),
   Sites = character(),
+  Design = character(),
   Habitat = character(),
   Pollinator = character(),
   Method = character(),
@@ -139,7 +154,7 @@ results <- data.frame(
 # Loop through each report to extract coefficients and store them
 for (report in unique_report) {
   # Construct model name
-  model_name <- paste0("GLM_R_", report)
+  model_name <- paste0("model_R_", report)
   dataset_name <- paste0("R_", report)
   
   # Get the model and dataset from the global environment
@@ -158,6 +173,7 @@ for (report in unique_report) {
   authors <- unique(data$authors)
   agr_intensity <- unique(data$agr_intensity)
   sites <- unique(data$sites)
+  design <- unique(data$study_design)
   habitat <- unique(data$habitat)
   pollinator <- unique(data$pollinator)
   sampling_method <- unique(data$sampling_method)
@@ -174,6 +190,7 @@ for (report in unique_report) {
     PValue = p_value,
     AgrIntensity = agr_intensity,
     Sites = sites,
+    Design = design,
     Habitat = habitat,
     Pollinator = pollinator,
     Method = sampling_method,
@@ -188,17 +205,17 @@ for (report in unique_report) {
 print(results)
 
 # Save the results to a CSV file --> For Stage 2 of the meta-analysis
-write.csv(results, "outputs/richness/Richness GLM model results.csv", row.names = FALSE)
+write.csv(results, "outputs/richness/Richness-distance stage 1 results.csv", row.names = FALSE)
 
 ### Plot model fit for each individual report ####
 # Create folder to save the plots
-dir.create(here("outputs", "richness", "GLM fits"), recursive = TRUE, showWarnings = FALSE)
+dir.create(here("outputs", "richness", "Model fits"), recursive = TRUE, showWarnings = FALSE)
 
 # Loop through each report to generate plots
 for (report in unique_report) {
   # Construct dataset and model names
   dataset_name <- paste0("R_", report)
-  model_name <- paste0("GLM_R_", report)
+  model_name <- paste0("model_R_", report)
   
   # Get dataset and model
   dataset <- get(dataset_name)
@@ -240,14 +257,14 @@ for (report in unique_report) {
   print(p)
   
   # Save the plots
-  ggsave(filename = here("outputs", "richness", "GLM fits", paste0("Model_Fit_", report, ".png")), 
+  ggsave(filename = here("outputs", "richness", "Model fits", paste0("Model_Fit_", report, ".png")), 
          plot = p, width = 8, height = 6, dpi = 300)
   }
 
 ########################## Meta-Analysis ###########################
 
 ### Conduct the meta-analysis using metafor
-richness_es <- read.csv("outputs/richness/Richness GLM model results.csv", header=TRUE, stringsAsFactors = FALSE)
+richness_es <- results
 richness_es$Variance <- richness_es$StdError^2
 
 ### Fit a random-effects model using the calculated effect sizes ###
@@ -362,8 +379,8 @@ res.modintensity <- rma(Slope, Variance, mods = ~ 0 + AgrIntensity, data=richnes
 res.modintensity
 
 # Moderator analysis for pollinator groups
-res.modpollinator <- rma(Slope, Variance, mods = ~ 0 + Pollinator, data=richness_es)
-res.modpollinator
+# res.modpollinator <- rma(Slope, Variance, mods = ~ 0 + Pollinator, data=richness_es)
+# res.modpollinator
 
 
 ########################## Sensitivity analyses ###########################
@@ -386,16 +403,16 @@ write.csv(leave1out, ("outputs/richness/Leave1out_richness.csv"), row.names = FA
 # QQ-normal plots
 qqnorm(res, main = "Random-Effects Model")
 
-# Sensitivity analyses --> methods
+## Sensitivity analyses
+# Sensitivity model 1: Pollinator sampling method
 res.modmethod <- rma(Slope, Variance, mods = ~ 0 + Method, data=richness_es)
 res.modmethod
 
+# Sensitivty model 2: Distance measure
 res.moddistance <- rma(Slope, Variance, mods = ~ 0 + DistanceMeasure, data=richness_es)
 res.moddistance
 
-res.modtaxonomic <- rma(Slope, Variance, mods = ~ 0 + TaxonomicResolution, data=richness_es)
-res.modtaxonomic
-
+# Sensitivty model 3: Distance category (max distance)
 # Add categories for the maximum distance scales (small, medium, large) for sensitivty analysis
 richness_es <- richness_es %>%
   mutate(DistanceCategory = case_when(
@@ -410,6 +427,11 @@ richness_es$DistanceCategory <- factor(richness_es$DistanceCategory, levels = c(
 res.modmaxdistance <- rma(Slope, Variance, mods = ~ 0 + DistanceCategory, data=richness_es)
 res.modmaxdistance
 
+# Sensitivity model 4: Taxonomic resolution
+res.modtaxonomic <- rma(Slope, Variance, mods = ~ 0 + TaxonomicResolution, data=richness_es)
+res.modtaxonomic
+
+# Sensitivity model 5: RoB assessment
 ### Subgroup analysis excl reports with high RoB ###
 # Filter for medium RoB reports in the richness dataset
 # results_mediumRoB <- subset(richness_es, RoB == "medium")

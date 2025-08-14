@@ -2,7 +2,7 @@
 "Banks et al. 2013",-0.138409458526292,0.0919848911483303,0.132401802435735,"high",12,"natural forest","Hymenoptera","active","reported",9936.99
 "Banks et al. 2014",-0.0764080819771145,0.0514887051208084,0.13781487910446,"high",12,"natural forest","Hymenoptera","active","reported",9936.99
 "Basu et al. 2016",-0.0735783430845876,0.14539703447868,0.612820710611744,"both",12,"other","Bees","passive","reported",9936.99
-"Deepthi et al 2019",0.0486084062028905,0.0546219088194427,0.373515950864583,"high",10,"natural forest","Bees","active","reported",9936.99
+"Deepthi et al 2019",0.048608406202889,0.0546219088194421,0.373515950864592,"high",10,"natural forest","Bees","active","reported",9936.99
 "Enriquez et al. 2015",-0.0636263276643225,0.247063478654252,0.796769440707296,"low",10,"other","Bees","active","reported",9936.99
 "Escobedo-Kenefic et al. 2022",-0.0069945647451812,0.0609431882133986,0.90862593225483,"high",8,"other","Insecta","active","reported",9936.99
 "Escobedo-Kenefic et al. 2024",0.0326434389612597,0.224783184402806,0.884535683128279,"both",6,"natural forest","Insecta","active","reported",9936.99
@@ -16,10 +16,11 @@
 "Klein 2009",-0.172267595638259,0.0510374929156858,0.000737313490132393,"low",24,"natural forest","Bees","active","reported",9936.99
 "Krishnan et al. 2012",0.0471498055445571,0.0683860830563663,0.490530739238762,NA,35,"natural forest","Bees","active","reported",9936.99
 "Landaverde-Gonzales et al. 2017",0.0423847690870288,0.0615850989414845,0.491307377762485,"high",37,"other","Bees","mixed","reported",9936.99
-"Li et al. 2022",0.373135164390356,0.0972676995496484,0.00012496931460489,"high",47,"natural forest","Arthropods","passive","reported",9936.99
+"Li et al. 2022",0.373135164390355,0.0972676995496483,0.000124969314604891,"high",47,"natural forest","Arthropods","passive","reported",9936.99
 "Lucas-Garcia and Rosas-Guerrero, unpub",-0.531504165035306,0.183409326784053,0.0037565548041065,"high",18,"natural forest","Insecta","active","reported",9936.99
 "Obregon et al.",-0.122690677371818,0.152553995185681,0.421255912915863,"high",10,"natural forest","Bees","active","reported",9936.99
-"Schrader et al. 2018",-0.284570561834819,0.13736407010466,0.0382978990897343,"low",10,"other","Bees","active","reported",9936.99
+"Riojas-Lopez et al. 2019",-0.477218703609312,0.192676182469141,0.0132569373323426,"low",8,"other","Bees","passive","reported",9936.99
+"Schrader et al. 2018",-0.284570561834819,0.13736407010466,0.0382978990897345,"low",10,"other","Bees","active","reported",9936.99
 "Severiano-Galeana et al. 2024",-0.274776104620489,0.275439307344538,0.318477144837274,"high",24,"natural forest","Insecta","active","reported",9936.99
 "Tangtorwongsakul et al. 2017",0.176823641179475,0.195942265981641,0.366829948451932,"high",24,"other","Bees","mixed","reported",9936.99
 "Toledo-Hernandez et al. 2021",0.305658239664311,0.123332538760941,0.0132000470369445,"low",18,"other","Diptera","passive","reported",9936.99

@@ -4,6 +4,7 @@
 library(ggplot2)
 library(dplyr)
 library(MASS)
+library(lme4)
 library(metafor)
 library(here)
 
@@ -27,10 +28,6 @@ author_location_count <- df %>%
   summarise(unique_locations = n_distinct(location)) %>%
   bind_rows(tibble(authors = "Total", unique_locations = sum(.$unique_locations)))
 print(author_location_count)
-
-range(df$distance, na.rm = TRUE)
-
-range(df$distance, na.rm = TRUE)
 
 # Calculate the range of distance values for each study
 distance_range_by_study <- df %>%
@@ -58,7 +55,7 @@ df <- df %>%
 
 # View as a sorted table for better readability
 distance_range_by_study %>% arrange(min_distance, max_distance)
-write.csv(distance_range_by_study,  "outputs/fruitset/Distance range by study.csv", row.names = FALSE)
+write.csv(distance_range_by_study,  "outputs/fruitset/Study-level distance ranges.csv", row.names = FALSE)
 
 ########################## Estimate Effect Sizes ###########################
 
@@ -77,8 +74,8 @@ for (study in unique_study) {
   assign(dataset_name, study_data, envir = .GlobalEnv)
 }
 
-## Fit GLM Models ###
-# Loop through each study to fit the GLM and store the results
+## Fit Models ###
+# Loop through each study to fit the models and store the results
 for (study in unique_study) {
   # Construct the name of the dataset
   dataset_name <- paste0("FS_", study)
@@ -86,11 +83,21 @@ for (study in unique_study) {
   # Access the dataset using get()
   data <- get(dataset_name)
   
-  # Fit the GLM
-  model <- glm(fruitset ~ log(distance + 1), family = binomial(link = "logit"), data = data)
+  # Print report-level details
+  print(paste("Report:", report))
+  design <- unique(data$study_design)
+  print(paste("Study design:", design))
+  
+  # Fit model based on study design
+  if (design == "one distance per farm") {
+    model <- glm(fruitset ~ log(distance + 1), family = binomial(link = "logit"), data = data)
+  }
+    else {
+      model <- glmer(fruitset ~ log(distance + 1) + (1 | location), family = binomial(link = "logit"), data = data)
+    }
   
   # Dynamically create the model name in the global environment
-  model_name <- paste0("GLM_FS_", study)
+  model_name <- paste0("model_FS_", study)
   assign(model_name, model, envir = .GlobalEnv)
   
   # Optionally, print the summary of the model
@@ -118,7 +125,7 @@ results <- data.frame(
 # Loop through each study to extract coefficients and store them
 for (study in unique_study) {
   # Construct model name
-  model_name <- paste0("GLM_FS_", study)
+  model_name <- paste0("model_FS_", study)
   dataset_name <- paste0("FS_", study)
   
   # Get the model and dataset from the global environment
@@ -138,6 +145,7 @@ for (study in unique_study) {
   agr_intensity <- unique(data$agr_intensity)
   p_dependency <- unique(data$p_dependency)
   sites <- unique(data$sites)
+  design <- unique(data$study_design)
   habitat <- unique(data$habitat)
   distance_measure <- unique(data$distance_measure)
   max_distance <- unique(data$max_distance)
@@ -153,6 +161,7 @@ for (study in unique_study) {
     PollDependency = p_dependency,
     AgrIntensity = agr_intensity,
     Sites = sites,
+    Design = design,
     Habitat = habitat,
     DistanceMeasure = distance_measure,
     MaxDistance = max_distance
@@ -164,17 +173,17 @@ for (study in unique_study) {
 print(results)
 
 # Save the results to a CSV file --> For Stage 2 of the meta-analysis
-write.csv(results, "outputs/fruitset/Fruitset_GLM_Model_Results.csv", row.names = FALSE)
+write.csv(results, "outputs/fruitset/Fruitset-distance stage 1 results.csv", row.names = FALSE)
 
 ### Plot model fit ####
 # Create folder to save the plots
-dir.create(here("outputs", "fruitset", "GLM fits"), recursive = TRUE, showWarnings = FALSE)
+dir.create(here("outputs", "fruitset", "model fits"), recursive = TRUE, showWarnings = FALSE)
 
 # Loop through each study to generate plots
 for (study in unique_study) {
   # Construct dataset and model names
   dataset_name <- paste0("FS_", study)
-  model_name <- paste0("GLM_FS_", study)
+  model_name <- paste0("model_FS_", study)
   
   # Get dataset and model
   dataset <- get(dataset_name)
@@ -208,7 +217,7 @@ for (study in unique_study) {
   print(p)
   
   # Save the plots
-  ggsave(filename = here("outputs", "fruitset", "GLM fits", paste0("Model_Fit_", study, ".png")), 
+  ggsave(filename = here("outputs", "fruitset", "model fits", paste0("Model_Fit_", study, ".png")), 
          plot = p, width = 8, height = 6, dpi = 300)
 }
 
@@ -216,7 +225,7 @@ for (study in unique_study) {
 
 ### Conduct the meta-analysis using metafor
 # Load the CSV file into a dataframe
-fruitset_es <- read.csv("outputs/fruitset/Fruitset_GLM_Model_Results.csv", header=TRUE, stringsAsFactors = FALSE)
+fruitset_es <- read.csv("outputs/fruitset/Fruitset_model_Model_Results.csv", header=TRUE, stringsAsFactors = FALSE)
 fruitset_es$Variance <- fruitset_es$StdError^2
 
 ### Fit a random-effects model using the calculated effect sizes ###
@@ -329,13 +338,13 @@ moderator_summaries # Print all summaries
 res.modintensity <- rma(Slope, Variance, mods = ~ 0 + AgrIntensity, data=fruitset_es)
 res.modintensity
 
-# Moderator analysis for pollinator dependency
-res.modpdep <- rma(Slope, Variance, mods = ~ 0 + PollDependency, data=fruitset_es)
-res.modpdep
-
 # Moderator analysis for habitat type
 res.modhabitat <- rma(Slope, Variance, mods = ~ 0 + Habitat, data=fruitset_es)
 res.modhabitat
+
+# Moderator analysis for pollinator dependency
+res.modpdep <- rma(Slope, Variance, mods = ~ 0 + PollDependency, data=fruitset_es)
+res.modpdep
 
 ########################## Sensitivity analyses ###########################
 
