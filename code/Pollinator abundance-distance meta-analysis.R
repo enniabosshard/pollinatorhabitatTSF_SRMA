@@ -452,35 +452,61 @@ unique_report_wild <- unique(wild_data$report)
 unique_report_wild
 length(unique_report_wild) #number of studies
 
-# Loop through each report in the wild dataset
+# !!! insert here the new code
+# Loop through each dataset to fit the models and store the results
 for (report in unique_report_wild) {
-  # Filter the dataset for the current report
-  dataset_name <- paste0("AWild_", report)
+  dataset_name <- paste0("AWild_", report)   # Construct the dataset name
   data <- wild_data[wild_data$report == report, ]
   
   # Assign the filtered dataset to a new variable in the global environment
   assign(dataset_name, data, envir = .GlobalEnv)
   
-  # Fit the GLM for abundance_wild
-  model <- glm.nb(abundance_wild ~ log(distance_m + 1), data = data, link = log)
+  # Determine model type
+  balanced_effort <- length(unique(data$sampling_effort)) > 1
+  design <- unique(data$study_design)
   
-  # Dynamically name the model
+  # Print report-level details
+  print(paste("Report:", report))
+  print(paste("Study design:", design))
+  print(paste("Balanced sampling effort:", balanced_effort))
+  
+  # Choose model type based on study design and sampling effort
+  if (design == "single distance per site") {
+    # Use GLM
+    if (balanced_effort) {
+      model <- glm.nb(abundance_wild ~ log(distance_m + 1) + offset(log(sampling_effort)), data = data, link = log)
+    } else {
+      model <- glm.nb(abundance_wild ~ log(distance_m + 1), data = data, link = log)
+    }
+    
+  } else {
+    # Use GLMM with random effect for location
+    if (balanced_effort) {
+      model <- glmer.nb(abundance_wild ~ log(distance_m + 1) + offset(log(sampling_effort)) + (1 | location), data = data)
+    } else {
+      model <- glmer.nb(abundance_wild ~ log(distance_m + 1) + (1 | location), data = data)
+    }
+  }
+  
+  # Save the model
   model_name <- paste0("model_AWild_", report)
   assign(model_name, model, envir = .GlobalEnv)
   
-  # Print model summary
+  # Print summary for debugging
   print(paste("Model stored as", model_name))
   print(summary(model))
 }
 
-# Create an empty data frame for results
+# Create an empty data frame to store the results
 results_wild <- data.frame(
+  Report = character(),
   Authors = character(),
   Slope = numeric(),
   StdError = numeric(),
   PValue = numeric(),
   AgrIntensity = character(),
   Sites = character(),
+  Design = character(),
   Habitat = character(),
   Pollinator = character(),
   Method = character(),
@@ -489,33 +515,34 @@ results_wild <- data.frame(
   stringsAsFactors = FALSE
 )
 
-# Loop through each report in the wild dataset
+# Loop through each dataset to extract coefficients and store them
 for (report in unique_report_wild) {
-  # Construct model and dataset names
+  # Construct model name
   model_name <- paste0("model_AWild_", report)
   dataset_name <- paste0("AWild_", report)
   
-  # Get the model and dataset
+  # Get the model and dataset from the global environment
   model <- get(model_name)
   data <- get(dataset_name)
   
-  # Extract coefficients
+  # Extract coefficients and their statistics from the model
   coef_summary <- summary(model)$coefficients
   slope <- coef_summary["log(distance_m + 1)", "Estimate"]
   std_error <- coef_summary["log(distance_m + 1)", "Std. Error"]
   p_value <- coef_summary["log(distance_m + 1)", "Pr(>|z|)"]
   
-  # Additional information from the dataset
+  # Extract additional information from the dataset
   authors <- unique(data$authors)
   agr_intensity <- unique(data$agr_intensity)
   sites <- unique(data$sites)
+  design <- unique(data$study_design)
   habitat <- unique(data$habitat)
   pollinator <- unique(data$pollinator)
   sampling_method <- unique(data$sampling_method)
-  distance_m_measure <- unique(data$distance_m_measure)
-  max_distance_m <- unique(data$max_distance_m)
+  distance_measure <- unique(data$distance_measure)
+  max_distance <- unique(data$max_distance)
   
-  # Append results
+  # Append the results to the data frame
   results_wild <- rbind(results_wild, data.frame(
     Authors = authors,
     Slope = slope,
@@ -523,6 +550,7 @@ for (report in unique_report_wild) {
     PValue = p_value,
     AgrIntensity = agr_intensity,
     Sites = sites,
+    Design = design,
     Habitat = habitat,
     Pollinator = pollinator,
     Method = sampling_method,
@@ -531,13 +559,16 @@ for (report in unique_report_wild) {
   ))
 }
 
-# Save the results
-write.csv(results_wild, "outputs/abundance/Wild abundance-distance stage 1 results.csv", row.names = FALSE)
+# Print the overview of the extracted results
+print(results_wild)
 
-# Calculate variance for the meta-analysis
+# Add Variance as a column 
 results_wild$Variance <- results_wild$StdError^2
 
-# Fit random-effects model
+# Save the results to a CSV file --> For Stage 2 of the meta-analysis
+write.csv(results_wild, "outputs/abundance/Wild abundance-distance stage 1 results.csv", row.names = FALSE)
+
+#### Fit random-effects model
 res_abundance_wild <- rma(yi = Slope, vi = Variance, data = results_wild)
 print(res_abundance_wild)
 
