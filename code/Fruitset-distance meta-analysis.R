@@ -5,22 +5,28 @@ library(ggplot2)
 library(dplyr)
 library(MASS)
 library(lme4)
+library(ggeffects)
 library(metafor)
 library(here)
 
 # Load data
-here() 
+setwd(rprojroot::find_rstudio_root_file())
 df <- read.csv("raw_data/Fulldataset_fruitset.csv", header = TRUE, stringsAsFactors = FALSE)
 
 # Remove rows with NA in 'fruitset' or 'distance' columns
-df <- df[!is.na(df$fruitset) & !is.na(df$distance), ]
+df <- df[!is.na(df$fruitset) & !is.na(df$distance_m), ]
 nrow(df)
 colnames(df)
 
-# Get all individual study names
-unique_study <- unique(df$study)
-unique_study
-length(unique_study) #number of studies
+# Get all individual report names
+unique_report <- unique(df$report)
+length(unique_report) #number of reports
+unique_report
+
+# Check distribution of study design types across datasets
+df %>%
+  distinct(report, study_design) %>%  # keep only unique study-design pairs
+  count(study_design)  # count how many studies per design
 
 # Count unique locations per author and add total sum
 author_location_count <- df %>%
@@ -29,18 +35,18 @@ author_location_count <- df %>%
   bind_rows(tibble(authors = "Total", unique_locations = sum(.$unique_locations)))
 print(author_location_count)
 
-# Calculate the range of distance values for each study
-distance_range_by_study <- df %>%
-  group_by(study) %>%
-  summarise(min_distance = min(distance, na.rm = TRUE),
-            max_distance = max(distance, na.rm = TRUE),
-            n_observations = n()) # Optional: count number of observations per study
+# Calculate the range of distance values for each report
+distance_range_by_report <- df %>%
+  group_by(report) %>%
+  summarise(min_distance = min(distance_m, na.rm = TRUE),
+            max_distance = max(distance_m, na.rm = TRUE),
+            n_observations = n()) 
 
 # Print the results
-print(distance_range_by_study)
+print(distance_range_by_report)
 
 # Calculate summary statistics for max_distance
-summary_stats <- distance_range_by_study %>%
+summary_stats <- distance_range_by_report %>%
   summarise(mean_max_distance = mean(max_distance, na.rm = TRUE),
             median_max_distance = median(max_distance, na.rm = TRUE),
             min_max_distance = min(max_distance, na.rm = TRUE),
@@ -51,56 +57,57 @@ print(summary_stats)
 
 # Merge max_distance into df
 df <- df %>%
-  left_join(distance_range_by_study %>% dplyr::select(study, max_distance), by = "study")
+  left_join(distance_range_by_report %>% dplyr::select(report, max_distance), by = "report")
 
 # View as a sorted table for better readability
-distance_range_by_study %>% arrange(min_distance, max_distance)
-write.csv(distance_range_by_study,  "outputs/fruitset/Study-level distance ranges.csv", row.names = FALSE)
+distance_range_by_report %>% arrange(min_distance, max_distance)
+write.csv(distance_range_by_report,  "outputs/fruitset/Study-level distance ranges.csv", row.names = FALSE)
 
 ########################## Estimate Effect Sizes ###########################
 
-## Estimate effect sizes for each individual study
-# Loop through each study and create a separate data frame for each
-for (study in unique_study) {
+## Estimate effect sizes for each individual report
+# Loop through each report and create a separate data frame for each
+for (report in unique_report) {
   
-  # Filter the df for the current study
-  study_data <- df %>% filter(study == !!study)
+  # Filter the df for the current report
+  report_data <- df %>% filter(report == !!report)
   
-  # Create a variable name dynamically based on the study name
-  dataset_name <- paste0("FS_", gsub(" ", "_", study))
-  hist(study_data$fruitset)
+  # Create a variable name dynamically based on the report name
+  dataset_name <- paste0("FS_", gsub(" ", "_", report))
+  hist(report_data$fruitset)
   
   # Assign the filtered data frame to a new variable in the global environment
-  assign(dataset_name, study_data, envir = .GlobalEnv)
+  assign(dataset_name, report_data, envir = .GlobalEnv)
 }
 
 ## Fit Models ###
-# Loop through each study to fit the models and store the results
-for (study in unique_study) {
-  # Construct the name of the dataset
-  dataset_name <- paste0("FS_", study)
-  
-  # Access the dataset using get()
+### !! This is currently not working as binomial GLM/GLMM doesn't deal with offsets the same as Poisson / neg binomial models
+# Loop through each report to fit the models and store the results
+for (report in unique_report) {
+  dataset_name <- paste0("FS_", report) # Construct the dataset name
   data <- get(dataset_name)
   
+  # Determine model type
+  design <- unique(data$study_design)
+  
   # Print report-level details
-  print(paste("Report:", report))
+  print(paste("report:", report))
   design <- unique(data$study_design)
   print(paste("Study design:", design))
   
-  # Fit model based on study design
-  if (design == "one distance per farm") {
-    model <- glm(fruitset ~ log(distance + 1), family = binomial(link = "logit"), data = data)
+  # Choose model type based on study design
+  if (design == "single distance per site") { # Use GLM with binomial error distribution
+      model <- glm(fruitset ~ log(distance_m + 1), family = binomial(link = "logit"), data = data)
   }
-    else {
-      model <- glmer(fruitset ~ log(distance + 1) + (1 | location), family = binomial(link = "logit"), data = data)
+      else { # Use GLMM with random effect for location
+      model <- glmer(fruitset ~ log(distance_m + 1) + (1 | location), data = data, family = binomial(link = "logit"))
     }
   
-  # Dynamically create the model name in the global environment
-  model_name <- paste0("model_FS_", study)
+  # Save the models
+  model_name <- paste0("model_FS_", report)
   assign(model_name, model, envir = .GlobalEnv)
   
-  # Optionally, print the summary of the model
+  # Print summary for debugging
   print(paste("Model stored as", model_name))
   print(summary(model))
 }
@@ -111,22 +118,23 @@ results <- data.frame(
   Slope = numeric(),
   StdError = numeric(),
   PValue = numeric(),
+  SingularFit = character(),
   Crop = character(),
   PollDependency = character(),
   AgrIntensity = character(),
   Sites = character(),
-  Haibtat = character(),
+  Design = character(),
+  Habitat = character(),
   DistanceMeasure = character(),
   MaxDistance = numeric(),
-  RoB = character(),
   stringsAsFactors = FALSE
 )
 
-# Loop through each study to extract coefficients and store them
-for (study in unique_study) {
+# Loop through each report to extract coefficients and store them
+for (report in unique_report) {
   # Construct model name
-  model_name <- paste0("model_FS_", study)
-  dataset_name <- paste0("FS_", study)
+  model_name <- paste0("model_FS_", report)
+  dataset_name <- paste0("FS_", report)
   
   # Get the model and dataset from the global environment
   model <- get(model_name)
@@ -135,9 +143,11 @@ for (study in unique_study) {
   # Extract coefficients and their statistics from the model
   coef_summary <- summary(model)$coefficients
   
-  slope <- coef_summary["log(distance + 1)", "Estimate"]
-  std_error <- coef_summary["log(distance + 1)", "Std. Error"]
-  p_value <- coef_summary["log(distance + 1)", "Pr(>|z|)"]
+  slope <- coef_summary["log(distance_m + 1)", "Estimate"]
+  std_error <- coef_summary["log(distance_m + 1)", "Std. Error"]
+  p_value <- coef_summary["log(distance_m + 1)", "Pr(>|z|)"]
+  singularfit<-NA
+  if (inherits(model, "glmerMod")) {singularfit<-isSingular(model)}
   
   # Extract additional information from the dataset
   authors <- unique(data$authors)
@@ -149,7 +159,6 @@ for (study in unique_study) {
   habitat <- unique(data$habitat)
   distance_measure <- unique(data$distance_measure)
   max_distance <- unique(data$max_distance)
-  #RoB <- unique(data$RoB)
   
   # Append the results to the data frame
   results <- rbind(results, data.frame(
@@ -157,6 +166,7 @@ for (study in unique_study) {
     Slope = slope,
     StdError = std_error,
     PValue = p_value,
+    SingularFit = singularfit,
     Crop = crop,
     PollDependency = p_dependency,
     AgrIntensity = agr_intensity,
@@ -165,7 +175,6 @@ for (study in unique_study) {
     Habitat = habitat,
     DistanceMeasure = distance_measure,
     MaxDistance = max_distance
-    #RoB = RoB
   ))
 }
 
@@ -179,53 +188,73 @@ write.csv(results, "outputs/fruitset/Fruitset-distance stage 1 results.csv", row
 # Create folder to save the plots
 dir.create(here("outputs", "fruitset", "model fits"), recursive = TRUE, showWarnings = FALSE)
 
-# Loop through each study to generate plots
-for (study in unique_study) {
+# Loop through each report to generate plots
+for (report in unique_report) {
+  
   # Construct dataset and model names
-  dataset_name <- paste0("FS_", study)
-  model_name <- paste0("model_FS_", study)
+  dataset_name <- paste0("FS_", report)
+  model_name <- paste0("model_FS_", report)
   
   # Get dataset and model
   dataset <- get(dataset_name)
   model <- get(model_name)
   
   # Create a smooth sequence of distances for prediction
-  smooth_distance <- data.frame(distance = seq(min(dataset$distance), max(dataset$distance), length.out = 100))
+  smooth_distance <- data.frame(distance_m = seq(min(dataset$distance_m), max(dataset$distance_m), length.out = 100))
   
-  # Predict values for smooth distance sequence
-  preds <- predict(model, newdata = smooth_distance, type = "response", se.fit = TRUE)
+  ### For the GLMs
+  if (inherits(model, "glm")) {
+    
+    preds <- predict(model, newdata = smooth_distance, type = "response", se.fit = TRUE)
+    
+    smooth_distance <- smooth_distance %>%
+      mutate(
+        predicted = preds$fit,
+        lower_CI = preds$fit - 1.96 * preds$se.fit,
+        upper_CI = preds$fit + 1.96 * preds$se.fit
+      )
+    
+    p <- ggplot(dataset, aes(x = distance_m, y = fruitset)) +
+      geom_ribbon(data = smooth_distance, aes(ymin = lower_CI, ymax = upper_CI, x = distance_m),
+                  inherit.aes = FALSE, fill = "grey70", alpha = 0.4) +
+      geom_line(data = smooth_distance, aes(y = predicted, x = distance_m),
+                inherit.aes = FALSE, color = "blue", linewidth = 1) +
+      geom_point(size = 3, alpha = 0.6, colour = "black") +
+      labs(x = "Distance in m", y = "Fruit set", title = paste(report, "et al.")) +
+      theme_minimal(base_size = 12)
+    
+    print(p)
+    
+    ggsave(here("outputs", "fruitset", "model fits", paste0("Model_Fit_", report, ".png")),
+           plot = p, width = 8, height = 6, dpi = 300)
+    
+    next
+  }
   
-  # Add predictions and confidence intervals to smooth dataset
-  smooth_distance <- smooth_distance %>%
-    mutate(
-      predicted = preds$fit,
-      lower_CI = preds$fit - 1.96 * preds$se.fit,
-      upper_CI = preds$fit + 1.96 * preds$se.fit
-    )
-  
-  # Plot raw data with a **smooth** fitted line and confidence intervals
-  p <- ggplot(dataset, aes(x = distance, y = fruitset)) +  # Base plot with actual data
-    geom_ribbon(data = smooth_distance, aes(x = distance, ymin = lower_CI, ymax = upper_CI), 
-                inherit.aes = FALSE, fill = "grey70", alpha = 0.4) +  # Confidence interval shading
-    geom_line(data = smooth_distance, aes(x = distance, y = predicted), 
-              inherit.aes = FALSE, color = "blue", linewidth = 1) +  # Smooth fitted line
-    geom_point(size = 3, alpha = 0.6, colour = "black") + # Raw data points
-    labs(x = "Distance in m", y = "Fruit set", title = paste(study, "et al.")) +
-    theme_minimal(base_size = 12)  # Clean theme
-  
-  # Print the plots
-  print(p)
-  
-  # Save the plots
-  ggsave(filename = here("outputs", "fruitset", "model fits", paste0("Model_Fit_", study, ".png")), 
-         plot = p, width = 8, height = 6, dpi = 300)
+  ### For the GLMMs
+  if (inherits(model, "glmerMod")) {
+    #preds <- ggeffects::ggemmeans(model,   terms = "distance_m[all]")
+    preds <- ggeffects::ggemmeans(model, terms = list(distance_m = smooth_distance$distance_m), condition = c(repeat_measures = mean(dataset$repeat_measures)))  
+    
+    p <- ggplot() +
+      geom_ribbon(data = preds, aes(x = x, ymin = conf.low, ymax = conf.high), fill = "grey70", alpha = 0.4) +
+      geom_line(data = preds, aes(x = x, y = predicted), colour = "blue", linewidth = 1) +
+      geom_point(data = dataset, aes(x = distance_m, y = fruitset), colour = "black", alpha = 0.6, size = 3) +
+      labs(x = "Distance to forest (m)", y = "Fruit set", title = paste(report, "et al. (GLMM)")) +
+      theme_minimal(base_size = 12)
+    
+    print(p)
+    
+    ggsave(here("outputs", "fruitset", "model fits", paste0(report, "_GLMM_fit.png")),
+           plot = p, width = 8, height = 6, dpi = 300)
+  }
 }
-
+  
 ########################## Meta-Analysis ###########################
 
 ### Conduct the meta-analysis using metafor
 # Load the CSV file into a dataframe
-fruitset_es <- read.csv("outputs/fruitset/Fruitset_model_Model_Results.csv", header=TRUE, stringsAsFactors = FALSE)
+fruitset_es <- results
 fruitset_es$Variance <- fruitset_es$StdError^2
 
 ### Fit a random-effects model using the calculated effect sizes ###
@@ -242,16 +271,16 @@ forest(res,
        xlim = c(-15, 11),                            # Customize x-axis limits
        refline = 0,                                # Add reference line at 0
        header = "a) Fruit set",         # Header for the plot
-       annotate = TRUE,                            # Add study annotations
-       ilab.xpos = -0.015,                         # Adjust position of study effect size labels
+       annotate = TRUE,                            # Add report annotations
+       ilab.xpos = -0.015,                         # Adjust position of report effect size labels
        cex = 0.8)                                  # Manage overall font size
 dev.off()  # Close device to save the file
 
 ##### Plot decay surve
 # Define distances (log scale for consistency with Ricketts et al.)
 # Get the minimum and maximum distances from the dataset
-min_distance <- min(df$distance, na.rm = TRUE)
-max_distance <- max(df$distance, na.rm = TRUE)
+min_distance <- min(df$distance_m, na.rm = TRUE)
+max_distance <- max(df$distance_m, na.rm = TRUE)
 
 # Print the min and max distance values
 print(paste("Min distance:", min_distance))
@@ -262,7 +291,7 @@ distance_seq <- seq(min_distance, max_distance, length.out = 100)
 
 # Define mean fruitset at 0m
 str(df)
-fruitset_at_0m <- df[df$distance == 0, ] # Filter the dataset for only rows where distance = 0m
+fruitset_at_0m <- df[df$distance_m == 0, ] # Filter the dataset for only rows where distance = 0m
 mean_fruitset_0m <- mean(fruitset_at_0m$fruitset, na.rm = TRUE)
 print(mean_fruitset_0m) # Print the result
 f0 <- mean_fruitset_0m  # mean from dataset = 0.42
@@ -274,7 +303,7 @@ upper_CI <- res$ci.ub
 
 # Create a dataframe for the mean effect and confidence intervals
 df_fruitset <- data.frame(
-  distance = distance_seq,
+  distance_m = distance_seq,
   fruitset_mean = f0 * exp(mean_slope * log(distance_seq + 1)),  # Mean effect
   fruitset_upper = f0 * exp(upper_CI * log(distance_seq + 1)),  # Upper CI
   fruitset_lower = f0 * exp(lower_CI * log(distance_seq + 1))  # Lower CI
@@ -303,8 +332,8 @@ ggsave(filename = here("outputs", "fruitset", "Fruitset decay curve.png"), plot 
 
 #### Calculate % decline at 1km from natural habitat
 # Define the function for predicted fruitset
-predict_fruitset <- function(distance, slope) {
-  f0 * exp(slope * log(distance + 1))
+predict_fruitset <- function(distance_m, slope) {
+  f0 * exp(slope * log(distance_m + 1))
 }
 
 # Calculate predicted fruitsets at 0m and 1000m
@@ -362,7 +391,7 @@ inf <- influence(res) # Check if any individual studies were very influential
 print(inf) # influential studies have an * next to them
 plot(inf) # red dots for influential studies 
 
-# Re-run meta-analysis excluding each study one by one
+# Re-run meta-analysis excluding each report one by one
 leave1out <- leave1out(res, digits = 3)
 leave1out
 write.csv(leave1out, "outputs/fruitset/Leave1out_fruitset.csv", row.names = FALSE)
@@ -388,25 +417,3 @@ fruitset_es$DistanceCategory <- factor(fruitset_es$DistanceCategory, levels = c(
 res.modmaxdistance <- rma(Slope, Variance, mods = ~ 0 + DistanceCategory, data=fruitset_es)
 res.modmaxdistance
 
-### Subgroup analysis excl studies with high RoB ###
-# Filter for medium RoB studies in the fruitset dataset
-# results_mediumRoB <- subset(fruitset_es, RoB == "medium")
-
-# Calculate variance for the meta-analysis
-# results_mediumRoB$Variance <- results_mediumRoB$StdError^2
-
-# Fit random-effects model
-# res_fruitset_mediumRoB <- rma(yi = Slope, vi = Variance, data = results_mediumRoB)
-# print(res_fruitset_mediumRoB)
-
-# Create a forest plot
-# forest(res_fruitset_mediumRoB,
-#       slab = results_mediumRoB$Authors,                # Labels for the studies
-#       xlab = "Slope",                                  # Label for the x-axis
-#       xlim = c(-4, 3),                                 # Customise x-axis limits
-#       refline = 0,                                     # Add reference line at 0
-#       header = "Fruit set subgroup; medium Risk of Bias", # Header for the plot
-#       annotate = TRUE,                                 # Add study annotations
-#       ilab.xpos = -0.015,                              # Adjust position of study effect size labels
-#       cex = 0.8                                        # Manage overall font size
-#       )

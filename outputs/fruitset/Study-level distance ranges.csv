@@ -1,4 +1,4 @@
-"study","min_distance","max_distance","n_observations"
+"report","min_distance","max_distance","n_observations"
 "Enriquez",12.51,239.01,10
 "Escobedo",3.11,661.38,22
 "Geeraert",40,390,17
@@ -9,9 +9,9 @@
 "Krishnan",0,500,130
 "Landaverde",0,140,11
 "Latini",0,250,32
-"Li",2.150085,94.17192,31
+"Li",2.150085,94.17192,22
 "LucasGarcia",52.63,1106.6,18
-"Munyuli",5,7000,17
+"Munyuli",5,7000,16
 "Obregon",0,90,10
 "SeverianoGaleana",52.22,2000,24
 "Vogel(a)",10,250,9

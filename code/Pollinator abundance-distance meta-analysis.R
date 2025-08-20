@@ -90,7 +90,7 @@ for (report in unique_report) {
   data <- get(dataset_name)
   
   # Determine model type
-  unbalanced_effort <- length(unique(data$sampling_effort)) > 1
+  unbalanced_effort <- length(unique(data$repeat_measures)) > 1
   design <- unique(data$study_design)
   
   # Print report-level details
@@ -102,7 +102,7 @@ for (report in unique_report) {
   if (design == "single distance per site") {
     # Use GLM
     if (unbalanced_effort) {
-      model <- glm.nb(abundance_all ~ log(distance_m + 1) + offset(log(sampling_effort)), data = data, link = log)
+      model <- glm.nb(abundance_all ~ log(distance_m + 1) + offset(log(repeat_measures)), data = data, link = log)
     } else {
       model <- glm.nb(abundance_all ~ log(distance_m + 1), data = data, link = log)
     }
@@ -110,7 +110,7 @@ for (report in unique_report) {
   } else {
     # Use GLMM with random effect for location
     if (unbalanced_effort) {
-      model <- glmer.nb(abundance_all ~ log(distance_m + 1) + offset(log(sampling_effort)) + (1 | location), data = data)
+      model <- glmer.nb(abundance_all ~ log(distance_m + 1) + offset(log(repeat_measures)) + (1 | location), data = data)
     } else {
       model <- glmer.nb(abundance_all ~ log(distance_m + 1) + (1 | location), data = data)
     }
@@ -208,21 +208,21 @@ for (report in unique_report) {
   dataset_name <- paste0("A_", report)
   model_name <- paste0("model_A_", report)
   
+  # Create objects needed for prediction
   dataset <- get(dataset_name)
   model <- get(model_name)
   
+  # Create smooth sequence of distances
+  smooth_distance <- data.frame(distance_m = seq(min(dataset$distance_m),
+                                                 max(dataset$distance_m),
+                                                 length.out = 100))
   ### For the GLMs
   if (inherits(model, "glm")) {
     
-    # Create smooth sequence of distances
-    smooth_distance <- data.frame(distance_m = seq(min(dataset$distance_m),
-                                                   max(dataset$distance_m),
-                                                   length.out = 100))
-    
-    # Check if sampling_effort used as offset
-    balanced_effort <- "sampling_effort" %in% colnames(dataset) && length(unique(dataset$sampling_effort)) > 1
+    # Check if repeat_measures used as offset
+    balanced_effort <- "repeat_measures" %in% colnames(dataset) && length(unique(dataset$repeat_measures)) > 1
     if (balanced_effort) {
-      smooth_distance$sampling_effort <- mean(dataset$sampling_effort, na.rm = TRUE)
+      smooth_distance$repeat_measures <- mean(dataset$repeat_measures, na.rm = TRUE)
     }
     
     # Predict with SEs
@@ -256,8 +256,9 @@ for (report in unique_report) {
   ### For the GLMMs
   if (inherits(model, "glmerMod")) {
     
-    # Predictions from ggpredict
-    preds <- ggpredict(model, terms = "distance_m", condition = c(sampling_effort = 1)) # set offset to 1
+    # Predictions from ggeffects package
+    preds <- ggeffects::ggemmeans(model, terms = list(distance_m = smooth_distance$distance_m), 
+                                  condition = c(repeat_measures = mean(dataset$repeat_measures)))  
     
     # Build plot (same style)
     p <- ggplot() +
@@ -267,8 +268,7 @@ for (report in unique_report) {
       labs(x = "Distance to forest (m)", y = "Pollinator abundance (all)", title = paste(report, "et al. (GLMM)")) +
       theme_minimal(base_size = 12)
     
-    ggsave(filename = here("outputs", "abundance", "model fits",
-                           paste0(report, "_GLMM_fit.png")),
+    ggsave(filename = here("outputs", "abundance", "model fits", paste0(report, "_GLMM_fit.png")),
            plot = p, width = 8, height = 6, dpi = 300)
   }
 }
@@ -462,7 +462,7 @@ for (report in unique_report_wild) {
   assign(dataset_name, data, envir = .GlobalEnv)
   
   # Determine model type
-  balanced_effort <- length(unique(data$sampling_effort)) > 1
+  balanced_effort <- length(unique(data$repeat_measures)) > 1
   design <- unique(data$study_design)
   
   # Print report-level details
@@ -474,7 +474,7 @@ for (report in unique_report_wild) {
   if (design == "single distance per site") {
     # Use GLM
     if (balanced_effort) {
-      model <- glm.nb(abundance_wild ~ log(distance_m + 1) + offset(log(sampling_effort)), data = data, link = log)
+      model <- glm.nb(abundance_wild ~ log(distance_m + 1) + offset(log(repeat_measures)), data = data, link = log)
     } else {
       model <- glm.nb(abundance_wild ~ log(distance_m + 1), data = data, link = log)
     }
@@ -482,7 +482,7 @@ for (report in unique_report_wild) {
   } else {
     # Use GLMM with random effect for location
     if (balanced_effort) {
-      model <- glmer.nb(abundance_wild ~ log(distance_m + 1) + offset(log(sampling_effort)) + (1 | location), data = data)
+      model <- glmer.nb(abundance_wild ~ log(distance_m + 1) + offset(log(repeat_measures)) + (1 | location), data = data)
     } else {
       model <- glmer.nb(abundance_wild ~ log(distance_m + 1) + (1 | location), data = data)
     }

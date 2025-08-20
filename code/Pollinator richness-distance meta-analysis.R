@@ -7,6 +7,7 @@ library(MASS)
 library(lme4)
 library(metafor)
 library(ggeffects)
+library(here)
 
 # Load data
 setwd(rprojroot::find_rstudio_root_file())
@@ -52,7 +53,7 @@ distance_range_by_report <- df %>%
   group_by(report) %>%
   summarise(min_distance = min(distance_m, na.rm = TRUE),
             max_distance = max(distance_m, na.rm = TRUE),
-            n_observations = n()) # Optional: count number of observations per report
+            n_observations = n()) 
 
 # Print the results
 print(distance_range_by_report)
@@ -94,26 +95,26 @@ for (report in unique_report) {
 
 ## Fit Models ###
 # Loop through each report to fit the models and store the results
-
+set.seed(123)
 for (report in unique_report) {
   # Construct the dataset name
   dataset_name <- paste0("R_", report)
   data <- get(dataset_name)
   
   # Determine model type
-  unbalanced_effort <- length(unique(data$sampling_effort)) > 1
+  unbalanced_effort <- length(unique(data$repeat_measures)) > 1
   design <- unique(data$study_design)
   
   # Print report-level details
-  print(paste("report:", report))
+  print(paste("Study:", report))
   print(paste("Study design:", design))
-  print(paste("unbalanced sampling effort:", unbalanced_effort))
+  print(paste("Unbalanced sampling effort:", unbalanced_effort))
   
   # Choose model type based on study design and sampling effort
   if (design == "single distance per site") {
     # Use GLM
     if (unbalanced_effort) {
-      model <- glm.nb(richness_all ~ log(distance_m + 1) + offset(log(sampling_effort)), data = data, link = log)
+      model <- glm.nb(richness_all ~ log(distance_m + 1) + offset(log(repeat_measures)), data = data, link = log)
     } else {
       model <- glm.nb(richness_all ~ log(distance_m + 1), data = data, link = log)
     }
@@ -121,7 +122,7 @@ for (report in unique_report) {
   } else {
     # Use GLMM with random effect for location
     if (unbalanced_effort) {
-      model <- glmer.nb(richness_all ~ log(distance_m + 1) + offset(log(sampling_effort)) + (1 | location), data = data)
+      model <- glmer.nb(richness_all ~ log(distance_m + 1) + offset(log(repeat_measures)) + (1 | location), data = data)
     } else {
       model <- glmer.nb(richness_all ~ log(distance_m + 1) + (1 | location), data = data)
     }
@@ -222,16 +223,16 @@ for (report in unique_report) {
   dataset <- get(dataset_name)
   model <- get(model_name)
   
+  # Create smooth sequence of distances
+  smooth_distance <- data.frame(distance_m = seq(min(dataset$distance_m), max(dataset$distance_m), length.out = 100))
+  
   ### For the GLMs
   if (inherits(model, "glm")) {
-    
-    # Create smooth sequence of distances
-    smooth_distance <- data.frame(distance_m = seq(min(dataset$distance_m), max(dataset$distance_m), length.out = 100))
-    
-    # Check if sampling_effort used as offset
-    balanced_effort <- "sampling_effort" %in% colnames(dataset) && length(unique(dataset$sampling_effort)) > 1
+
+    # Check if repeat_measures used as offset
+    balanced_effort <- "repeat_measures" %in% colnames(dataset) && length(unique(dataset$repeat_measures)) > 1
     if (balanced_effort) {
-      smooth_distance$sampling_effort <- mean(dataset$sampling_effort, na.rm = TRUE)
+      smooth_distance$repeat_measures <- mean(dataset$repeat_measures, na.rm = TRUE)
     }
     
     # Predict with SEs
@@ -265,8 +266,9 @@ for (report in unique_report) {
   ### For the GLMMs
   if (inherits(model, "glmerMod")) {
     
-    # Predictions from ggpredict
-    preds <- ggpredict(model, terms = "distance_m", condition = c(sampling_effort = 1)) # set offset to 1
+    # Predictions from ggeffects package
+    preds <- ggeffects::ggemmeans(model, terms = list(distance_m = smooth_distance$distance_m), 
+                                  condition = c(repeat_measures = mean(dataset$repeat_measures)))  
     
     # Build plot (same style)
     p <- ggplot() +
