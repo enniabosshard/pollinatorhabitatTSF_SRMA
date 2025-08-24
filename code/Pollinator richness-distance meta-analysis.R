@@ -95,7 +95,6 @@ for (report in unique_report) {
 
 ## Fit Models ###
 # Loop through each report to fit the models and store the results
-set.seed(123)
 for (report in unique_report) {
   # Construct the dataset name
   dataset_name <- paste0("R_", report)
@@ -251,7 +250,7 @@ for (report in unique_report) {
       geom_line(data = smooth_distance, aes(x = distance_m, y = predicted),
                 inherit.aes = FALSE, color = "blue", linewidth = 1) +
       geom_point(size = 3, alpha = 0.6, colour = "black") +
-      labs(x = "Distance to forest (m)",
+      labs(x = "Distance to natural habitat (m)",
            y = "Pollinator richness (all)",
            title = paste(report, "et al. (GLM)")) +
       theme_minimal(base_size = 12)
@@ -275,7 +274,7 @@ for (report in unique_report) {
       geom_ribbon(data = preds, aes(x = x, ymin = conf.low, ymax = conf.high), fill = "grey70", alpha = 0.4) +
       geom_line(data = preds, aes(x = x, y = predicted), colour = "blue", linewidth = 1) +
       geom_point(data = dataset, aes(x = distance_m, y = richness_all), colour = "black", alpha = 0.6, size = 3) +
-      labs(x = "Distance to forest (m)", y = "Pollinator richness (all)", title = paste(report, "et al. (GLMM)")) +
+      labs(x = "Distance to natural habitat (m)", y = "Pollinator richness (all)", title = paste(report, "et al. (GLMM)")) +
       theme_minimal(base_size = 12)
     
     ggsave(filename = here("outputs", "richness", "model fits",
@@ -392,7 +391,6 @@ names(moderator_summaries) <- moderators # Name the list elements
 moderator_summaries # Print all summaries
 
 ## Meta-analysis with individual moderators
-
 # Moderator analysis for habitat type
 res.modhabitat <- rma(Slope, Variance, mods = ~ 0 + Habitat, data=richness_es)
 res.modhabitat
@@ -400,11 +398,6 @@ res.modhabitat
 # Moderator analysis for agricultural intensity
 res.modintensity <- rma(Slope, Variance, mods = ~ 0 + AgrIntensity, data=richness_es)
 res.modintensity
-
-# Moderator analysis for pollinator groups
-# res.modpollinator <- rma(Slope, Variance, mods = ~ 0 + Pollinator, data=richness_es)
-# res.modpollinator
-
 
 ########################## Sensitivity analyses ###########################
 
@@ -435,7 +428,7 @@ res.modmethod
 res.moddistance <- rma(Slope, Variance, mods = ~ 0 + DistanceMeasure, data=richness_es)
 res.moddistance
 
-# Sensitivty model 3: Distance category (max distance)
+# Sensitivity model 3: Distance category (max distance)
 # Add categories for the maximum distance scales (small, medium, large) for sensitivty analysis
 richness_es <- richness_es %>%
   mutate(DistanceCategory = case_when(

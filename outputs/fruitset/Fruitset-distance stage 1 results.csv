@@ -1,18 +1,18 @@
-"Authors","Slope","StdError","PValue","SingularFit","Crop","PollDependency","AgrIntensity","Sites","Design","Habitat","DistanceMeasure","MaxDistance"
-"Enriquez et al. 2015",0.465975894641751,1.37398081361839,0.73450205067646,NA,"squash","Essential (90-100%)","low",10,"single distance per site","other","reported",239.01
-"Escobedo-Kenefic et al. 2024",7.09070430767473,9519649.72852888,0.999999405696254,TRUE,"Brassica rapa (rape, rape seed)","Modest (10-40%)","both",6,"nested design","natural forest","reported",661.38
-"Geeraert et al. 2020",-0.0681517490949119,0.983176438121433,0.944736559187127,NA,"coffee","Modest (10-40%)","low",18,"single distance per site","other","estimated",390
-"Hansen et al. 2020",0.325900289406362,0.719304516452506,0.650493339526324,NA,"guava","Little (0-10%)","high",6,"single distance per site","natural forest","reported",8676
-"Hipolito et al. 2019",0.145310078354353,0.587654527944273,0.804698295809334,NA,"coffee arabica","Modest (10-40%)","both",19,"single distance per site","other","reported",865.3
-"Klein et al. 2003 a)",-0.109319327894393,0.197610803229971,0.580122892891653,NA,"coffee arabica","Modest (10-40%)","low",24,"single distance per site","natural forest","reported",2500
-"Klein et al. 2003 b)",-0.16841377136964,0.260490426481642,0.517938918897862,NA,"coffee canephora","Great (40-90%)","low",15,"single distance per site","natural forest","reported",1500
-"Krishnan et al. 2012",-0.0092225955768066,0.148549142128282,0.950495559894022,TRUE,"coffee","Great (40-90%)",NA,35,"nested design","natural forest","reported",500
-"Landaverde-Gonzales et al. 2017",-0.13992081714142,0.405421466344275,0.730000893564161,NA,"chilli","Great (40-90%)","high",11,"single distance per site","other","estimated",140
-"Latini et al 2020",0.0172490266891729,0.372593561773595,0.963075535716851,TRUE,"coffee","Modest (10-40%)","both",8,"nested design","natural forest","reported",250
-"Li et al. 2022",-0.116499893599436,0.527933563818624,0.825348220919445,NA,"oil palm","Little (0-10%)","high",22,"single distance per site","natural forest","reported",94.17192
-"Lucas-Garcia and Rosas-Guerrero, unpub",-0.379672668578645,2.48421218461514,0.878528999327797,NA,"mango","Great (40-90%)","high",18,"single distance per site","natural forest","reported",1106.6
-"Munyuli 2012",-0.33408235838176,0.283123752853655,0.23800537046764,NA,"coffee","Great (40-90%)","low",16,"single distance per site","other","reported",7000
-"Obregon et al. 2021",0.0566610029219498,0.467551369371669,0.903543166149558,NA,"lulo' or 'naranjilla'","Essential (90-100%)","high",10,"single distance per site","natural forest","estimated",90
-"Severiano-Galeana et al. 2024",-0.273641464335219,1.03204845556512,0.790898526370562,NA,"mango","Great (40-90%)","high",24,"single distance per site","natural forest","reported",2000
-"Vogel et al. (a) 2021",0.266664922473505,0.73209289981725,0.715671247707269,NA,"pigeonpea","Modest (10-40%)","low",9,"single distance per site","other","estimated",250
-"Vogel et al. (b) 2023",-0.185932641836624,0.486844404173868,0.702525234658474,NA,"pumpkin","Essential (90-100%)","low",24,"single distance per site","other","estimated",200
+"Authors","Slope","StdError","PValue","Crop","PollDependency","AgrIntensity","Sites","Design","Habitat","DistanceMeasure","MaxDistance"
+"Enriquez et al. 2015",0.830955516012596,0.288568738200287,0.0039821073192101,"squash","Essential (90-100%)","low",10,"single distance per site","other","reported",239.01
+"Escobedo-Kenefic et al. 2024",-0.00781903945763266,0.0303194207551781,0.796492718128374,"Brassica rapa (rape, rape seed)","Modest (10-40%)","both",6,"nested design","natural forest","reported",661.38
+"Geeraert et al. 2020",-0.257597943935791,0.146306718494966,0.0782941645401031,"coffee","Modest (10-40%)","low",18,"single distance per site","other","estimated",390
+"Hansen et al. 2020",0.243686343409584,0.307197634335745,0.427628730583087,"guava","Little (0-10%)","high",6,"single distance per site","natural forest","reported",8676
+"Hipolito et al. 2019",0.145393608533944,0.136125097941771,0.28548073575242,"coffee arabica","Modest (10-40%)","both",19,"single distance per site","other","reported",865.3
+"Klein et al. 2003 a)",-0.11380882467237,0.0400229284639995,0.00446083197236584,"coffee arabica","Modest (10-40%)","low",24,"single distance per site","natural forest","reported",2500
+"Klein et al. 2003 b)",-0.177879381978312,0.071066966515604,0.0123151591822182,"coffee canephora","Great (40-90%)","low",15,"single distance per site","natural forest","reported",1500
+"Krishnan et al. 2012",0.0134780263676218,0.019135930452712,0.481226751835985,"coffee","Great (40-90%)",NA,35,"nested design","natural forest","reported",500
+"Landaverde-Gonzales et al. 2017",-0.137408985685964,0.075207528049523,0.067690109938802,"chilli","Great (40-90%)","high",11,"single distance per site","other","estimated",140
+"Latini et al 2020",-0.000505649765551056,0.0370674453225886,0.989116119948642,"coffee","Modest (10-40%)","both",8,"nested design","natural forest","reported",250
+"Li et al. 2022",-0.220496165723504,0.186547741860266,0.237212645930658,"oil palm","Little (0-10%)","high",22,"single distance per site","natural forest","reported",94.17192
+"Lucas-Garcia and Rosas-Guerrero, unpub",-0.388740182612108,0.103840671490897,0.000181386744228968,"mango","Great (40-90%)","high",18,"single distance per site","natural forest","reported",1106.6
+"Munyuli 2012",-0.308462207035481,0.021937065642009,6.5730246831948e-45,"coffee","Great (40-90%)","low",16,"single distance per site","other","reported",7000
+"Obregon et al. 2021",0.0528474055274852,0.0151945522701119,0.000505076570023952,"lulo' or 'naranjilla'","Essential (90-100%)","high",10,"single distance per site","natural forest","estimated",90
+"Severiano-Galeana et al. 2024",-0.293039266048162,0.242812203574287,0.2274877617944,"mango","Great (40-90%)","high",24,"single distance per site","natural forest","reported",2000
+"Vogel et al. (a) 2021",0.300187634407702,0.0798836579378201,0.000171406729159149,"pigeonpea","Modest (10-40%)","low",9,"single distance per site","other","estimated",250
+"Vogel et al. (b) 2023",-0.329629242648592,0.14719622026485,0.0251307727515824,"pumpkin","Essential (90-100%)","low",24,"single distance per site","other","estimated",200

@@ -241,7 +241,7 @@ for (report in unique_report) {
       geom_line(data = smooth_distance, aes(x = distance_m, y = predicted),
                 inherit.aes = FALSE, color = "blue", linewidth = 1) +
       geom_point(size = 3, alpha = 0.6, colour = "black") +
-      labs(x = "Distance to forest (m)",
+      labs(x = "Distance to natural habitat (m)",
            y = "Pollinator abundance (all)",
            title = paste(report, "et al. (GLM)")) +
       theme_minimal(base_size = 12)
@@ -265,7 +265,7 @@ for (report in unique_report) {
       geom_ribbon(data = preds, aes(x = x, ymin = conf.low, ymax = conf.high), fill = "grey70", alpha = 0.4) +
       geom_line(data = preds, aes(x = x, y = predicted), colour = "blue", linewidth = 1) +
       geom_point(data = dataset, aes(x = distance_m, y = abundance_all), colour = "black", alpha = 0.6, size = 3) +
-      labs(x = "Distance to forest (m)", y = "Pollinator abundance (all)", title = paste(report, "et al. (GLMM)")) +
+      labs(x = "Distance to natural habitat (m)", y = "Pollinator abundance (all)", title = paste(report, "et al. (GLMM)")) +
       theme_minimal(base_size = 12)
     
     ggsave(filename = here("outputs", "abundance", "model fits", paste0(report, "_GLMM_fit.png")),
@@ -394,11 +394,6 @@ res.modhabitat
 res.modintensity <- rma(Slope, Variance, mods = ~ 0 + AgrIntensity, data=abundance_es)
 res.modintensity
 
-# Moderator analysis for distance measure
-res.modpollinator <- rma(Slope, Variance, mods = ~ 0 + Pollinator, data=abundance_es)
-res.modpollinator
-
-
 ########################## Sensitivity analyses ###########################
 
 # Test for small study bias incl publication bias
@@ -440,7 +435,6 @@ abundance_es$DistanceCategory <- factor(abundance_es$DistanceCategory, levels = 
 res.modmaxdistance <- rma(Slope, Variance, mods = ~ 0 + DistanceCategory, data=abundance_es)
 res.modmaxdistance
 
-
 ########################## Wild pollinators ###########################
 
 # Subgroup analysis for wild pollinators only (dataset excl Apis mellifera and Apis cerana where it was managed)
@@ -452,7 +446,6 @@ unique_report_wild <- unique(wild_data$report)
 unique_report_wild
 length(unique_report_wild) #number of studies
 
-# !!! insert here the new code
 # Loop through each dataset to fit the models and store the results
 for (report in unique_report_wild) {
   dataset_name <- paste0("AWild_", report)   # Construct the dataset name

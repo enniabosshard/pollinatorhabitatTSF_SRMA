@@ -8,6 +8,7 @@ library(lme4)
 library(ggeffects)
 library(metafor)
 library(here)
+library(glmmTMB)
 
 # Load data
 setwd(rprojroot::find_rstudio_root_file())
@@ -63,6 +64,18 @@ df <- df %>%
 distance_range_by_report %>% arrange(min_distance, max_distance)
 write.csv(distance_range_by_report,  "outputs/fruitset/Study-level distance ranges.csv", row.names = FALSE)
 
+# Check the distribution of fruit set values
+hist(df$fruitset)
+
+# Estimating the study-level effect sizes using beta regression cannot deal with 0s and 1s,
+# therefore check how many 0s and 1s in the dataset
+sum(df$fruitset == 0, na.rm = TRUE)   # number of true 0s = 11
+sum(df$fruitset == 1, na.rm = TRUE)   # number of true 1s = 2
+
+# Truncate the exact 0s and 1s
+df$fruitset[df$fruitset == 0] <- 0.00001   # tiny >0
+df$fruitset[df$fruitset == 1] <- 0.99999   # just <1
+
 ########################## Estimate Effect Sizes ###########################
 
 ## Estimate effect sizes for each individual report
@@ -81,27 +94,39 @@ for (report in unique_report) {
 }
 
 ## Fit Models ###
-### !! This is currently not working as binomial GLM/GLMM doesn't deal with offsets the same as Poisson / neg binomial models
 # Loop through each report to fit the models and store the results
 for (report in unique_report) {
   dataset_name <- paste0("FS_", report) # Construct the dataset name
   data <- get(dataset_name)
   
   # Determine model type
+  unbalanced_effort <- length(unique(data$repeat_measures)) > 1
   design <- unique(data$study_design)
   
   # Print report-level details
   print(paste("report:", report))
-  design <- unique(data$study_design)
   print(paste("Study design:", design))
+  print(paste("Unbalanced sampling effort:", unbalanced_effort))
   
-  # Choose model type based on study design
-  if (design == "single distance per site") { # Use GLM with binomial error distribution
-      model <- glm(fruitset ~ log(distance_m + 1), family = binomial(link = "logit"), data = data)
-  }
-      else { # Use GLMM with random effect for location
-      model <- glmer(fruitset ~ log(distance_m + 1) + (1 | location), data = data, family = binomial(link = "logit"))
+  # Choose model type based on study design and sampling effort
+  if (design == "single distance per site") {
+    # Beta regression without random effect
+    if (unbalanced_effort) {
+      model <- glmmTMB(fruitset ~ log(distance_m + 1), weights = repeat_measures, 
+                       family = beta_family(link = "logit"), data = data)
+    } else {
+      model <- glmmTMB(fruitset ~ log(distance_m + 1), family = beta_family(link = "logit"), data = data)
     }
+    
+  } else {
+    # Beta regression with location as random effect
+    if (unbalanced_effort) {
+      model <- glmmTMB(fruitset ~ log(distance_m + 1) + (1 | location), weights = repeat_measures, 
+                       family = beta_family(link = "logit"), data = data)
+    } else {
+      model <- glmmTMB(fruitset ~ log(distance_m + 1) + (1 | location), family = beta_family(link = "logit"), data = data)
+    }
+  }
   
   # Save the models
   model_name <- paste0("model_FS_", report)
@@ -118,7 +143,6 @@ results <- data.frame(
   Slope = numeric(),
   StdError = numeric(),
   PValue = numeric(),
-  SingularFit = character(),
   Crop = character(),
   PollDependency = character(),
   AgrIntensity = character(),
@@ -141,13 +165,11 @@ for (report in unique_report) {
   data <- get(dataset_name)
   
   # Extract coefficients and their statistics from the model
-  coef_summary <- summary(model)$coefficients
+  coef_summary <- summary(model)$coefficients$cond # specify the conditional model here, i.e. regression part
   
   slope <- coef_summary["log(distance_m + 1)", "Estimate"]
   std_error <- coef_summary["log(distance_m + 1)", "Std. Error"]
   p_value <- coef_summary["log(distance_m + 1)", "Pr(>|z|)"]
-  singularfit<-NA
-  if (inherits(model, "glmerMod")) {singularfit<-isSingular(model)}
   
   # Extract additional information from the dataset
   authors <- unique(data$authors)
@@ -166,7 +188,6 @@ for (report in unique_report) {
     Slope = slope,
     StdError = std_error,
     PValue = p_value,
-    SingularFit = singularfit,
     Crop = crop,
     PollDependency = p_dependency,
     AgrIntensity = agr_intensity,
@@ -198,57 +219,29 @@ for (report in unique_report) {
   # Get dataset and model
   dataset <- get(dataset_name)
   model <- get(model_name)
+  if (unique(dataset$study_design) == "single distance per site") {model_type <- "(GLM)"
+  } else {model_type <- "(GLMM)"
+  }
   
   # Create a smooth sequence of distances for prediction
   smooth_distance <- data.frame(distance_m = seq(min(dataset$distance_m), max(dataset$distance_m), length.out = 100))
   
-  ### For the GLMs
-  if (inherits(model, "glm")) {
-    
-    preds <- predict(model, newdata = smooth_distance, type = "response", se.fit = TRUE)
-    
-    smooth_distance <- smooth_distance %>%
-      mutate(
-        predicted = preds$fit,
-        lower_CI = preds$fit - 1.96 * preds$se.fit,
-        upper_CI = preds$fit + 1.96 * preds$se.fit
-      )
-    
-    p <- ggplot(dataset, aes(x = distance_m, y = fruitset)) +
-      geom_ribbon(data = smooth_distance, aes(ymin = lower_CI, ymax = upper_CI, x = distance_m),
-                  inherit.aes = FALSE, fill = "grey70", alpha = 0.4) +
-      geom_line(data = smooth_distance, aes(y = predicted, x = distance_m),
-                inherit.aes = FALSE, color = "blue", linewidth = 1) +
-      geom_point(size = 3, alpha = 0.6, colour = "black") +
-      labs(x = "Distance in m", y = "Fruit set", title = paste(report, "et al.")) +
-      theme_minimal(base_size = 12)
-    
-    print(p)
-    
-    ggsave(here("outputs", "fruitset", "model fits", paste0("Model_Fit_", report, ".png")),
-           plot = p, width = 8, height = 6, dpi = 300)
-    
-    next
-  }
+  # Get predictions with ggeffects (population-level, random effects averaged)
+  preds <- ggeffects::ggemmeans(model, terms = list(distance_m = smooth_distance$distance_m), 
+                                condition = c(repeat_measures = mean(dataset$repeat_measures, na.rm = TRUE)))
   
-  ### For the GLMMs
-  if (inherits(model, "glmerMod")) {
-    #preds <- ggeffects::ggemmeans(model,   terms = "distance_m[all]")
-    preds <- ggeffects::ggemmeans(model, terms = list(distance_m = smooth_distance$distance_m), condition = c(repeat_measures = mean(dataset$repeat_measures)))  
+  # Plot
+  p <- ggplot() +
+    geom_ribbon(data = preds, aes(x = x, ymin = conf.low, ymax = conf.high), fill = "grey70", alpha = 0.4) +
+    geom_line(data = preds, aes(x = x, y = predicted), colour = "blue", linewidth = 1) +
+    geom_point(data = dataset, aes(x = distance_m, y = fruitset), colour = "black", alpha = 0.6, size = 3) +
+    labs(x = "Distance to natural habitat (m)", y = "Fruit set", title = paste(report, "et al.", model_type)) +
+    theme_minimal(base_size = 12)
     
-    p <- ggplot() +
-      geom_ribbon(data = preds, aes(x = x, ymin = conf.low, ymax = conf.high), fill = "grey70", alpha = 0.4) +
-      geom_line(data = preds, aes(x = x, y = predicted), colour = "blue", linewidth = 1) +
-      geom_point(data = dataset, aes(x = distance_m, y = fruitset), colour = "black", alpha = 0.6, size = 3) +
-      labs(x = "Distance to forest (m)", y = "Fruit set", title = paste(report, "et al. (GLMM)")) +
-      theme_minimal(base_size = 12)
+  print(p)
     
-    print(p)
-    
-    ggsave(here("outputs", "fruitset", "model fits", paste0(report, "_GLMM_fit.png")),
-           plot = p, width = 8, height = 6, dpi = 300)
+  ggsave(here("outputs", "fruitset", "model fits", paste0(report, "_glmmTMB_fit.png")), plot = p, width = 8, height = 6, dpi = 300)
   }
-}
   
 ########################## Meta-Analysis ###########################
 
@@ -268,7 +261,7 @@ tiff(filename = here("outputs", "fruitset", "Fruit set forest plot.tiff"), width
 forest(res,
        slab = fruitset_es$Authors,                # Labels for the studies
        xlab = "Slope",                       # Label for the x-axis
-       xlim = c(-15, 11),                            # Customize x-axis limits
+       xlim = c(-2, 2),                            # Customize x-axis limits
        refline = 0,                                # Add reference line at 0
        header = "a) Fruit set",         # Header for the plot
        annotate = TRUE,                            # Add report annotations
