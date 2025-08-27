@@ -371,21 +371,6 @@ print(paste("Predicted % decline at 1km:", round(percentage_decline, 2), "%"))
 ########################## Additional analyses ###########################
 
 ### Moderator analysis ###
-# Summarise each moderators distribution
-moderators <- c("Method", "DistanceMeasure" , "MaxDistance", "AgrIntensity", "Pollinator", "Habitat") # List of moderator variables
-
-# Use lapply to get counts for each moderator
-moderator_summaries <- lapply(moderators, function(moderator) {
-  abundance_es %>%
-    count(!!sym(moderator), name = "Report_Count") %>%
-    arrange(desc(Report_Count))
-})
-
-names(moderator_summaries) <- moderators # Name the list elements
-moderator_summaries # Print all summaries
-
-## Meta-analysis with individual moderators
-
 # Moderator analysis for habitat type
 res.modhabitat <- rma(Slope, Variance, mods = ~ 0 + Habitat, data=abundance_es)
 res.modhabitat
@@ -434,6 +419,19 @@ abundance_es$DistanceCategory <- factor(abundance_es$DistanceCategory, levels = 
 
 res.modmaxdistance <- rma(Slope, Variance, mods = ~ 0 + DistanceCategory, data=abundance_es)
 res.modmaxdistance
+
+# Overview of moderator distributions
+moderators <- c("Method", "DistanceMeasure" , "MaxDistance", "AgrIntensity", "Pollinator", "Habitat", "DistanceCategory") # List of moderator variables
+
+# Use lapply to get counts for each moderator
+moderator_summaries <- lapply(moderators, function(moderator) {
+  abundance_es %>%
+    count(!!sym(moderator), name = "Report_Count") %>%
+    arrange(desc(Report_Count))
+})
+
+names(moderator_summaries) <- moderators # Name the list elements
+moderator_summaries # Print all summaries
 
 ########################## Wild pollinators ###########################
 

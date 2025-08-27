@@ -342,18 +342,6 @@ print(paste("Predicted % decline at 1km:", round(percentage_decline, 2), "%"))
 ########################## Additional analyses ###########################
 
 ### Moderator analysis ###
-# Summarise each moderators distribution
-moderators <- c("DistanceMeasure" , "PollDependency", "AgrIntensity", "Habitat") # List of moderator variables
-
-# Use lapply to get counts for each moderator
-moderator_summaries <- lapply(moderators, function(moderator) {
-  fruitset_es %>%
-    count(!!sym(moderator), name = "Study_Count") %>%
-    arrange(desc(Study_Count))
-})
-
-names(moderator_summaries) <- moderators # Name the list elements
-moderator_summaries # Print all summaries
 
 ## Meta-analysis with individual moderators
 # Moderator analysis for agricultural intensity
@@ -410,3 +398,15 @@ fruitset_es$DistanceCategory <- factor(fruitset_es$DistanceCategory, levels = c(
 res.modmaxdistance <- rma(Slope, Variance, mods = ~ 0 + DistanceCategory, data=fruitset_es)
 res.modmaxdistance
 
+# Summarise each moderators distribution
+moderators <- c("DistanceMeasure" , "PollDependency", "AgrIntensity", "Habitat", "DistanceCategory") # List of moderator variables
+
+# Use lapply to get counts for each moderator
+moderator_summaries <- lapply(moderators, function(moderator) {
+  fruitset_es %>%
+    count(!!sym(moderator), name = "Study_Count") %>%
+    arrange(desc(Study_Count))
+})
+
+names(moderator_summaries) <- moderators # Name the list elements
+moderator_summaries # Print all summaries

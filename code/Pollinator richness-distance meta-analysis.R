@@ -377,18 +377,6 @@ print(paste("Predicted % decline at 1km:", round(percentage_decline, 2), "%"))
 ########################## Additional analyses ###########################
 
 ### Moderator analysis ###
-# Summarise each moderators distribution
-moderators <- c("Method", "DistanceMeasure" , "AgrIntensity", "Pollinator", "Habitat", "TaxonomicResolution") # List of moderator variables
-
-# Use lapply to get counts for each moderator
-moderator_summaries <- lapply(moderators, function(moderator) {
-  richness_es %>%
-    count(!!sym(moderator), name = "Report_Count") %>%
-    arrange(desc(Report_Count))
-})
-
-names(moderator_summaries) <- moderators # Name the list elements
-moderator_summaries # Print all summaries
 
 ## Meta-analysis with individual moderators
 # Moderator analysis for habitat type
@@ -424,7 +412,7 @@ qqnorm(res, main = "Random-Effects Model")
 res.modmethod <- rma(Slope, Variance, mods = ~ 0 + Method, data=richness_es)
 res.modmethod
 
-# Sensitivty model 2: Distance measure
+# Sensitivity model 2: Distance measure
 res.moddistance <- rma(Slope, Variance, mods = ~ 0 + DistanceMeasure, data=richness_es)
 res.moddistance
 
@@ -446,3 +434,16 @@ res.modmaxdistance
 # Sensitivity model 4: Taxonomic resolution
 res.modtaxonomic <- rma(Slope, Variance, mods = ~ 0 + TaxonomicResolution, data=richness_es)
 res.modtaxonomic
+
+# Summarise each moderators distribution
+moderators <- c("Method", "DistanceMeasure" , "AgrIntensity", "Pollinator", "Habitat", "TaxonomicResolution", "DistanceCategory") # List of moderator variables
+
+# Use lapply to get counts for each moderator
+moderator_summaries <- lapply(moderators, function(moderator) {
+  richness_es %>%
+    count(!!sym(moderator), name = "Report_Count") %>%
+    arrange(desc(Report_Count))
+})
+
+names(moderator_summaries) <- moderators # Name the list elements
+moderator_summaries # Print all summaries
