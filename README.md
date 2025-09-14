@@ -25,7 +25,7 @@ In the main repository, you will also find:
 This analysis was conducted in **R** (version 4.2.2). The following packages are required:  
 
 ```r
-install.packages(c("metafor", "MASS", "ggplot2", "dplyr", "here"))
+install.packages(c("ggplot2", "dplyr", "MASS", "lme4", "metafor", "ggeffects", "glmmTMB", "here"))
 ```
 
 ## Variable Explanations
