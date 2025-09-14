@@ -35,21 +35,23 @@ install.packages(c("ggplot2", "dplyr", "MASS", "lme4", "metafor", "ggeffects", "
 - **authors**: Author and year for each study (e.g., `author et al. year`)
 - **crop**: Common name of the study crop
 - **p_dependency**: Pollinator-dependency level of each study crop, following the information from Siopa et al. (2024)
-- **farm_size**: Total size of farm in hectares (ha)
-- **habitat**: Definition/description of semi-natural habitat (e.g., 'forest', 'savannah', 'grassland')
+- **farm_size**: Total size of farm in hectares (ha) or nearest classification of farm size available (e.g. 'small <2ha' or 'medium 2-15ha')
+- **habitat_description**: Description of semi-natural habitat (e.g., 'forest', 'savannah', 'grassland')
+- **habitat_type**: Categorised type of natural habitat based on original description (binary; either 'natural forest' or 'other)
 - **agr_intensity**: Agricultural intensity (e.g., 'high' = intense use of pesticides, monocultures; 'low' = minimal pesticide use and no monocultures)
 - **distance_m**: Euclidean distance (in metres) to the nearest natural habitat
 - **distance_measure**: Whether distance measurement was reported in the original study ('reported') or estimated using remote sensing ('estimated')
 - **abundance_all**: Observed number of pollinators visiting crop flowers for all observed insects
 - **abundance_wild**: Observed number of wild pollinators excluding managed honeybees (A. mellifera, and in some cases A. cerana)
 - **richness_all**: Observed number of species for all pollinators
-- **richness_wild**: Observed number of species for wild pollinators excluding managed honeybees
+- **richness_wild**: Observed number of species for wild pollinators excluding managed honeybees (A. mellifera, and in some cases A. cerana)
 - **fruitset**: Observed proportion (0-1) of flowers that set fruit
-- **treatment**: Fruit set treatment ('open' for unbagged/untreated flowers)
+- **treatment**: Fruit set treatment (only used data from 'open' treatments for unbagged/untreated flowers in our synthesis)
 - **pollinator**: Focal pollinator taxa of the study to the most precise taxonomic level (e.g., 'Insecta', 'Hymenoptera', 'Diptera', 'bees', 'stingless bees', etc.)
 - **sites**: Total number of study sites/farms in the study
 - **location**: Name or code for each study site/farm
-- **sampling_effort**: Sample size (e.g., number of visits/replicate observations for active pollinator observations, number of pan traps for passive sampling, number of flowers counted for fruit set)
+- **study_design**: Description of the study design for each dataset; either 'single distance per site', 'nested design' or 'paired sites'
+- **repeat_measures**: Number of visits/replicate observations for active pollinator observations, number of pan traps for passive sampling, number of plants, branches or flowers observed for fruit set
 - **sampling_method**: Method for insect observations (e.g., 'active' for focal observations/sweep netting, 'passive' for pan traps, 'combined' for both methods)
 - **sampling_time_min**: Time (in minutes) over which pollinators were sampled per sampling event
 - **total_sampling_time_min**: Total time (in minutes) over which pollinators were sampled at each study site/data point (accummulative across total sampling effort)
