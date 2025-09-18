@@ -61,3 +61,35 @@ install.packages(c("ggplot2", "dplyr", "MASS", "lme4", "metafor", "ggeffects", "
 
 Siopa, C., L. G. Carvalheiro, H. Castro, J. Loureiro, and S. Castro. 2024. Animal-pollinated crops and cultivars—A quantitative assessment of pollinator dependence values and evaluation of methodological approaches. *Journal of Applied Ecology*, 61:1279-1288.
 
+## R Session Info
+
+R version 4.4.2 (2024-10-31)
+Platform: aarch64-apple-darwin20
+Running under: macOS Sequoia 15.6.1
+
+Matrix products: default
+BLAS:   /System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libBLAS.dylib 
+LAPACK: /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/lib/libRlapack.dylib;  LAPACK version 3.12.0
+
+locale:
+[1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+
+time zone: Europe/London
+tzcode source: internal
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+ [1] glmmTMB_1.1.12      ggeffects_2.3.0     here_1.0.1          metafor_4.6-0       numDeriv_2016.8-1.1 metadat_1.2-0       lme4_1.1-35.5       Matrix_1.7-1       
+ [9] MASS_7.3-61         dplyr_1.1.4         ggplot2_3.5.1      
+
+loaded via a namespace (and not attached):
+ [1] gtable_0.3.6       TMB_1.9.16         insight_1.2.0      lattice_0.22-6     mathjaxr_1.6-0     vctrs_0.6.5        tools_4.4.2        Rdpack_2.6.2       generics_0.1.4    
+[10] datawizard_1.0.2   sandwich_3.1-1     tibble_3.3.0       pkgconfig_2.0.3    RColorBrewer_1.1-3 lifecycle_1.0.4    compiler_4.4.2     farver_2.1.2       textshaping_1.0.0 
+[19] codetools_0.2-20   pillar_1.11.0      nloptr_2.1.1       crayon_1.5.3       reformulas_0.4.1   boot_1.3-31        multcomp_1.4-26    nlme_3.1-166       tidyselect_1.2.1  
+[28] mvtnorm_1.3-2      labeling_0.4.3     forcats_1.0.0      splines_4.4.2      rprojroot_2.0.4    grid_4.4.2         cli_3.6.5          magrittr_2.0.3     survival_3.7-0    
+[37] utf8_1.2.6         TH.data_1.1-2      withr_3.0.2        scales_1.4.0       estimability_1.5.1 emmeans_1.10.7     ragg_1.3.3         zoo_1.8-12         hms_1.1.3         
+[46] coda_0.19-4.1      haven_2.5.5        rbibutils_2.3      mgcv_1.9-1         rlang_1.1.6        Rcpp_1.1.0         xtable_1.8-4       glue_1.8.0         rstudioapi_0.17.1 
+[55] minqa_1.2.8        R6_2.6.1           systemfonts_1.2.1 
+> 
